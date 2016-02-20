@@ -16,6 +16,5 @@ storage/
 .env
 .env.example
 
-bash/
 Homestead.yaml
 Homestead.json
