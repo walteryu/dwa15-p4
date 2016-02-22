@@ -15,6 +15,8 @@
 
 # set permissions inside from within app folder
 # sudo chown -R www-data storage
+# sudo chown -R www-data bootstrap/cache
+# sudo service apache2 restart
 
 # update .env file and generate application key
 
