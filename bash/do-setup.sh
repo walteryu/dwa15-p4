@@ -43,5 +43,6 @@
 # php artisan key:generate
 
 # update apache localhost file
-# cd /etc/apache2/sites-enabled/
-# vi 000-default.conf
+# vi /etc/apache2/sites-enabled/000-default.conf
+
+# debugging do-apache permission settings...
