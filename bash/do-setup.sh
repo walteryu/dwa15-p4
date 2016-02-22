@@ -46,3 +46,10 @@
 # vi /etc/apache2/sites-enabled/000-default.conf
 
 # debugging do-apache permission settings...
+# php artisan cache:clea
+# sudo chmod -R 777 storage/
+# composer dump-autoload
+
+# sudo chmod -R 777 storage/
+# sudo chmod -R 777 storage/framework/views/
+# sudo chmod -R 777 storage/framework/sessions/
