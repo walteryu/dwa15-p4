@@ -7,18 +7,12 @@ Route::group(['middleware' => ['web']], function () {
     return 'Hello, welcome to my new Laravel application!';
   });
 
-  Route::get('/book/{title}', function ($title) {
-    return 'Show an individual book: '.$title;
-  });
+  Route::get('/books', 'BookController@getIndex');
 
-  Route::get('/books', function () {
-    return 'Show a list of all books';
-  });
+  Route::get('/book/create', 'BookController@getCreate');
 
-  Route::get('/book/create', function () {
-    $view = '<form>';
-    $view = '<input type="text" name="title">';
-    $view = '</form>';
-  });
+  Route::post('/book/create', 'BookController@postCreate');
+
+  Route::get('/book/{id}', 'BookController@getShow');
 
 });
