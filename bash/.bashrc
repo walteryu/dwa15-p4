@@ -27,7 +27,7 @@ atom_path='/Applications/Atom.app/Contents/Resources/app/'
 if [ -d "${atom_path}" ]; then
   text_editor='atom'
 else
-  text_editor='nano'
+  text_editor='vi'
 fi
 
 # ------------------------------------
@@ -85,8 +85,8 @@ alias sp="sync & sudo purge"
 alias cn="crontab ~/.crontab"
 alias ch="killall \"Google Chrome Helper\""
 
-alias tt='git st'
-alias br='git br'
+alias tt='git status'
+alias br='git branch'
 alias gg='git log'
 alias aa='git add -p'
 alias pp='git pull origin master; git push origin master'
