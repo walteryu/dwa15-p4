@@ -1,35 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Show Book</title>
-    <meta charset='utf-8'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-</head>
-<body>
+@extends('layouts.master')
 
-    <div class="container">
-      <header>
-          <img
-          src='http://making-the-internet.s3.amazonaws.com/laravel-foobooks-logo@2x.png'
-          style='width:300px'
-          alt='Foobooks Logo'>
-      </header>
+@section('title')
+    Show book
+@stop
 
-      <section>
-          @if(isset($title))
-              <h1>Show book: {{ $title }}</h1>
-          @else
-              <h1>No book chosen</h1>
-          @endif
-      </section>
+{{--
+This `head` section will be yielded right before the closing </head> tag.
+Use it to add specific things that *this* View needs in the head,
+such as a page specific stylesheets.
+--}}
 
-      <footer>
-          &copy; {{ date('Y') }}
-      </footer>
-    </div>
+@section('head')
+    <link href="/css/books/show.css" type='text/css' rel='stylesheet'>
+@stop
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+@section('content')
+    @if($title)
+        <h1>Show book: {{ $title }}</h1>
+    @else
+        <h1>No book chosen</h1>
+    @endif
+@stop
 
-</body>
-</html>
+{{--
+This `body` section will be yielded right before the closing </body> tag.
+Use it to add specific things that *this* View needs at the end of the body,
+such as a page specific JavaScript files.
+--}}
+
+@section('body')
+    <script src="/js/books/show.js"></script>
+@stop
