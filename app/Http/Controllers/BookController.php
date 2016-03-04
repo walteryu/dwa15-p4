@@ -14,10 +14,12 @@ class BookController extends Controller {
   }
 
   /**
-   * Responds to requests to GET /books/show/{id}
-   */
-  public function getShow($id) {
-    return 'Show an individual book: '.$id;
+    * Responds to requests to GET /books/show/{id}
+    */
+
+  # Passes in no title by default
+  public function getShow($title = null) {
+    return view('books.show')->with('title', $title);
   }
 
   /**
