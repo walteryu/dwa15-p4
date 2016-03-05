@@ -26,19 +26,30 @@
 <body>
 
     <header>
-        <img
-        src='http://making-the-internet.s3.amazonaws.com/laravel-foobooks-logo@2x.png'
-        style='width:300px'
-        alt='Foobooks Logo'>
+        <!--
+          <img
+          src='http://making-the-internet.s3.amazonaws.com/laravel-foobooks-logo@2x.png'
+          style='width:300px'
+          alt='Foobooks Logo'>
+        -->
+
+        <div class="text-center">
+            <h3>Developer's Best Friend Application</h3>
+            <h4>Lorem Ipsum & Random User Generator</h4>
+        </div>
     </header>
 
     <section>
         {{-- Main page content will be yielded here --}}
-        @yield('content')
+        <div class="container">
+            @yield('content')
+        </div>
     </section>
 
     <footer>
-        &copy; {{ date('Y') }}
+        <div class="container">
+            &copy; {{ date('Y') }}
+        </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
