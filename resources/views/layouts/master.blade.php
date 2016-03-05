@@ -8,6 +8,8 @@
 
     <meta charset='utf-8'>
 
+    <link rel="stylesheet" href="styles.css">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
