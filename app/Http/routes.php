@@ -39,9 +39,4 @@ Route::group(['middleware' => ['web']], function () {
     print_r($input);
   });
 
-  Route::get('/practice', function() {
-    echo 'Your current environment: ';
-    echo App::environment();
-  });
-
 });
