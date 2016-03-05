@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace P3\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use P3\Http\Requests;
+use P3\Http\Controllers\Controller;
 
 class TagController extends Controller
 {

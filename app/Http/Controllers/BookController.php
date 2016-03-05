@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace P3\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use P3\Http\Controllers\Controller;
 
 class BookController extends Controller {
 
