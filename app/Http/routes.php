@@ -6,7 +6,12 @@ Route::group(['middleware' => ['web']], function () {
   # Examples from lecture notes
   Route::get('/', function () {
     # return view('welcome');
-    return 'Hello, welcome to my new Laravel application!';
+    return 'Hello, welcome to Laravel!';
+  });
+
+  Route::get('/env', function() {
+    echo 'Your current environment: ';
+    echo App::environment();
   });
 
   Route::get('/books', 'BookController@getIndex');
