@@ -1,27 +1,30 @@
-# Laravel PHP Framework
+# HES, DWA-15 P3 - Lorem Ipsum & Random User Generator
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Live URL
+<http://p3.walteryu.pw>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Description
+Lorem ipsum and random user generator that accepts user input and returns the specified random text (lorem ipsum) and random users.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Random text is generated based on user input...
 
-## Official Documentation
+Random users is generated based on user input...
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Demo
+YouTube video is submitting using personal project account (StormSavvy), which contains my other coding demos:
 
-## Contributing
+[Demo on YouTube]()
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Details for Teaching Team
 
-## Security Vulnerabilities
+Lecture videos were referenced for general approaches to starting the homework set and class foobooks examples used as starting point for problem set.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+No login is required...
 
-## License
+Checkbox input is verified using if statement and errors are caught using flash message with Boostrap warning tag.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+## References & Outside Code
+* [Bootstrap](http://getbootstrap.com/) - Called as CDN Asset
+* [Subtle Patterns](http://subtlepatterns.com/symphony/) - Background Image, Set Inside Stylesheet
+* [Bootstrap Documentation](https://v4-alpha.getbootstrap.com/components/forms/) - Referenced for Form Elements
+* [Random Word Generator](http://listofrandomwords.com/) - Referenced for Generating Words List Array
