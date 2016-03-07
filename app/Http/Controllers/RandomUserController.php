@@ -14,9 +14,9 @@ class RandomUserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getIndex()
     {
-        //
+        return view('random-user.index');
     }
 
     /**
