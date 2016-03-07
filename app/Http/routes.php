@@ -15,28 +15,17 @@ Route::group(['middleware' => ['web']], function () {
   });
 
   Route::get('/books', 'BookController@getIndex');
+  Route::get('/book/new', 'BookController@getNew');
+  Route::post('/book/new', 'BookController@postNew');
   Route::get('/book/create', 'BookController@getCreate');
   Route::post('/book/create', 'BookController@postCreate');
-
-  # Route::get('/book/{id}', 'BookController@getShow');
-  Route::get('/books/show/{title?}', 'BookController@getShow');
+  Route::get('/book/show/{title?}', 'BookController@getShow');
 
   Route::get('/books/{category}', function($category) {
     return 'Here are all the books in the category of '.$category;
   });
 
-  Route::get('/new', function() {
-    $view  = '<form method="POST">';
-    $view .= csrf_field();
-    $view .= 'Title: <input type="text" name="title">';
-    $view .= '<input type="submit">';
-    $view .= '</form>';
-    return $view;
-  });
-
-  Route::post('/new', function() {
-    $input = Input::all();
-    print_r($input);
-  });
+  Route::get('/lorem-ipsum', 'LoremIpsumController@getIndex');
+  Route::get('/random-user', 'RandomUserController@getIndex');
 
 });
