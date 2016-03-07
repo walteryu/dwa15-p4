@@ -11,11 +11,11 @@ such as a page specific stylesheets.
 --}}
 
 @section('head')
-    <link href="/css/books/index.css" type='text/css' rel='stylesheet'>
+    <link href="/css/random-user/index.css" type='text/css' rel='stylesheet'>
 @stop
 
 @section('content')
-    <h1>Show all books...</h1>
+    <h1>Insert web form here...</h1>
 @stop
 
 {{--
@@ -25,5 +25,5 @@ such as a page specific JavaScript files.
 --}}
 
 @section('body')
-    <script src="/js/books/index.js"></script>
+    <script src="/js/random-user/index.js"></script>
 @stop
