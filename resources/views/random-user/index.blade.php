@@ -15,7 +15,7 @@ such as a page specific stylesheets.
 @stop
 
 @section('content')
-    <h1>Random User Generator</h1>
+    <h3>Random User Generator</h3>
 
     <div class="form-group">
       <p>
