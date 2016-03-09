@@ -36,7 +36,7 @@ such as a page specific stylesheets.
         <label for="shuffle">Shuffle Passphrases Again After Selection?</label>
       </p>
       <p>
-        <button type="submit" class="btn btn-primary">Generate Password</button>
+        <button type="submit" class="btn btn-primary">Generate Random Users</button>
       </p>
     </div>
   </form>
