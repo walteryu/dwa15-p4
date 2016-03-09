@@ -34,8 +34,8 @@
         -->
 
         <div class="text-center">
-            <h3>Developer's Best Friend Application</h3>
-            <h4>Lorem Ipsum & Random User Generator</h4>
+            <h1>Developer's Best Friend Application</h1>
+            <h3>Lorem Ipsum & Random User Generator</h3>
         </div>
     </header>
 
