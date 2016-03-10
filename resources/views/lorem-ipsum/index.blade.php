@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Show all books
+  Lorem Ipsum Generator
 @stop
 
 {{--
