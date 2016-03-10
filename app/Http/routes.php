@@ -37,7 +37,7 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('/book/show/{title?}', 'BookController@getShow');
 
   Route::get('/books/{category}', function($category) {
-    return 'Here are all the books in the category of '.$category;
+    return 'Books with category: '.$category;
   });
 
   Route::get('/lorem-ipsum', 'LoremIpsumController@getIndex');
