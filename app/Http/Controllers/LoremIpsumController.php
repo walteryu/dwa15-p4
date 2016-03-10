@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use P3\Http\Requests;
 use P3\Http\Controllers\Controller;
 
+use Badcow\LoremIpsum;
+
 class LoremIpsumController extends Controller
 {
     /**
@@ -16,7 +18,11 @@ class LoremIpsumController extends Controller
      */
     public function getIndex()
     {
-        return view('lorem-ipsum.index');
+      $generator = new LoremGenerator();
+      $paragraphs = $generator->getParagraphs(5);
+      echo implode('<p>', $paragraphs);
+
+      return view('lorem-ipsum.index');
     }
 
     /**
