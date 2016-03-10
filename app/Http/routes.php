@@ -14,6 +14,12 @@ Route::group(['middleware' => ['web']], function () {
     echo App::environment();
   });
 
+  Route::get('/random-text', function() {
+    $generator = new LoremIpsumGenerator();
+    $paragraphs = $generator->getParagraphs(5);
+    echo implode('<p>', $paragraphs);
+  });
+
   Route::get('/books', 'BookController@getIndex');
   Route::get('/book/new', 'BookController@getNew');
   Route::post('/book/new', 'BookController@postNew');
