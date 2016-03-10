@@ -203,6 +203,8 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
         'LoremIpsumGenerator' => 'Badcow\LoremIpsum\Generator',
+        'FakerFactory' => 'Faker\Factory',
+        'FakerGenerator' => 'Faker\Generator',
 
     ],
 
