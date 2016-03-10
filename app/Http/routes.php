@@ -3,10 +3,8 @@
 # Currently rooted to public/dir in htdocs/MAMP
 Route::group(['middleware' => ['web']], function () {
 
-  # Examples from lecture notes
   Route::get('/', function () {
-    # return view('welcome');
-    return 'Hello, welcome to Laravel!';
+    return view('welcome');
   });
 
   Route::get('/env', function() {
