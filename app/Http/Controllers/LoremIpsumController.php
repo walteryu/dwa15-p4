@@ -18,10 +18,6 @@ class LoremIpsumController extends Controller
      */
     public function getIndex()
     {
-      $generator = new LoremGenerator();
-      $paragraphs = $generator->getParagraphs(5);
-      echo implode('<p>', $paragraphs);
-
       return view('lorem-ipsum.index');
     }
 
