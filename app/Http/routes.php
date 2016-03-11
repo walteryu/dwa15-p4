@@ -1,6 +1,6 @@
 <?php
 
-# Currently rooted to public/dir in htdocs/MAMP
+# Rooted to public/dir in htdocs/MAMP
 Route::group(['middleware' => ['web']], function () {
 
   Route::get('/', function () {
@@ -12,21 +12,8 @@ Route::group(['middleware' => ['web']], function () {
     echo App::environment();
   });
 
-  Route::get('/lorem-test', function() {
-    $generator = new LoremIpsumGenerator();
-    $paragraphs = $generator->getParagraphs(5);
-    echo implode('<p>', $paragraphs);
-  });
-
-  Route::get('/faker-test', function() {
-    // use the factory to create a Faker\Generator instance
-    $faker = Faker\Factory::create();
-
-    // generate data by accessing properties
-    echo $faker->name;
-    // 'Lucy Cechtelar';
-    echo $faker->address;
-    // "426 Jordy Lodge
+  Route::get('/books/{category}', function($category) {
+    return 'Books with category: '.$category;
   });
 
   Route::get('/books', 'BookController@getIndex');
