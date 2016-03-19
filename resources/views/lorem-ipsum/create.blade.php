@@ -38,6 +38,15 @@
 
         <button type="submit" class="btn btn-primary">Add Some Lorem!</button>
 
+        <section>
+            <br>
+            @if(isset($paragraphs))
+                {{ implode('<p>', $paragraphs) }}
+            @else
+                <h1>No Lorem Yet!</h1>
+            @endif
+        </section>
+
         {{--
         <ul class=''>
             @foreach($errors->all() as $error)
