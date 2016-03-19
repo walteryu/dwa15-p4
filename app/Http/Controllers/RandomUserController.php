@@ -28,7 +28,22 @@ class RandomUserController extends Controller
       // echo $user->email.'<br>';
       // echo $user->address.'<br>';
 
-      return view('random-user.show')->with('user', $user);
+      for ($x = 0; $x <= $count; $x++) {
+          $user = \Faker\Factory::create();
+          $users[] = $user;
+      }
+
+      /*
+        foreach($users as $user):
+            echo $user->name;
+            echo '<p>';
+            echo $user->email;
+            echo '<p>';
+            echo $user->address;
+            echo '<p>';
+        endforeach;
+      */
+      return view('random-user.show')->with('users', $users);
     }
 
     /**
