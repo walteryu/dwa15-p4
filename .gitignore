@@ -18,3 +18,5 @@ storage/
 
 Homestead.yaml
 Homestead.json
+
+public/.DS_Store
