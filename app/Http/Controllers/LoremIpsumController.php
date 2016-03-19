@@ -26,9 +26,9 @@ class LoremIpsumController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function getShow($count)
     {
-        //
+      return 'Paragraph Count: '.$count;
     }
 
     /**
