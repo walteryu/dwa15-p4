@@ -26,13 +26,6 @@
 <body>
 
     <header>
-        <!--
-          <img
-          src='http://making-the-internet.s3.amazonaws.com/laravel-foobooks-logo@2x.png'
-          style='width:300px'
-          alt='Foobooks Logo'>
-        -->
-
         <div class="text-center">
             <h1>Developer's Best Friend Application</h1>
             <h3>Lorem Ipsum & Random User Generator</h3>
