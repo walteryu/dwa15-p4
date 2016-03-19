@@ -23,7 +23,7 @@ such as a page specific stylesheets.
         {{ csrf_field() }}
 
         <div class='form-group'>
-           <label>* Paragraph Count:</label>
+           <label>* Paragraph Count (Between 0-9):</label>
            <input
                type='number'
                id='count'
