@@ -70,7 +70,5 @@ such as a page specific stylesheets.
                 Please correct the errors above and try again.
             @endif
         </div>
-
     </form>
-
 @stop

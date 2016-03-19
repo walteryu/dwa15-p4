@@ -15,8 +15,15 @@ such as a page specific stylesheets.
 @stop
 
 @section('content')
-    <h3>Lorem Ipsum Generator</h3>
-    <h3>Links Here...</h3>
+    <h2>Lorem Ipsum Generator</h2>
+    <h4>
+      <a href="/lorem-ipsum/create">Generate Random Text Here...</a>
+    </h4>
+
+    <h2>Random User Generator</h2>
+    <h4>
+      <a href="/random-user/create">Generate Random Users Here...</a>
+    </h4>
 @stop
 
 {{--
