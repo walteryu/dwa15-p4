@@ -20,7 +20,7 @@
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
     @yield('head')
 
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="{{ URL::asset('css/master.css') }}" />
 
 </head>
 <body>
