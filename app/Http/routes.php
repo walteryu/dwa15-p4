@@ -24,10 +24,10 @@ Route::group(['middleware' => ['web']], function () {
 
   # Return random users
   Route::get('/faker-output', function() {
-    $faker = Faker\Factory::create();
-    echo $faker->name.'<br>';
-    echo $faker->email.'<br>';
-    echo $faker->address.'<br>';
+    $user = Faker\Factory::create();
+    echo $user->name.'<br>';
+    echo $user->email.'<br>';
+    echo $user->address.'<br>';
   });
 
   Route::get('/lorem-ipsum', 'LoremIpsumController@getIndex');
