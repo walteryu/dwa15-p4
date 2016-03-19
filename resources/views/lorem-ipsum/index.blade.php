@@ -17,32 +17,51 @@ such as a page specific stylesheets.
 @section('content')
     <h3>Lorem Ipsum Generator</h3>
 
-    <div class="form-group">
-      <p>
-        <label for="count">Number of Paragraphs? </label>
-        <input type="number" id="count" name="count" min="1" max="9">
-        <label for="count"> (Between 1-9)</label>
-      </p>
+    <form method='POST' action='/lorem-ipsum/create'>
 
-      <!--
-        <p>
-          <input type="checkbox" id="numbers" name="numbers" value="add_number">
-          <label for="numbers">Add a Number to Last Passphrase?</label>
-        </p>
-        <p>
-          <input type="checkbox" id="characters" name="characters" value="add_char">
-          <label for="characters">Add a Character to Last Passphrase?</label>
-        </p>
-        <p>
-          <input type="checkbox" id="shuffle" name="shuffle" value="shuffle_words">
-          <label for="shuffle">Shuffle Passphrases Again After Selection?</label>
-        </p>
-      -->
+        {{ csrf_field() }}
 
-      <p>
-        <button type="submit" class="btn btn-primary">Generate Random Text</button>
-      </p>
-    </div>
+        <div class='form-group'>
+           <label>* Paragraph Count:</label>
+           <input
+               type='number'
+               id='count'
+               name='count'
+               value='{{ old('count') }}'
+           >
+           <div class='error'>{{ $errors->first('count') }}</div>
+        </div>
+
+        <!--
+          <div class='form-group'>
+             <label>* Author:</label>
+             <input
+                 type='text'
+                 id='author'
+                 name='author'
+                 value='{{ old('author') }}'
+             >
+             <div class='error'>{{ $errors->first('author') }}</div>
+          </div>
+        -->
+
+        <button type="submit" class="btn btn-primary">Add Some Lorem!</button>
+
+        {{--
+        <ul class=''>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        --}}
+
+        <div class='error'>
+            @if(count($errors) > 0)
+                Please correct the errors above and try again.
+            @endif
+        </div>
+
+    </form>
 @stop
 
 {{--
