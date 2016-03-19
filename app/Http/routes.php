@@ -14,7 +14,6 @@ Route::group(['middleware' => ['web']], function () {
     return view('lorem-ipsum/index');
   });
 
-  # Return random users
   Route::get('/faker-output', function() {
     $user = Faker\Factory::create();
     echo $user->name.'<br>';
