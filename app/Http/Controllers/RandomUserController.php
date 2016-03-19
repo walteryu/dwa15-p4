@@ -42,15 +42,14 @@ class RandomUserController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function getShow($count = null)
     {
-        //
+      $user = \Faker\Factory::create();
+      // echo $user->name.'<br>';
+      // echo $user->email.'<br>';
+      // echo $user->address.'<br>';
+
+      return view('random-user.show')->with('user', $user);
     }
 
     /**
