@@ -41,5 +41,7 @@ Route::group(['middleware' => ['web']], function () {
   });
 
   Route::get('/lorem-ipsum', 'LoremIpsumController@getIndex');
+  Route::get('/lorem-ipsum/show/{count}', 'LoremIpsumController@getShow');
+
   Route::get('/random-user', 'RandomUserController@getIndex');
 });
