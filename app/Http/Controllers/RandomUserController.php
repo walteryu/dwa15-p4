@@ -46,14 +46,26 @@ class RandomUserController extends Controller
       return view('random-user.show')->with('users', $users);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function getCreate()
     {
-        //
+      $user = \Faker\Factory::create();
+      $users[] = $user;
+
+      return view('random-user.create')->with('users', $users);
+    }
+
+    public function postCreate(Request $request)
+    {
+      $this->validate($request,[
+        'count' => 'required|digits:1'
+      ]);
+
+      for ($x = 0; $x <= $count; $x++) {
+          $user = \Faker\Factory::create();
+          $users[] = $user;
+      }
+
+      return view('random-user.create')->with('users', $users);
     }
 
     /**
