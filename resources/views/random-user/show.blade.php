@@ -15,7 +15,7 @@ such as a page specific stylesheets.
 @stop
 
 @section('content')
-    <h2>Random Users Array...</h2>
+    <h2>Random Users Below</h2>
     </br>
     @forelse($users as $user)
         <p>
