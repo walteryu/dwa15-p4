@@ -36,5 +36,7 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('/lorem-ipsum/show/{count?}', 'LoremIpsumController@getShow');
 
   Route::get('/random-user', 'RandomUserController@getIndex');
+  Route::get('/random-user/create', 'RandomUserController@getCreate');
+  Route::post('/random-user/create', 'RandomUserController@postCreate');
   Route::get('/random-user/show/{count?}', 'RandomUserController@getShow');
 });
