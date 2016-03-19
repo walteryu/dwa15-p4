@@ -12,17 +12,6 @@ Route::group(['middleware' => ['web']], function () {
     echo App::environment();
   });
 
-  Route::get('/books/{category}', function($category) {
-    return 'Books with category: '.$category;
-  });
-
-  Route::get('/books', 'BookController@getIndex');
-  Route::get('/book/new', 'BookController@getNew');
-  Route::post('/book/new', 'BookController@postNew');
-  Route::get('/book/create', 'BookController@getCreate');
-  Route::post('/book/create', 'BookController@postCreate');
-  Route::get('/book/show/{title?}', 'BookController@getShow');
-
   # Returns paragraphs based on number parameter
   Route::get('/lorem-output/{number}', function($number) {
     $generator = new LoremIpsumGenerator();
