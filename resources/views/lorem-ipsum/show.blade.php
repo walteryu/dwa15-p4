@@ -1,25 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Show Lorem</title>
-    <meta charset='utf-8'>
-    <link href="/css/lorem-ipsum.css" type='text/css' rel='stylesheet'>
-</head>
-<body>
+@extends('layouts.master')
 
-    <header>
-        <h1>Extra Lorem...</h1>
-    </header>
+@section('title')
+    Show Lorem
+@stop
 
-    <section>
-        @if(isset($paragraphs))
-            {{ implode('<p>', $paragraphs) }}
-        @else
-            <h1>No Lorem Yet!</h1>
-        @endif
-    </section>
+{{--
+This `head` section will be yielded right before the closing </head> tag.
+Use it to add specific things that *this* View needs in the head,
+such as a page specific stylesheets.
+--}}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+@section('head')
+    <link href="/css/lorem-ipsum/index.css" type='text/css' rel='stylesheet'>
+@stop
 
-</body>
-</html>
+@section('content')
+    <h2>Extra Lorem...</h2>
+    @if(isset($paragraphs))
+        {{ implode('<p>', $paragraphs) }}
+    @else
+        <h2>No Lorem Yet!</h2>
+    @endif
+@stop
+
+{{--
+This `body` section will be yielded right before the closing </body> tag.
+Use it to add specific things that *this* View needs at the end of the body,
+such as a page specific JavaScript files.
+--}}
+
+@section('body')
+    <script src="/js/lorem-ipsum/index.js"></script>
+@stop
