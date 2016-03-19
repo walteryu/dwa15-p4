@@ -11,7 +11,7 @@ such as a page specific stylesheets.
 --}}
 
 @section('head')
-    <link href="/css/random-user/index.css" type='text/css' rel='stylesheet'>
+    <link href="/css/lorem-ipsum/index.css" type='text/css' rel='stylesheet'>
 @stop
 
 @section('content')
