@@ -29,9 +29,7 @@ class LoremIpsumController extends Controller
     public function postCreate(Request $request)
     {
       $this->validate($request,[
-        'count' => 'required'
-        // 'title' => 'required|min:3',
-        // 'author' => 'required'
+        'count' => 'required|digits:1'
       ]);
 
       $generator = new \LoremIpsumGenerator();
