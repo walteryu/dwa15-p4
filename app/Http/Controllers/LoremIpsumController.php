@@ -40,7 +40,7 @@ class LoremIpsumController extends Controller
       $paragraphs = $generator->getParagraphs($request->input('count'));
       // echo implode('<p>', $paragraphs);
 
-      return view('lorem-ipsum.show')->with('paragraphs', $paragraphs);
+      return view('lorem-ipsum.create')->with('paragraphs', $paragraphs);
     }
 
     /**
