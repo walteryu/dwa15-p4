@@ -40,7 +40,7 @@ such as a page specific stylesheets.
             @if(isset($paragraphs))
                 {{ implode('<p>', $paragraphs) }}
             @else
-                <h2>No Lorem Yet!</h2>
+                <h3>No Lorem Yet!</h3>
             @endif
         </section>
 
