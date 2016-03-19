@@ -33,19 +33,6 @@ such as a page specific stylesheets.
            <div class='error'>{{ $errors->first('count') }}</div>
         </div>
 
-        <!--
-          <div class='form-group'>
-             <label>* Author:</label>
-             <input
-                 type='text'
-                 id='author'
-                 name='author'
-                 value='{{ old('author') }}'
-             >
-             <div class='error'>{{ $errors->first('author') }}</div>
-          </div>
-        -->
-
         <button type="submit" class="btn btn-primary">Add Some Lorem!</button>
 
         <section>
