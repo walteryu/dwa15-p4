@@ -4,6 +4,16 @@
     Create Some Lorem
 @stop
 
+{{--
+This `head` section will be yielded right before the closing </head> tag.
+Use it to add specific things that *this* View needs in the head,
+such as a page specific stylesheets.
+--}}
+
+@section('head')
+    <link href="/css/random-user/index.css" type='text/css' rel='stylesheet'>
+@stop
+
 @section('content')
 
     <h3>Create Some Lorem</h3>
