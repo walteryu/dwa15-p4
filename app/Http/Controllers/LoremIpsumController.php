@@ -21,14 +21,40 @@ class LoremIpsumController extends Controller
       return view('lorem-ipsum.index');
     }
 
+    public function getCreate()
+    {
+      return view('lorem-ipsum.create');
+    }
+
+    public function postCreate(Request $request) {
+
+      $this->validate($request,[
+        'count' => 'required'
+        // 'title' => 'required|min:3',
+        // 'author' => 'required'
+      ]);
+
+      // return 'Added Some Lorem: '.$request->input('count');
+
+      $generator = new \LoremIpsumGenerator();
+      $paragraphs = $generator->getParagraphs($request->input('count'));
+      // echo implode('<p>', $paragraphs);
+
+      return view('lorem-ipsum.show')->with('paragraphs', $paragraphs);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function getShow($count)
+    public function getShow($count = null)
     {
-      return 'Paragraph Count: '.$count;
+      $generator = new \LoremIpsumGenerator();
+      $paragraphs = $generator->getParagraphs($count);
+      // echo implode('<p>', $paragraphs);
+
+      return view('lorem-ipsum.show')->with('paragraphs', $paragraphs);
     }
 
     /**
