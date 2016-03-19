@@ -10,6 +10,12 @@ Random text is generated based on user input...
 
 Random users is generated based on user input...
 
+## TODO
+* Add JS/CSS
+* Clean DO deploy
+* Include form options
+* Add carbon date/time package
+
 ## Demo
 YouTube video is submitting using personal project account (StormSavvy), which contains my other coding demos:
 
