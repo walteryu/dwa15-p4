@@ -15,7 +15,7 @@
         @if(isset($paragraphs))
             {{ implode('<p>', $paragraphs) }}
         @else
-            <h1>No Lorem!</h1>
+            <h1>No Lorem Yet!</h1>
         @endif
     </section>
 
