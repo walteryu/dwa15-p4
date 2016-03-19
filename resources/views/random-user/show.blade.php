@@ -15,18 +15,19 @@ such as a page specific stylesheets.
 @stop
 
 @section('content')
-    <h1>Random Users...</h1>
+    <h2>Random Users Array...</h2>
     </br>
-    @if(isset($user))
+    @forelse($users as $user)
+        <p>
         {{ $user->name }}
-        <br>
+        <p>
         {{ $user->email }}
-        <br>
+        <p>
         {{ $user->address }}
-        <br>
-    @else
-        <h1>No Users Yet!</h1>
-    @endif
+        <p>
+    @empty
+        <h2>No User Array Yet!</h2>
+    @endforelse
 @stop
 
 {{--
