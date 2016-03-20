@@ -19,29 +19,30 @@ class LoremIpsumController extends Controller
      */
     public function getIndex()
     {
-      return view('lorem-ipsum.index');
+        $date_time = \Carbon\Carbon::now('America/Los_Angeles');
+        return view('lorem-ipsum.index')->with('date_time', $date_time);;
     }
 
     public function getCreate()
     {
-      $paragraphs[] = 'No Lorem Generated Yet';
-      return view('lorem-ipsum.create')->with('paragraphs', $paragraphs);
+        $paragraphs[] = 'No Lorem Generated Yet';
+        return view('lorem-ipsum.create')->with('paragraphs', $paragraphs);
     }
 
     public function postCreate(Request $request)
     {
-      $this->validate($request,[
-        'count' => 'required|digits:1'
-      ]);
+        $this->validate($request,[
+            'count' => 'required|digits:1'
+        ]);
 
-      $generator = new \LoremIpsumGenerator();
-      $paragraphs = $generator->getParagraphs($request->input('count'));
+        $generator = new \LoremIpsumGenerator();
+        $paragraphs = $generator->getParagraphs($request->input('count'));
 
-      if ($request->input == 'add_random' ) {
-          shuffle($paragraphs);
-      }
+        if ($request->input == 'add_random' ) {
+            shuffle($paragraphs);
+        }
 
-      return view('lorem-ipsum.create')->with('paragraphs', $paragraphs);
+        return view('lorem-ipsum.create')->with('paragraphs', $paragraphs);
     }
 
     /**
