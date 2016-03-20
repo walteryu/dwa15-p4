@@ -52,7 +52,7 @@ such as a page specific stylesheets.
                 <p>
                 {{ $paragraph }}
             @empty
-                <h3>No Lorem Array Yet!</h3>
+                <h3>No Random Text Created Yet</h3>
             @endforelse
         </section>
 
