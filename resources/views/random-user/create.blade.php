@@ -45,7 +45,7 @@ such as a page specific stylesheets.
            <label>Generate User Email?</label>
            <div class='error'>{{ $errors->first('add_email') }}</div>
         </div>
-
+ 
         <div class='form-group'>
            <input
                type='checkbox'
@@ -60,28 +60,29 @@ such as a page specific stylesheets.
         <button type="submit" class="btn btn-primary">Create Random Users</button>
 
         <section>
-          <h3>Random Users Below (Example Shown If None Generated Yet) </h3>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>User Name</th>
-                <th>User Email</th>
-                <th>User Address</th>
-              </tr>
-            </thead>
-            <tbody>
-              @forelse($user_data as $users)
-                <td>
-                  @foreach($users as $user)
-                    <p>
-                    {{ $user }}
-                  @endforeach
-                </td>
-              @empty
-                  <h3>No User Array Yet!</h3>
-              @endforelse
-            </tbody>
-          </table>
+          <h3>Random Users Below</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>User Email</th>
+                        <th>User Address</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @forelse($user_data as $users)
+                        <td>
+                            @foreach($users as $user)
+                                <p>
+                                {{ $user }}
+                            @endforeach
+                        </td>
+                    @empty
+                        <h3>No User Generated Yet</h3>
+                    @endforelse
+                </tbody>
+            </table>
         </section>
 
         {{--
