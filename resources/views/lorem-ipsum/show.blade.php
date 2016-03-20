@@ -30,5 +30,5 @@ such as a page specific JavaScript files.
 --}}
 
 @section('body')
-    <script src="/js/lorem-ipsum/index.js"></script>
+    <script src="/js/lorem-ipsum.js"></script>
 @stop
