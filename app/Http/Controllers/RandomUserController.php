@@ -60,7 +60,7 @@ class RandomUserController extends Controller
         'count' => 'required|digits:1'
       ]);
 
-      for ($x = 0; $x <= $count; $x++) {
+      for ($x = 0; $x <= $request->input('count'); $x++) {
           $user = \Faker\Factory::create();
           $users[] = $user;
       }
