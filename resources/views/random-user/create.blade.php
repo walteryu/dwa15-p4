@@ -33,23 +33,53 @@ such as a page specific stylesheets.
            <div class='error'>{{ $errors->first('count') }}</div>
         </div>
 
+        <div class='form-group'>
+           <input
+               type='checkbox'
+               id='add_email'
+               name='add_email'
+               value='{{ old('add_email') }}'
+           >
+           <label>Generate User Email?</label>
+           <div class='error'>{{ $errors->first('add_email') }}</div>
+        </div>
+
+        <div class='form-group'>
+           <input
+               type='checkbox'
+               id='add_address'
+               name='add_address'
+               value='{{ old('add_address') }}'
+           >
+           <label>Generate User Address?</label>
+           <div class='error'>{{ $errors->first('add_address') }}</div>
+        </div>
+
         <button type="submit" class="btn btn-primary">Create Random Users</button>
 
         <section>
           <h3>Random Users Below (Example Shown If None Generated Yet) </h3>
-          @forelse($users as $user)
-              <p>
-              {{ $user->name }}
-              @if($request->input('email') == 'add_email')
-                <p>
-                {{ $user->email }}
-              @endif
-              <p>
-              {{ $user->address }}
-              <p>
-          @empty
-              <h3>No User Array Yet!</h3>
-          @endforelse
+          <table class="table">
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>User Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              @forelse($user_data as $users)
+                <td>
+                  @foreach($users as $user)
+                    <p>
+                    {{ $user }}
+                  @endforeach
+                </td>
+              @empty
+                  <h3>No User Array Yet!</h3>
+              @endforelse
+            </tbody>
+          </table>
         </section>
 
         {{--
