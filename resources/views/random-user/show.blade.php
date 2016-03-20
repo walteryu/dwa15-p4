@@ -37,5 +37,5 @@ such as a page specific JavaScript files.
 --}}
 
 @section('body')
-    <script src="/js/random-user/index.js"></script>
+    <script src="/js/random-user.js"></script>
 @stop
