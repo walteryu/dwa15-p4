@@ -33,15 +33,27 @@ such as a page specific stylesheets.
            <div class='error'>{{ $errors->first('count') }}</div>
         </div>
 
+        <div class='form-group'>
+           <label>* Add User Email:</label>
+           <input
+               type='checkbox'
+               id='email'
+               name='email'
+               value='add_email'
+           >
+           <div class='error'>{{ $errors->first('email') }}</div>
+        </div>
+
         <button type="submit" class="btn btn-primary">Add Some Lorem!</button>
 
         <section>
             <br>
-            @if(isset($paragraphs))
-                {{ implode('<p>', $paragraphs) }}
-            @else
-                <h3>No Lorem Yet!</h3>
-            @endif
+            @forelse($paragraphs as $paragraph)
+                <p>
+                {{ $paragraph }}
+            @empty
+                <h3>No Lorem Array Yet!</h3>
+            @endforelse
         </section>
 
         {{--
