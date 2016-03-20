@@ -57,7 +57,8 @@ class RandomUserController extends Controller
     public function postCreate(Request $request)
     {
       $this->validate($request,[
-        'count' => 'required|digits:1'
+        'count' => 'required|digits:1',
+        'email'
       ]);
 
       for ($x = 0; $x <= $request->input('count'); $x++) {
