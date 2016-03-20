@@ -21,31 +21,25 @@
     @yield('head')
 
     <link rel="stylesheet" href="{{ URL::asset('css/master.css') }}" />
-
 </head>
 <body>
-
-    <header>
-        <div class="text-center">
+    <div class="container">
+        <header>
             <h2>
-              <a href="/lorem-ipsum">Developer's Best Friend Application</a>
+                <a href="/lorem-ipsum">Developer's Best Friend Application</a>
             </h2>
             <h3>Lorem Ipsum & Random User Generator</h3>
-        </div>
-    </header>
+        </header>
 
-    <section>
-        {{-- Main page content will be yielded here --}}
-        <div class="container">
+        <section>
+            {{-- Main page content will be yielded here --}}
             @yield('content')
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
+        <footer>
             &copy; {{ date('Y') }}
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
