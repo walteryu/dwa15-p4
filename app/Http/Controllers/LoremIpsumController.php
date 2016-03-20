@@ -23,7 +23,8 @@ class LoremIpsumController extends Controller
 
     public function getCreate()
     {
-      return view('lorem-ipsum.create');
+      $paragraphs[] = 'No Lorem Generated Yet';
+      return view('lorem-ipsum.create')->with('paragraphs', $paragraphs);
     }
 
     public function postCreate(Request $request)
