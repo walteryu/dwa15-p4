@@ -28,6 +28,6 @@ Checkbox input is verified using if statement and errors are caught using flash 
 
 ## References & Outside Code
 * [Bootstrap](http://getbootstrap.com/) - Called as CDN Asset
+* [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Reference for Controllers/Views
 * [Subtle Patterns](http://subtlepatterns.com/symphony/) - Background Image, Set Inside Stylesheet
-* [Bootstrap Documentation](https://v4-alpha.getbootstrap.com/components/forms/) - Referenced for Form Elements
-* [Random Word Generator](http://listofrandomwords.com/) - Referenced for Generating Words List Array
+* [Bootstrap Documentation](https://v5-alpha.getbootstrap.com/components/forms/) - Referenced for Form Elements
