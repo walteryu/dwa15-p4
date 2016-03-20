@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-  Lorem Ipsum Generator
+    Lorem Ipsum Generator
 @stop
 
 {{--
@@ -15,14 +15,28 @@ such as a page specific stylesheets.
 @stop
 
 @section('content')
-    <h2>Lorem Ipsum Generator</h2>
     <h4>
-      <a href="/lorem-ipsum/create">Generate Random Text Here...</a>
+        Welcome! Pacific Standard Time (PST) is now:
+        {{ $date_time }}
     </h4>
 
-    <h2>Random User Generator</h2>
+    <br><h3>Lorem Ipsum Generator</h3>
+    <blockquote class="blockquote">
+        Random text is useful in web development and publishing as a spaceholder for
+        layout/planning purposes;<p>
+        This application generates random Latin text (Lorem Ipsum) and offers text shuffling.
+    </blockquote>
     <h4>
-      <a href="/random-user/create">Generate Random Users Here...</a>
+        <a href="/lorem-ipsum/create">Generate Random Text Here...</a>
+    </h4>
+
+    <br><h3>Random User Generator</h3>
+    <blockquote class="blockquote">
+        Random users are useful in web development for testing and development purposes;<p>
+        This application generates user name, email and street address.
+    </blockquote>
+    <h4>
+        <a href="/random-user/create">Generate Random Users Here...</a>
     </h4>
 @stop
 
