@@ -40,8 +40,10 @@ such as a page specific stylesheets.
           @forelse($users as $user)
               <p>
               {{ $user->name }}
-              <p>
-              {{ $user->email }}
+              @if($request->input('email') == 'add_email')
+                <p>
+                {{ $user->email }}
+              @endif
               <p>
               {{ $user->address }}
               <p>
