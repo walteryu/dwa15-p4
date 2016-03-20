@@ -27,9 +27,9 @@
 
     <header>
         <div class="text-center">
-            <h1>
+            <h2>
               <a href="/lorem-ipsum">Developer's Best Friend Application</a>
-            </h1>
+            </h2>
             <h3>Lorem Ipsum & Random User Generator</h3>
         </div>
     </header>
