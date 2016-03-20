@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "80f3af9a69816203f125f68fef6ae495",
-    "content-hash": "8019425f11d9bc9efbb4572f6745e639",
+    "hash": "447c7f1b48deca1e1545ad14f51935ca",
+    "content-hash": "f4ac9515a157ecef591abaacb6b58447",
     "packages": [
         {
             "name": "badcow/lorem-ipsum",
