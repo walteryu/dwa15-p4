@@ -49,24 +49,58 @@ class RandomUserController extends Controller
     public function getCreate()
     {
       $user = \Faker\Factory::create();
-      $users[] = $user;
+      $user_name[] = $user->name;
+      $user_email[] = $user->email;
+      $user_address[] = $user->address;
 
-      return view('random-user.create')->with('users', $users);
+      $user_data[] = $user_name;
+      $user_data[] = $user_email;
+      $user_data[] = $user_address;
+
+      return view('random-user.create')->with('user_data', $user_data);
     }
 
     public function postCreate(Request $request)
     {
       $this->validate($request,[
         'count' => 'required|digits:1',
-        'email'
+        'add_email',
+        'add_address'
       ]);
 
       for ($x = 0; $x <= $request->input('count'); $x++) {
           $user = \Faker\Factory::create();
           $users[] = $user;
+          $user_name[] = $user->name;
       }
 
-      return view('random-user.create')->with('users', $users);
+      if ($request->input == 'add_email' ) {
+          foreach($users as $user) {
+              $user_email[] = $user->email;
+          }
+      }
+      else {
+          foreach($users as $user) {
+              $user_email[] = 'No Email Requested';
+          }
+      }
+
+      if ($request->input == 'add_address' ) {
+          foreach($users as $user) {
+              $user_address[] = $user->address;
+          }
+      }
+      else {
+          foreach($users as $user) {
+              $user_address[] = 'No Address Requested';
+          }
+      }
+
+      $user_data[] = $user_name;
+      $user_data[] = $user_email;
+      $user_data[] = $user_address;
+
+      return view('random-user.create')->with('user_data', $user_data);
     }
 
     /**
