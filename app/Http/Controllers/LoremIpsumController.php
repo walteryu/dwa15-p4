@@ -36,6 +36,10 @@ class LoremIpsumController extends Controller
       $generator = new \LoremIpsumGenerator();
       $paragraphs = $generator->getParagraphs($request->input('count'));
 
+      if ($request->input == 'add_random' ) {
+          shuffle($paragraphs);
+      }
+
       return view('lorem-ipsum.create')->with('paragraphs', $paragraphs);
     }
 
