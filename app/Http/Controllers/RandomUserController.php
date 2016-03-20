@@ -8,6 +8,7 @@ use P3\Http\Requests;
 use P3\Http\Controllers\Controller;
 
 use P3\Vendor\Faker\Factory;
+use P3\Vendor\Nesbot\Carbon\src;
 
 class RandomUserController extends Controller
 {
