@@ -16,7 +16,7 @@ such as a page specific stylesheets.
 
 @section('content')
 
-    <h3>Create Some Lorem</h3>
+    <h3>Create Random Text</h3>
 
     <form method='POST' action='/lorem-ipsum/create'>
 
