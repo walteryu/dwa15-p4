@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use P3\Http\Requests;
 use P3\Http\Controllers\Controller;
 
+use P3\Vendor\Nesbot\Carbon\src;
 use P3\Vendor\Badcow\LoremIpsum\Generator;
 
 class LoremIpsumController extends Controller
