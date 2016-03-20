@@ -4,17 +4,14 @@
 <http://p3.walteryu.pw>
 
 ## Description
-Lorem ipsum and random user generator that accepts user input and returns the specified random text (lorem ipsum) and random users.
+Random text/user generator that generates random text (lorem ipsum) and random users based on user input.
 
 Random text is generated based on user input...
 
 Random users is generated based on user input...
 
 ## TODO
-* Add JS/CSS
-* Clean DO deploy
-* Include form options
-* Add carbon date/time package
+* Add JS validation
 
 ## Demo
 YouTube video is submitting using personal project account (StormSavvy), which contains my other coding demos:
