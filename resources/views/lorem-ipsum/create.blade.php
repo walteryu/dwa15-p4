@@ -34,17 +34,17 @@ such as a page specific stylesheets.
         </div>
 
         <div class='form-group'>
-           <label>* Add User Email:</label>
            <input
                type='checkbox'
-               id='email'
-               name='email'
-               value='add_email'
+               id='add_random'
+               name='add_random'
+               value='{{ old('add_random') }}'
            >
-           <div class='error'>{{ $errors->first('email') }}</div>
+           <label>Shuffle Paragraphs?</label>
+           <div class='error'>{{ $errors->first('add_random') }}</div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Add Some Lorem!</button>
+        <button type="submit" class="btn btn-primary">Create Random Text</button>
 
         <section>
             <br>
