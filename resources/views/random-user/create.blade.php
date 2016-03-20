@@ -15,8 +15,10 @@ such as a page specific stylesheets.
 @stop
 
 @section('content')
-
-    <h3>Create Some Random Users</h3>
+    <h3>Create Random Users</h3>
+    <blockquote class="blockquote">
+        Create random users below by entering the number between 0-9 and options
+    </blockquote>
 
     <form method='POST' action='/random-user/create'>
 
