@@ -33,7 +33,7 @@ such as a page specific stylesheets.
            <div class='error'>{{ $errors->first('count') }}</div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Add Some Lorem!</button>
+        <button type="submit" class="btn btn-primary">Create Random Users</button>
 
         <section>
           <h3>Random Users Below (Example Shown If None Generated Yet) </h3>
