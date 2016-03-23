@@ -20,12 +20,12 @@ class LoremIpsumController extends Controller
     public function getIndex()
     {
         $date_time = \Carbon\Carbon::now('America/Los_Angeles');
-        return view('lorem-ipsum.index')->with('date_time', $date_time);;
+        return view('lorem-ipsum.index')->with('date_time', $date_time);
     }
 
     public function getCreate()
     {
-        $paragraphs[] = 'No Lorem Generated Yet';
+        $paragraphs[] = 'No Random Text Generated Yet';
         return view('lorem-ipsum.create')->with('paragraphs', $paragraphs);
     }
 
