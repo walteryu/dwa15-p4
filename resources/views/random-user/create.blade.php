@@ -4,18 +4,12 @@
     Random User Generator
 @stop
 
-{{--
-This `head` section will be yielded right before the closing </head> tag.
-Use it to add specific things that *this* View needs in the head,
-such as a page specific stylesheets.
---}}
-
 @section('head')
     <link href="/css/random-user.css" type='text/css' rel='stylesheet'>
 @stop
 
 @section('content')
-    <h3>Create Random Users</h3>
+    <br><h3>Create Random Users</h3>
     <blockquote class="blockquote">
         Create random users below by entering the number between 0-9 and options
     </blockquote>

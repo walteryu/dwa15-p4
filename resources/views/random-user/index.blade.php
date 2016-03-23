@@ -4,18 +4,12 @@
     Show all books
 @stop
 
-{{--
-This `head` section will be yielded right before the closing </head> tag.
-Use it to add specific things that *this* View needs in the head,
-such as a page specific stylesheets.
---}}
-
 @section('head')
     <link href="/css/random-user.css" type='text/css' rel='stylesheet'>
 @stop
 
 @section('content')
-    <h3>Random User Generator</h3>
+    <br><h3>Random User Generator</h3>
 
     <div class="form-group">
       <p>
