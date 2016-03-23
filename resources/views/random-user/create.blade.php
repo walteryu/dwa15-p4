@@ -94,3 +94,7 @@
         </div>
     </form>
 @stop
+
+@section('body')
+    <script src="/js/random-user.js"></script>
+@stop

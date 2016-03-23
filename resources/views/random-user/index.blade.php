@@ -34,9 +34,8 @@
       </p>
     </div>
   </form>
-
 @stop
 
 @section('body')
-    <script src="/js/random-user/index.js"></script>
+    <script src="/js/random-user.js"></script>
 @stop
