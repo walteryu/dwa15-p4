@@ -2,8 +2,7 @@
 <html>
 <head>
     <title>
-        {{-- Yield the title if it exists, otherwise default to 'Foobooks' --}}
-        @yield('title','Foobooks')
+        @yield('title','Developer App')
     </title>
 
     <meta charset='utf-8'>
@@ -17,7 +16,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
     @yield('head')
 
     <link rel="stylesheet" href="{{ URL::asset('css/master.css') }}" />
@@ -25,26 +23,25 @@
 <body>
     <div class="container">
         <header>
-            <h2>
-                <a href="/lorem-ipsum">Developer's Best Friend Application</a>
-            </h2>
+            <h1>
+                <a href="/">Developer's Best Friend Application</a>
+            </h1>
             <h3>Lorem Ipsum & Random User Generator</h3>
         </header>
 
         <section>
-            {{-- Main page content will be yielded here --}}
             @yield('content')
         </section>
 
         <footer>
-            &copy; {{ date('Y') }}
+            <h5>
+              <br><a href="http://subtlepatterns.com/">Background Image Provided by Subtle Patterns</a><br>
+            </h5>
         </footer>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
     @yield('body')
-
 </body>
 </html>
