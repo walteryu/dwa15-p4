@@ -62,7 +62,7 @@ class RandomUserController extends Controller
             $user_name[] = $user->name;
         }
 
-        if ($request->input == 'add_email' ) {
+        if ($request->input('add_email') == 'add_email' ) {
             foreach($users as $user) {
                 $user_email[] = $user->email;
             }
