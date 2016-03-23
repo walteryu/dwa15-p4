@@ -34,18 +34,18 @@
                type='checkbox'
                id='add_email'
                name='add_email'
-               value='{{ old('add_email') }}'
+               value='add_email'
            >
            <label>Generate User Email?</label>
            <div class='error'>{{ $errors->first('add_email') }}</div>
         </div>
- 
+
         <div class='form-group'>
            <input
                type='checkbox'
                id='add_address'
                name='add_address'
-               value='{{ old('add_address') }}'
+               value='add_address'
            >
            <label>Generate User Address?</label>
            <div class='error'>{{ $errors->first('add_address') }}</div>
