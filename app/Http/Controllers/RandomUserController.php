@@ -73,7 +73,7 @@ class RandomUserController extends Controller
             }
         }
 
-        if ($request->input == 'add_address' ) {
+        if ($request->input('add_address') == 'add_address' ) {
             foreach($users as $user) {
                 $user_address[] = $user->address;
             }
