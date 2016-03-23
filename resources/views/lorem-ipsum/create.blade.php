@@ -64,3 +64,7 @@
         </div>
     </form>
 @stop
+
+@section('body')
+    <script src="/js/lorem-ipsum.js"></script>
+@stop
