@@ -15,8 +15,7 @@
         Create random users below by entering the number between 0-9 and options
     </blockquote>
 
-    <form method='POST' action='/random-user/create'>
-
+    <form id="random-user" method='POST' action='/random-user/create'>
         {{ csrf_field() }}
 
         <div class='form-group'>
