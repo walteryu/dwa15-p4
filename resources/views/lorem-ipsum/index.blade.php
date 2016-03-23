@@ -4,21 +4,14 @@
     Lorem Ipsum Generator
 @stop
 
-{{--
-This `head` section will be yielded right before the closing </head> tag.
-Use it to add specific things that *this* View needs in the head,
-such as a page specific stylesheets.
---}}
-
 @section('head')
     <link href="/css/lorem-ipsum.css" type='text/css' rel='stylesheet'>
 @stop
 
 @section('content')
-    <h4>
-        Welcome! Pacific Standard Time (PST) is now:
-        {{ $date_time }}
-    </h4>
+    <h5>
+        Welcome! Pacific Standard Time (PST) is now: {{ $date_time }}
+    </h5>
 
     <br><h3>Lorem Ipsum Generator</h3>
     <blockquote class="blockquote">
