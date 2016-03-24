@@ -43,4 +43,4 @@ jQuery(document).ready(function () {
             .closest('.form-group').removeClass('error').addClass('success');
         }
     });
-});
+});(jQuery, window, document);
