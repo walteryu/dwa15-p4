@@ -52,8 +52,7 @@
 
         <button type="submit" class="btn btn-primary">Create Random Users</button>
 
-        <section>
-          <h3>Random Users Below</h3>
+        <section><h3>Random Users Below</h3>
             <table class="table">
                 <thead>
                     <tr>
