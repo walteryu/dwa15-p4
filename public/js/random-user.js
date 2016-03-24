@@ -18,6 +18,23 @@ jQuery(document).ready(function () {
                 required: true
             }
         }
+        messages: {
+            count: {
+                required: "Please enter number count",
+                range: "Please enter number from 0-9"
+            }
+            add_email: {
+                required: "Please enter value",
+            }
+            add_address: {
+                required: "Please enter value",
+            }
+        }
+
+        submitHandler: function(form) {
+            form.submit();
+        }
+
         highlight: function (element) {
             $(element).closest('.form-group').removeClass('success').addClass('error');
         },
