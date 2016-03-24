@@ -6,7 +6,6 @@
 
 @section('head')
     <link href="/css/random-user.css" type='text/css' rel='stylesheet'>
-    <script src="/js/random-user.js"></script>
 @stop
 
 @section('content')
