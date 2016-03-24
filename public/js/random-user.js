@@ -1,11 +1,15 @@
-$(document).ready(function () {
-    $('#random-user').append("Form submitted successfully!");
+jQuery(document).ready(function () {
+    jQuery('#random-user').on('submit', function(){
+        $.post(
+        )
+    });
 
-    $('#random-user').validate({
+    jQuery('#random-user').validate({
         // initialize jquery validation plugin
         rules: {
             count: {
-                required: true
+                required: true,
+                range: [0,9]
             },
             add_email: {
                 required: true
