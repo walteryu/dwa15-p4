@@ -64,12 +64,14 @@
 
                 <tbody>
                     @forelse($user_data as $users)
-                        <td>
-                            @foreach($users as $user)
-                                <p>
-                                {{ $user }}
-                            @endforeach
-                        </td>
+                        <tr>
+                            <td>
+                                @foreach($users as $user)
+                                    <p>
+                                    {{ $user }}
+                                @endforeach
+                            </td>
+                        </tr>
                     @empty
                         <h3>No User Generated Yet</h3>
                     @endforelse
