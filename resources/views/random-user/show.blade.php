@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <br><h3>Random Users Below</h3>
+    <br><h2>Random Users Below</h2>
     </br>
     @forelse($users as $user)
         <p>

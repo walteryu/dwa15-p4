@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <br><h3>Random User Generator</h3>
+    <br><h2>Random User Generator</h2>
 
     <div class="form-group">
       <p>
