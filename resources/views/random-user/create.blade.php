@@ -93,5 +93,8 @@
 @stop
 
 @section('body')
+<!--
     <script src="/js/random-user.js"></script>
+-->
+    <script src="{{ URL::asset('js/random-user.js') }}"></script>
 @stop
