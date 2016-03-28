@@ -65,8 +65,7 @@
                         <tr>
                             <td>
                                 @foreach($users as $user)
-                                    <p>
-                                    {{ $user }}
+                                    <p>{{ $user }}
                                 @endforeach
                             </td>
                         </tr>
