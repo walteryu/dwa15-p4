@@ -27,7 +27,7 @@
             <h1>
                 <a href="/">Developer's Best Friend Application</a>
             </h1>
-            <h3>Lorem Ipsum & Random User Generator</h3>
+            <h2>Lorem Ipsum & Random User Generator</h2>
         </header>
 
         <section>
