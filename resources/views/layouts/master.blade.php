@@ -35,9 +35,9 @@
         </section>
 
         <footer>
-            <h5>
+            <h3>
               <br><a href="http://subtlepatterns.com/">Background Image Provided by Subtle Patterns</a><br>
-            </h5>
+            </h3>
         </footer>
     </div>
 

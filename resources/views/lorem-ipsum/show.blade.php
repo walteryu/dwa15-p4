@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <br><h3>Random Text Below</h3>
+    <br><h2>Random Text Below</h2>
     @if(isset($paragraphs))
         {{ implode('<p>', $paragraphs) }}
     @else

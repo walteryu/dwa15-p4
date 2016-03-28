@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <br><h3>Create Random Users</h3>
+    <br><h2>Create Random Users</h2>
     <blockquote class="blockquote">
         Create random users below by entering the number between 0-9 and options
     </blockquote>
@@ -18,45 +18,69 @@
         {{ csrf_field() }}
 
         <div class='form-group'>
-           <label>* User Count (Between 0-9):</label>
-           <input
-               type='number'
-               id='count'
-               name='count'
-               value='{{ old('count') }}'
-           >
-           <div class='error'>{{ $errors->first('count') }}</div>
+            <div class="container">
+                @foreach ( $errors->all() as $error )
+                    <div class="col-md-4 alert alert-danger">{{ $errors->first('count') }}</div>
+                @endforeach
+            </div>
+            <label>* User Count (Between 0-9):</label>
+            <input
+                type='number'
+                id='count'
+                name='count'
+                value='{{ old('count') }}'
+            >
+            <!--
+                <div class='error'>{{ $errors->first('count') }}</div>
+            -->
         </div>
 
         <div class='form-group'>
-           <input
-               type='checkbox'
-               id='add_email'
-               name='add_email'
-               value='add_email'
-           >
-           <label>Generate User Email?</label>
-           <div class='error'>{{ $errors->first('add_email') }}</div>
+            <div class="container">
+                @foreach ( $errors->all() as $error )
+                    <div class="col-md-4 alert alert-danger">{{ $errors->first('add_email') }}</div>
+                @endforeach
+             </div>
+            <input
+                type='checkbox'
+                id='add_email'
+                name='add_email'
+                value='add_email'
+            >
+            <label>Generate User Email?</label>
+            <!--
+                <div class='error'>{{ $errors->first('add_email') }}</div>
+            -->
         </div>
 
         <div class='form-group'>
-           <input
-               type='checkbox'
-               id='add_address'
-               name='add_address'
-               value='add_address'
-           >
-           <label>Generate User Address?</label>
-           <div class='error'>{{ $errors->first('add_address') }}</div>
+            <div class="container">
+                @foreach ( $errors->all() as $error )
+                    <div class="col-md-4 alert alert-danger">{{ $errors->first('add_address') }}</div>
+                @endforeach
+             </div>
+            <input
+                type='checkbox'
+                id='add_address'
+                name='add_address'
+                value='add_address'
+            >
+            <label>Generate User Address?</label>
+            <!--
+                <div class='error'>{{ $errors->first('add_address') }}</div>
+            -->
         </div>
 
         <button type="submit" class="btn btn-primary">Create Random Users</button>
 
         <section>
+            <h2>Random User Data</h2>
             <table class="table">
                 <thead>
                     <tr>
-                      <h3>Random User Data - Names, Email Addresses & Street Addresses</h3>
+                        <blockquote class="blockquote">
+                            Random User Name, Email Address & Street Address Listed Below
+                        </blockquote>
                     </tr>
                 </thead>
 
@@ -70,7 +94,7 @@
                             </td>
                         </tr>
                     @empty
-                        <h3>No User Generated Yet</h3>
+                        <h2>No User Generated Yet</h2>
                     @endforelse
                 </tbody>
             </table>

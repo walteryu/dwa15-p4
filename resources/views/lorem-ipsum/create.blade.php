@@ -9,7 +9,12 @@
 @stop
 
 @section('content')
-    <br><h3>Create Random Text</h3>
+    <br><h2>Create Random Text</h2>
+
+    <blockquote class="blockquote">
+        Create random text below by entering the number between 0-9 and options
+    </blockquote>
+
 
     <form method='POST' action='/lorem-ipsum/create'>
 
@@ -45,7 +50,7 @@
                 <p>
                 {{ $paragraph }}
             @empty
-                <h3>No Random Text Created Yet</h3>
+                <h2>No Random Text Created Yet</h2>
             @endforelse
         </section>
 

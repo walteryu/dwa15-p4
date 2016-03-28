@@ -9,28 +9,28 @@
 @stop
 
 @section('content')
-    <h5>
+    <h3>
         Welcome! Pacific Standard Time (PST) is now: {{ $date_time }}
-    </h5>
+    </h3>
 
-    <br><h3>Lorem Ipsum Generator</h3>
+    <br><h2>Lorem Ipsum Generator</h2>
     <blockquote class="blockquote">
         Random text is useful in web development and publishing as a spaceholder for
         layout/planning purposes;<p>
         This application generates random Latin text (Lorem Ipsum) and offers text shuffling.
     </blockquote>
-    <h4>
+    <h2>
         <a href="/lorem-ipsum/create">Generate Random Text Here...</a>
-    </h4>
+    </h2>
 
-    <br><h3>Random User Generator</h3>
+    <br><h2>Random User Generator</h2>
     <blockquote class="blockquote">
         Random users are useful in web development for testing and development purposes;<p>
         This application generates user name, email and street address.
     </blockquote>
-    <h4>
+    <h2>
         <a href="/random-user/create">Generate Random Users Here...</a>
-    </h4>
+    </h2>
 @stop
 
 @section('body')
