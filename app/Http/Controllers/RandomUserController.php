@@ -56,7 +56,13 @@ class RandomUserController extends Controller
             'add_address'
         ]);
 
-        for ($x = 0; $x <= $request->input('count') - 1; $x++) {
+        if ($request->input('count') == 0) {
+            $user = \Faker\Factory::create();
+            $users[] = $user;
+            $user_name[] = $user->name;
+        }
+
+        for ($x = 1; $x <= $request->input('count'); $x++) {
             $user = \Faker\Factory::create();
             $users[] = $user;
             $user_name[] = $user->name;
