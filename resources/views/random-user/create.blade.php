@@ -103,22 +103,24 @@
         {{--
         <ul class=''>
             @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
+                <div class="col-md-4 alert alert-danger">{{ $error }}</div>
+                <!--
+                    <li>{{ $error }}</li>
+                -->
             @endforeach
         </ul>
         --}}
 
         <div class='error'>
             @if(count($errors) > 0)
-                Please correct the errors above and try again.
+                <div class="col-md-4 alert alert-danger">
+                    Please correct the errors above and try again.
+                </div>
             @endif
         </div>
     </form>
 @stop
 
 @section('body')
-<!--
-    <script src="/js/random-user.js"></script>
--->
     <script src="{{ URL::asset('js/random-user.js') }}"></script>
 @stop
