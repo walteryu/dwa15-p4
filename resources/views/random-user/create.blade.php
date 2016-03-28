@@ -52,13 +52,11 @@
 
         <button type="submit" class="btn btn-primary">Create Random Users</button>
 
-        <section><h3>Random Users Below</h3>
+        <section>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>User Name</th>
-                        <th>User Email</th>
-                        <th>User Address</th>
+                      <h3>Random User Data - Names, Email Addresses & Street Addresses</h3>
                     </tr>
                 </thead>
 
