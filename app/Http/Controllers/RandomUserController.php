@@ -1,7 +1,6 @@
 <?php
 
 namespace P3\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 use P3\Http\Requests;
@@ -12,11 +11,6 @@ use P3\Vendor\Nesbot\Carbon\src;
 
 class RandomUserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function getIndex()
     {
         return view('random-user.index');
@@ -89,22 +83,10 @@ class RandomUserController extends Controller
                 $user_address[] = 'No Address Generated';
             }
         }
-
         $user_data[] = $user_name;
         $user_data[] = $user_email;
         $user_data[] = $user_address;
 
         return view('random-user.create')->with('user_data', $user_data);
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 }
