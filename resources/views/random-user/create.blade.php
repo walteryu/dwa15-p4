@@ -52,17 +52,9 @@
                 value='add_email'
             >
             <label>Generate User Email?</label>
-            <!--
-                <div class='error'>{{ $errors->first('add_email') }}</div>
-            -->
         </div>
 
         <div class='form-group'>
-            <div class="container">
-                @foreach ( $errors->all() as $error )
-                    <div class="col-md-4 alert alert-danger">{{ $errors->first('add_address') }}</div>
-                @endforeach
-             </div>
             <input
                 type='checkbox'
                 id='add_address'
