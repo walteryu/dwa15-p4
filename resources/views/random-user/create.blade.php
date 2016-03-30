@@ -62,9 +62,6 @@
                 value='add_address'
             >
             <label>Generate User Address?</label>
-            <!--
-                <div class='error'>{{ $errors->first('add_address') }}</div>
-            -->
         </div>
 
         <button type="submit" class="btn btn-primary">Create Random Users</button>
