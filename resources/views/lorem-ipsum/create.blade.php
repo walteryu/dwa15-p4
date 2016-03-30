@@ -52,7 +52,6 @@
                value='{{ old('add_random') }}'
            >
            <label>Shuffle Paragraphs?</label>
-           <div class='error'>{{ $errors->first('add_random') }}</div>
         </div>
 
         <button type="submit" class="btn btn-primary">Create Random Text</button>
@@ -66,20 +65,6 @@
                 <h2>No Random Text Created Yet</h2>
             @endforelse
         </section>
-
-        {{--
-        <ul class=''>
-            @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-        --}}
-
-        <div class='error'>
-            @if(count($errors) > 0)
-                Please correct the errors above and try again.
-            @endif
-        </div>
     </form>
 @stop
 
