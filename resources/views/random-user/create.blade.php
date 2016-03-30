@@ -20,6 +20,7 @@
         <div class='form-group'>
             <div class="container">
                 @foreach ( $errors->all() as $error )
+                    <!-- Reference: https://laravel.com/docs/5.2/validation -->
                     <div class="col-md-4 alert alert-danger">{{ $errors->first('count') }}</div>
                 @endforeach
             </div>
