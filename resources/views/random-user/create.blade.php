@@ -42,17 +42,9 @@
                 name='count'
                 value='{{ old('count') }}'
             >
-            <!--
-                <div class='error'>{{ $errors->first('count') }}</div>
-            -->
         </div>
 
         <div class='form-group'>
-            <div class="container">
-                @foreach ( $errors->all() as $error )
-                    <div class="col-md-4 alert alert-danger">{{ $errors->first('add_email') }}</div>
-                @endforeach
-             </div>
             <input
                 type='checkbox'
                 id='add_email'
