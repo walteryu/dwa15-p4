@@ -12,11 +12,6 @@ use P3\Vendor\Badcow\LoremIpsum\Generator;
 
 class LoremIpsumController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function getIndex()
     {
         $date_time = \Carbon\Carbon::now('America/Los_Angeles');
@@ -45,27 +40,11 @@ class LoremIpsumController extends Controller
         return view('lorem-ipsum.create')->with('paragraphs', $paragraphs);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function getShow($count = null)
     {
         $generator = new \LoremIpsumGenerator();
         $paragraphs = $generator->getParagraphs($count);
 
         return view('lorem-ipsum.show')->with('paragraphs', $paragraphs);
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 }
