@@ -10,20 +10,31 @@
 
 @section('content')
     <br><h2>Create Random Users</h2>
+
     <blockquote class="blockquote">
         Create random users below by entering the number between 0-9 and options
     </blockquote>
 
     <form id="random-user" method='POST' action='/random-user/create'>
+
         {{ csrf_field() }}
 
         <div class='form-group'>
             <div class="container">
-                @foreach ( $errors->all() as $error )
-                    <!-- Reference: https://laravel.com/docs/5.2/validation -->
-                    <div class="col-md-4 alert alert-danger">{{ $errors->first('count') }}</div>
-                @endforeach
+                <div class="error">
+                    @if(count($errors) > 0)
+                        <!-- Reference: https://laravel.com/docs/6.2/validation -->
+                        <div class="col-md-4 alert alert-danger">
+                            Please correct the errors below and try again:
+                            <p>
+                            @foreach ( $errors->all() as $error )
+                                {{ $error }}
+                            @endforeach
+                        </div>
+                    @endif
+                </div>
             </div>
+
             <label>* User Count (Between 0-9):</label>
             <input
                 type='number'
