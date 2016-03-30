@@ -42,7 +42,6 @@
                name='count'
                value='{{ old('count') }}'
            >
-           <div class='error'>{{ $errors->first('count') }}</div>
         </div>
 
         <div class='form-group'>
