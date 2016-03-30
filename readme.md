@@ -38,4 +38,4 @@ validation but abandoned due to time constraints.
 * [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Reference for Controllers/Views
 * [Subtle Patterns](http://subtlepatterns.com) - Background Image, Set Inside Stylesheet
 * [Bootstrap Documentation](https://v5-alpha.getbootstrap.com/components/forms) - Referenced for Form Elements
-* [Laravel Docs](https://laravel.com/docs/5.1/validation) - Referenced for HTML form validation/error handling
+* [Laravel Docs](https://laravel.com/docs/5.1/validation) - Referenced for HTML Form Validation/Error Handling
