@@ -92,25 +92,6 @@
                 </tbody>
             </table>
         </section>
-
-        {{--
-        <ul class=''>
-            @foreach($errors->all() as $error)
-                <div class="col-md-4 alert alert-danger">{{ $error }}</div>
-                <!--
-                    <li>{{ $error }}</li>
-                -->
-            @endforeach
-        </ul>
-        --}}
-
-        <div class='error'>
-            @if(count($errors) > 0)
-                <div class="col-md-4 alert alert-danger">
-                    Please correct the errors above and try again.
-                </div>
-            @endif
-        </div>
     </form>
 @stop
 
