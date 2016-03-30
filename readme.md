@@ -33,6 +33,9 @@ Form validation is handled both server-side (controller validation methods) and
 client-side (HTML5 validation methods); jQuery was considered for client-side
 validation but abandoned due to time constraints.
 
+Commits are made using "git add -p" command; hence they are small/atomic
+in nature.
+
 ## References & Outside Code
 * [Bootstrap](http://getbootstrap.com) - Called as CDN Asset
 * [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Reference for Controllers/Views
