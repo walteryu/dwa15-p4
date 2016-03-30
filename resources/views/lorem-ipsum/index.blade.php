@@ -19,18 +19,18 @@
         layout/planning purposes;<p>
         This application generates random Latin text (Lorem Ipsum) and offers text shuffling.
     </blockquote>
-    <h2>
+    <h3>
         <a href="/lorem-ipsum/create">Generate Random Text Here...</a>
-    </h2>
+    </h3>
 
     <br><h2>Random User Generator</h2>
     <blockquote class="blockquote">
         Random users are useful in web development for testing and development purposes;<p>
         This application generates user name, email and street address.
     </blockquote>
-    <h2>
+    <h3>
         <a href="/random-user/create">Generate Random Users Here...</a>
-    </h2>
+    </h3>
 @stop
 
 @section('body')
