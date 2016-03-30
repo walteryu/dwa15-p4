@@ -1,4 +1,4 @@
-# HES, DWA-15 P3 - Lorem Ipsum & Random User Generator
+# HES, DWA-15 P3 - Random Text & User Generator
 
 ## Live URL
 <http://p3.walteryu.pw>
@@ -34,7 +34,8 @@ client-side (HTML5 validation methods); jQuery was considered for client-side
 validation but abandoned due to time constraints.
 
 ## References & Outside Code
-* [Bootstrap](http://getbootstrap.com/) - Called as CDN Asset
+* [Bootstrap](http://getbootstrap.com) - Called as CDN Asset
 * [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Reference for Controllers/Views
 * [Subtle Patterns](http://subtlepatterns.com) - Background Image, Set Inside Stylesheet
-* [Bootstrap Documentation](https://v5-alpha.getbootstrap.com/components/forms/) - Referenced for Form Elements
+* [Bootstrap Documentation](https://v5-alpha.getbootstrap.com/components/forms) - Referenced for Form Elements
+* [Laravel Docs](https://laravel.com/docs/5.1/validation) - Referenced for HTML form validation/error handling
