@@ -39,12 +39,4 @@ class LoremIpsumController extends Controller
 
         return view('lorem-ipsum.create')->with('paragraphs', $paragraphs);
     }
-
-    public function getShow($count = null)
-    {
-        $generator = new \LoremIpsumGenerator();
-        $paragraphs = $generator->getParagraphs($count);
-
-        return view('lorem-ipsum.show')->with('paragraphs', $paragraphs);
-    }
 }
