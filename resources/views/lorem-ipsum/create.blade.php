@@ -60,6 +60,7 @@
         @forelse($paragraphs as $paragraph)
             <p>{{ $paragraph }}
         @empty
+            <br>
             <h3>No Random Text Generated Yet</h3>
         @endforelse
     </form>
