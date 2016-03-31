@@ -70,9 +70,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <h3>
-                        Random User Name, Email Address & Street Address Listed Below
-                    </h3>
+                    Random User Name, Email Address & Street Address Listed Below
                 </tr>
             </thead>
 
