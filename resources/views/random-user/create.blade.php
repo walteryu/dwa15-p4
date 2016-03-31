@@ -66,31 +66,29 @@
 
         <button type="submit" class="btn btn-primary">Create Random Users</button>
 
-        <section>
-            <h2>Random User Data</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <h3>
-                            Random User Name, Email Address & Street Address Listed Below
-                        </h3>
-                    </tr>
-                </thead>
+        <h2>Random User Data</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <h3>
+                        Random User Name, Email Address & Street Address Listed Below
+                    </h3>
+                </tr>
+            </thead>
 
-                <tbody>
-                    @forelse($user_data as $users)
-                        <tr>
-                            <td>
-                                @foreach($users as $user)
-                                    <p>{{ $user }}
-                                @endforeach
-                            </td>
-                        </tr>
-                    @empty
-                        <h2>No User Generated Yet</h2>
-                    @endforelse
-                </tbody>
-            </table>
-        </section>
+            <tbody>
+                @forelse($user_data as $users)
+                    <tr>
+                        <td>
+                            @foreach($users as $user)
+                                <p>{{ $user }}
+                            @endforeach
+                        </td>
+                    </tr>
+                @empty
+                    <h2>No User Generated Yet</h2>
+                @endforelse
+            </tbody>
+        </table>
     </form>
 @stop
