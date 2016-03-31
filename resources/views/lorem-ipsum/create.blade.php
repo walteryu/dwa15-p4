@@ -62,12 +62,8 @@
                 <p>
                 {{ $paragraph }}
             @empty
-                <h2>No Random Text Created Yet</h2>
+                <h3>No Random Text Created Yet</h3>
             @endforelse
         </section>
     </form>
-@stop
-
-@section('body')
-    <script src="/js/lorem-ipsum.js"></script>
 @stop
