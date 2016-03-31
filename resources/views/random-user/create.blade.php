@@ -94,7 +94,3 @@
         </section>
     </form>
 @stop
-
-@section('body')
-    <script src="{{ URL::asset('js/random-user.js') }}"></script>
-@stop
