@@ -20,7 +20,7 @@
         This application generates random Latin text (Lorem Ipsum) and offers text shuffling.
     </blockquote>
     <h3>
-        <a href="/lorem-ipsum/create">Generate Random Text Here...</a>
+        <a href="/lorem-ipsum/create">Generate Random Text Here</a>
     </h3>
 
     <br><h2>Random User Generator</h2>
@@ -29,6 +29,6 @@
         This application generates user name, email and street address.
     </blockquote>
     <h3>
-        <a href="/random-user/create">Generate Random Users Here...</a>
+        <a href="/random-user/create">Generate Random Users Here</a>
     </h3>
 @stop
