@@ -66,10 +66,9 @@
 
         <button type="submit" class="btn btn-primary">Create Random Users</button>
 
-        <h2>Random User Data</h2>
+        <h2>Random Users - View Data Below</h2>
         <table class="table">
             <thead>
-                Random User Name, Email Address and Street Address Listed Below
             </thead>
             <br>
             <br>
