@@ -71,9 +71,9 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <blockquote class="blockquote">
+                        <h3>
                             Random User Name, Email Address & Street Address Listed Below
-                        </blockquote>
+                        </h3>
                     </tr>
                 </thead>
 
