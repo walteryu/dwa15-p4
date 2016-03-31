@@ -16,18 +16,6 @@ class RandomUserController extends Controller
         return view('random-user.index');
     }
 
-    public function getShow($count = null)
-    {
-        $user = \Faker\Factory::create();
-
-        for ($x = 0; $x <= $count; $x++) {
-            $user = \Faker\Factory::create();
-            $users[] = $user;
-        }
-
-        return view('random-user.show')->with('users', $users);
-    }
-
     public function getCreate()
     {
         $user = \Faker\Factory::create();
