@@ -19,12 +19,15 @@ conditions are not met.
 YouTube video is submitting using personal project account (StormSavvy),
 which contains my other coding demos:
 
-[Demo on YouTube]()
+[Demo on YouTube](https://youtu.be/YBKZV8PsGMU)
 
 ## Details for Teaching Team
 
-Lecture videos were referenced for general approaches to starting the
-homework set and class foobooks examples used as starting point for problem set.
+Lecture videos were referenced for general approach and planning to starting the
+homework set and class Foobooks examples used as starting point for problem set.
+
+Specifically, view template inheritance is referenced place from Foobooks example.
+Package installation was completed with help during TA sections.
 
 No login is required since there are no user accounts; POST/create forms
 are protected against CSRF attacks with the csrf_field() method.
