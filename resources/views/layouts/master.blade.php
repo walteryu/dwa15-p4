@@ -37,7 +37,7 @@
         <footer>
             <br>
             <h4>
-              <a href="http://subtlepatterns.com/">Background Image Provided by Subtle Patterns</a>
+                Background Image Provided by <a href="http://subtlepatterns.com/">Subtle Patterns</a>
             </h4>
             <br>
         </footer>
