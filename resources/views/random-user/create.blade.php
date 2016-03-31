@@ -70,8 +70,6 @@
         <table class="table">
             <thead>
             </thead>
-            <br>
-            <br>
 
             <tbody>
                 @forelse($user_data as $users)
