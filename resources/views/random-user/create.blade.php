@@ -70,9 +70,10 @@
         <table class="table">
             <thead>
                 <tr>
-                    Random User Name, Email Address & Street Address Listed Below
+                    Random User Name, Email Address and Street Address Listed Below
                 </tr>
             </thead>
+            <br></br>
 
             <tbody>
                 @forelse($user_data as $users)
