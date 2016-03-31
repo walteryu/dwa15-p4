@@ -55,15 +55,12 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Create Random Text</button>
+        <br>
 
-        <section>
-            <br>
-            @forelse($paragraphs as $paragraph)
-                <p>
-                {{ $paragraph }}
-            @empty
-                <h3>No Random Text Created Yet</h3>
-            @endforelse
-        </section>
+        @forelse($paragraphs as $paragraph)
+            <p>{{ $paragraph }}
+        @empty
+            <h3>No Random Text Generated Yet</h3>
+        @endforelse
     </form>
 @stop
