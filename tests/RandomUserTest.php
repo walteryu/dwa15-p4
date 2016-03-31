@@ -21,6 +21,9 @@ class RandomUserTest extends TestCase
              ->check('add_address')
              ->press('Create Random Users')
              ->see('The count must be 1 digits')
+             ->see('No User Generated Yet')
+             ->see('No User Email Generated Yet')
+             ->see('No User Address Generated Yet')
              ->seePageIs('/random-user/create');
     }
 }
