@@ -15,7 +15,7 @@ Random users is generated based on user input for number of paragraphs
 between 0-9; user input is validated and error message returned if
 conditions are not met. 
 
-## Demo
+## Video Demo
 YouTube video is submitting using personal project account (StormSavvy),
 which contains my other coding demos:
 
