@@ -32,7 +32,3 @@
         <a href="/random-user/create">Generate Random Users Here...</a>
     </h3>
 @stop
-
-@section('body')
-    <script src="/js/lorem-ipsum.js"></script>
-@stop
