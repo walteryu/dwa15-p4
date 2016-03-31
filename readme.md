@@ -29,16 +29,22 @@ homework set and class foobooks examples used as starting point for problem set.
 No login is required since there are no user accounts; POST/create forms
 are protected against CSRF attacks with the csrf_field() method.
 
+Commits are made on an atomic level using "git add -p" command for clarity during
+development, hence they are small in nature.
+
+## Additional Features
+
 Form validation is handled both server-side (controller validation methods) and
 client-side (HTML5 validation methods); jQuery was considered for client-side
 validation but abandoned due to time constraints.
 
-Commits are made using "git add -p" command; hence they are small/atomic
-in nature.
+PHPUnit has been implemented for test cases located in the /tests directory;
+test suite can be run using either the "phpunit" or "/vendor/bin/phpunit" command.
 
 ## References & Outside Code
 * [Bootstrap](http://getbootstrap.com) - Called as CDN Asset
 * [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Reference for Controllers/Views
 * [Subtle Patterns](http://subtlepatterns.com) - Background Image, Set Inside Stylesheet
 * [Bootstrap Documentation](https://v5-alpha.getbootstrap.com/components/forms) - Referenced for Form Elements
-* [Laravel Docs](https://laravel.com/docs/5.1/validation) - Referenced for HTML Form Validation/Error Handling
+* [Laravel Docs on Testing](https://laravel.com/docs/5.1/testing) - Referenced for PHPUnit testing in Laravel
+* [Laravel Docs on Validation](https://laravel.com/docs/5.1/validation) - Referenced for HTML Form Validation/Error Handling
