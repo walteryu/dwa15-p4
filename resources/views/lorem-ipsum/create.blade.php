@@ -55,7 +55,8 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Create Random Text</button>
-        <br></br>
+        <br>
+        <br>
 
         @forelse($paragraphs as $paragraph)
             <p>{{ $paragraph }}
