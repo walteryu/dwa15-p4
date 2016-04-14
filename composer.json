@@ -7,8 +7,6 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "badcow/lorem-ipsum": "^1.1",
-        "fzaninotto/faker": "^1.5",
         "nesbot/carbon": "^1.21"
     },
     "require-dev": {
