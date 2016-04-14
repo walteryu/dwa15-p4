@@ -1,25 +1,16 @@
-# HES, DWA-15 P3 - Random Text & User Generator
+# HES, DWA-15 P4 - Final Project
 
 ## Live URL
-<http://p3.walteryu.pw>
+<http://p4.walteryu.pw>
 
 ## Description
-Random text/user generator (Developer's Best Friend Application) that 
-generates random text (lorem ipsum) and random users based on user input.
-
-Random text is generated based on user input for number of paragraphs
-between 0-9; user input is validated and error message returned if
-conditions are not met.
-
-Random users is generated based on user input for number of paragraphs
-between 0-9; user input is validated and error message returned if
-conditions are not met. 
+StormSafe is a web application for environmental compliance.
 
 ## Video Demo
 YouTube video is submitting using personal project account (StormSavvy),
 which contains my other coding demos:
 
-[Demo on YouTube](https://youtu.be/YBKZV8PsGMU)
+[Demo on YouTube]()
 
 ## Details for Teaching Team
 
@@ -29,8 +20,7 @@ homework set and class Foobooks examples used as starting point for problem set.
 Specifically, view template inheritance is referenced place from Foobooks example.
 Package installation was completed with help during TA sections.
 
-No login is required since there are no user accounts; POST/create forms
-are protected against CSRF attacks with the csrf_field() method.
+POST/create forms are protected against CSRF attacks with the csrf_field() method.
 
 Commits are made on an atomic level using "git add -p" command for clarity during
 development, hence they are small in nature.
