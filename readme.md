@@ -37,8 +37,12 @@ test suite can be run using either the "phpunit" or "/vendor/bin/phpunit" comman
 Unit tests include coverage of models and database migrations; setup
 completed with help of the following tutorials:
 
-[Unit Testing with Models - TutsPlus](
+[Model Unit Testing - TutsPlus](
 http://code.tutsplus.com/tutorials/testing-like-a-boss-in-laravel-models--net-30087
+)
+
+[Model Unit Testing & Configuration](
+http://www.patrickstephan.me/post/setting-up-a-laravel-5-test-database.html
 )
 
 ## References & Outside Code
