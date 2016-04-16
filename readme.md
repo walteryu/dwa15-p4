@@ -34,6 +34,13 @@ validation but abandoned due to time constraints.
 PHPUnit has been implemented for test cases located in the /tests directory;
 test suite can be run using either the "phpunit" or "/vendor/bin/phpunit" command.
 
+Unit tests include coverage of models and database migrations; setup
+completed with help of the following tutorials:
+
+[Unit Testing with Models - TutsPlus](
+http://code.tutsplus.com/tutorials/testing-like-a-boss-in-laravel-models--net-30087
+)
+
 ## References & Outside Code
 * [Bootstrap](http://getbootstrap.com) - Called as CDN Asset
 * [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Reference for Controllers/Views
