@@ -10,6 +10,15 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
     protected $baseUrl = 'http://localhost';
 
     /**
+      * Default preparation for each test
+     */
+    public function setUp()
+    {
+        parent::setUp();
+        $this->prepareForTests();
+    }
+
+    /**
      * Creates the application.
      *
      * @return \Illuminate\Foundation\Application
