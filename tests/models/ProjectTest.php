@@ -2,7 +2,7 @@
 
 use Zizaco\FactoryMuff\Facade\FactoryMuff;
 
-class PostTest extends TestCase
+class ProjectTest extends TestCase
 {
     public function test_posted_at()
     {
