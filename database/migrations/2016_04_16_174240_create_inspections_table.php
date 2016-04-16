@@ -14,6 +14,18 @@ class CreateInspectionsTable extends Migration
     {
         Schema::create('inspections', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->string('name');
+            $table->string('description');
+            $table->string('address');
+            $table->string('city');
+            $table->string('state', 2); // limit state names to abbreviation
+
+            $table->integer('zipcode');
+            $table->float('lat');
+            $table->float('long');
+            $table->boolean('active');
+
             $table->timestamps();
         });
     }
