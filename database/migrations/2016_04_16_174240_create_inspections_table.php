@@ -18,7 +18,9 @@ class CreateInspectionsTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('address');
-            $table->string('city');
+            $table->string('submitted_by');
+            $table->string('inspected_by');
+
             $table->string('state', 2); // limit state names to abbreviation
 
             $table->integer('zipcode');
