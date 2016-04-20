@@ -14,14 +14,11 @@ class CreateInspectionsTable extends Migration
     {
         Schema::create('inspections', function (Blueprint $table) {
             $table->increments('id');
+            $table->timestamps();
 
             # https://laravel.com/docs/5.2/migrations
             $table->string('name');
             $table->string('description');
-            $table->string('address');
-            $table->string('submitted_by');
-            $table->string('inspected_by');
-
             $table->date('inspection_date');
             $table->text('inspection_location');
 
