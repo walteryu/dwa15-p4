@@ -19,58 +19,75 @@ class CreateProjectsTable extends Migration
             $table->string('description');
             $table->string('address');
             $table->string('city');
-            $table->string('state', 2); // limit state names to abbreviation
+
+            // limit state names to abbreviation
+            $table->string('state', 2);
 
             $table->integer('zipcode');
             $table->float('lat');
             $table->float('long');
             $table->boolean('active');
 
-            $table->string('cost_code');
+            $table->string('tracking_number');
+            $table->string('cost_center');
+            $table->string('project_phase');
             $table->string('wdid_number');
+            $table->string('cgp_number');
             $table->integer('risk_level');
 
-            $table->string('owner_name');
-            $table->string('owner_description');
-            $table->integer('owner_zipcode');
-            $table->string('owner_address');
-            $table->string('owner_city');
-            $table->string('owner_state', 2); // limit state names to abbreviation
+            $table->string('owner_company_name');
+            $table->string('owner_company_description');
+            $table->integer('owner_company_zipcode');
+            $table->string('owner_company_address');
+            $table->string('owner_company_city');
+
+            // limit state names to abbreviation
+            $table->string('owner_company_state', 2);
 
             $table->string('owner_representative');
+            $table->string('owner_title');
             $table->string('owner_phone');
             $table->string('owner_email');
 
-            $table->string('contractor_name');
-            $table->string('contractor_description');
-            $table->integer('contractor_zipcode');
-            $table->string('contractor_address');
-            $table->string('contractor_city');
-            $table->string('contractor_state', 2); // limit state names to abbreviation
+            $table->string('contractor_company_name');
+            $table->string('contractor_company_description');
+            $table->integer('contractor_company_zipcode');
+            $table->string('contractor_company_address');
+            $table->string('contractor_company_city');
+
+            // limit state names to abbreviation
+            $table->string('contractor_company_state', 2);
 
             $table->string('contractor_representative');
+            $table->string('contractor_title');
             $table->string('contractor_phone');
             $table->string('contractor_email');
 
-            $table->string('wpcm_name');
-            $table->string('wpcm_description');
-            $table->integer('wpcm_zipcode');
-            $table->string('wpcm_address');
-            $table->string('wpcm_city');
-            $table->string('wpcm_state', 2); // limit state names to abbreviation
+            $table->string('wpcm_company_name');
+            $table->string('wpcm_company_description');
+            $table->integer('wpcm_company_zipcode');
+            $table->string('wpcm_company_address');
+            $table->string('wpcm_company_city');
+
+            // limit state names to abbreviation
+            $table->string('wpcm_company_state', 2);
 
             $table->string('wpcm_representative');
+            $table->string('wpcm_title');
             $table->string('wpcm_phone');
             $table->string('wpcm_email');
 
-            $table->string('qsp_name');
-            $table->string('qsp_description');
-            $table->integer('qsp_zipcode');
-            $table->string('qsp_address');
-            $table->string('qsp_city');
-            $table->string('qsp_state', 2); // limit state names to abbreviation
+            $table->string('qsp_company_name');
+            $table->string('qsp_company_description');
+            $table->integer('qsp_company_zipcode');
+            $table->string('qsp_company_address');
+            $table->string('qsp_company_city');
+
+            // limit state names to abbreviation
+            $table->string('qsp_company_state', 2);
 
             $table->string('qsp_representative');
+            $table->string('qsp_title');
             $table->string('qsp_phone');
             $table->string('qsp_email');
 
