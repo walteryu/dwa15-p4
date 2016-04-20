@@ -26,6 +26,7 @@ class CreateInspectionsTable extends Migration
             $table->string('inspector_title');
             $table->string('inspector_phone');
             $table->string('inspector_email');
+
             $table->string('inspector_company_name');
             $table->string('inspector_company_address');
             $table->string('inspector_company_state');
@@ -235,8 +236,6 @@ class CreateInspectionsTable extends Migration
             $table->text('discharge_description_2');
             $table->boolean('discharge_sediment_2');
             $table->string('discharge_action_2');
-
-            $table->timestamps();
         });
     }
 
