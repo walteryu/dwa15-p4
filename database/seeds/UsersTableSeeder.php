@@ -11,6 +11,20 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('users')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'name' => 'Jamal Harvard',
+            'email' => 'jamal@harvard.edu',
+            'password' => bcrypt('secret'),
+        ]);
+
+        DB::table('users')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'name' => 'Jill Harvard',
+            'email' => 'jill@harvard.edu',
+            'password' => 'helloworld',
+        ]);
     }
 }
