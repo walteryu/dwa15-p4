@@ -14,6 +14,7 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
+            $table->timestamps();
 
             $table->string('name');
             $table->string('description');
@@ -90,8 +91,6 @@ class CreateProjectsTable extends Migration
             $table->string('qsp_title');
             $table->string('qsp_phone');
             $table->string('qsp_email');
-
-            $table->timestamps();
         });
     }
 
