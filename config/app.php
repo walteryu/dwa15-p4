@@ -155,7 +155,6 @@ return [
         P3\Providers\AuthServiceProvider::class,
         P3\Providers\EventServiceProvider::class,
         P3\Providers\RouteServiceProvider::class,
-
     ],
 
     /*
