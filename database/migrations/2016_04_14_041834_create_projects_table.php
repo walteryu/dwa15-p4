@@ -20,13 +20,11 @@ class CreateProjectsTable extends Migration
             $table->string('description');
             $table->string('address');
             $table->string('city');
-
-            // limit state names to abbreviation
             $table->string('state', 2);
 
             $table->integer('zipcode');
-            $table->float('lat');
-            $table->float('long');
+            $table->float('latitude');
+            $table->float('longtude');
             $table->boolean('active');
 
             $table->string('tracking_number');
@@ -41,8 +39,6 @@ class CreateProjectsTable extends Migration
             $table->integer('owner_company_zipcode');
             $table->string('owner_company_address');
             $table->string('owner_company_city');
-
-            // limit state names to abbreviation
             $table->string('owner_company_state', 2);
 
             $table->string('owner_representative');
@@ -55,8 +51,6 @@ class CreateProjectsTable extends Migration
             $table->integer('contractor_company_zipcode');
             $table->string('contractor_company_address');
             $table->string('contractor_company_city');
-
-            // limit state names to abbreviation
             $table->string('contractor_company_state', 2);
 
             $table->string('contractor_representative');
@@ -69,8 +63,6 @@ class CreateProjectsTable extends Migration
             $table->integer('wpcm_company_zipcode');
             $table->string('wpcm_company_address');
             $table->string('wpcm_company_city');
-
-            // limit state names to abbreviation
             $table->string('wpcm_company_state', 2);
 
             $table->string('wpcm_representative');
@@ -83,8 +75,6 @@ class CreateProjectsTable extends Migration
             $table->integer('qsp_company_zipcode');
             $table->string('qsp_company_address');
             $table->string('qsp_company_city');
-
-            // limit state names to abbreviation
             $table->string('qsp_company_state', 2);
 
             $table->string('qsp_representative');

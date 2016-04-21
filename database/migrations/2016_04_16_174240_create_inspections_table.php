@@ -16,7 +16,6 @@ class CreateInspectionsTable extends Migration
             $table->increments('id');
             $table->timestamps();
 
-            # https://laravel.com/docs/5.2/migrations
             $table->string('name');
             $table->string('description');
             $table->date('inspection_date');
@@ -31,8 +30,6 @@ class CreateInspectionsTable extends Migration
             $table->string('inspector_company_address');
             $table->string('inspector_company_state');
             $table->integer('inspector_company_zipcode');
-
-            // limit state names to abbreviation
             $table->string('inspector_company_state', 2);
 
             $table->string('inspector_company_phone');
