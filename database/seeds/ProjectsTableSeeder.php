@@ -22,8 +22,8 @@ class ProjectsTableSeeder extends Seeder
             'state' => 'CA',
 
             'zipcode' => 94621,
-            'lat' => 37.7125689,
-            'long' => -122.2197428,
+            'latitude' => 37.7125689,
+            'longitude' => -122.2197428,
             'active' => true,
 
             'tracking_number' => str_random(10),
