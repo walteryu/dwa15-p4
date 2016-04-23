@@ -28,7 +28,6 @@ class CreateInspectionsTable extends Migration
 
             $table->string('inspector_company_name');
             $table->string('inspector_company_address');
-            $table->string('inspector_company_state');
             $table->integer('inspector_company_zipcode');
             $table->string('inspector_company_state', 2);
 
