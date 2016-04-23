@@ -19,7 +19,7 @@ class ProjectsTableSeeder extends Seeder
             'description' => 'Runway Renovation',
             'address' => '1 Airport Dr',
             'city' => 'Oakland',
-            'state', 2 => 'CA',
+            'state' => 'CA',
 
             'zipcode' => 94621,
             'lat' => 37.7125689,
@@ -62,7 +62,7 @@ class ProjectsTableSeeder extends Seeder
             'wpcm_company_zipcode' => 94621,
             'wpcm_company_address' => str_random(10),
             'wpcm_company_city' => str_random(10),
-            'wpcm_company_state' => str_random(10),
+            'wpcm_company_state' => 'CA',
 
             'wpcm_representative' => str_random(10),
             'wpcm_title' => str_random(10),
