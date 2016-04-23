@@ -26,5 +26,21 @@ class User extends Authenticatable
 
     public function projects() {
         return $this->hasMany('\App\Project');
+
+        /*
+        $user_projects = \App\Project::with('user')->get();
+
+        foreach($user_projects as $project) {
+              echo $project->user->name.' '.$project->user->email.' has project: '.$project->name.'<br>';
+        }
+
+        dump($user_projects->toArray());
+        */
+
+        $projects = \App\Project::all();
+
+        foreach($projects as $project) {
+              echo $project['name']."<br>";
+        }
     }
 }
