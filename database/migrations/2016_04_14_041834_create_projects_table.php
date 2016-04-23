@@ -24,7 +24,7 @@ class CreateProjectsTable extends Migration
 
             $table->integer('zipcode');
             $table->float('latitude');
-            $table->float('longtude');
+            $table->float('longitude');
             $table->boolean('active');
 
             $table->string('tracking_number');
