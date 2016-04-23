@@ -11,7 +11,6 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        # $user_id = DB::table('users')->where('email','=','jamal@harvard.edu')->pluck('id')->first();
         $user_id = DB::table('users')->first();
 
         DB::table('projects')->insert([
