@@ -11,12 +11,12 @@ class InspectionsTableSeeder extends Seeder
      */
     public function run()
     {
-        $project_id = \App\Project::where('name','=','Oakland Airport')->pluck('id')->first();
+        # $project_id = \App\Project::where('name','=','Oakland Airport')->pluck('id')->first();
 
         DB::table('inspections')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'project_id' => $project_id,
+            'project_id' => 1,
 
             'name' => 'Oakland Airport',
             'description' => 'Runway Renovation',
