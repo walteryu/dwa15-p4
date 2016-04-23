@@ -27,9 +27,8 @@ class InspectionsTableSeeder extends Seeder
 
             'inspector_company_name' => str_random(10),
             'inspector_company_address' => str_random(10),
-            'inspector_company_state' => str_random(10),
             'inspector_company_zipcode' => str_random(10),
-            'inspector_company_state' => str_random(10),
+            'inspector_company_state' => 'CA',
             'inspector_company_phone' => str_random(10),
             'inspector_company_email' => str_random(10),
 
