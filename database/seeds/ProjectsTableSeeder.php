@@ -11,12 +11,13 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        $user_id = \App\User::where('email','=','jamal@harvard.edu')->pluck('id')->first();
+        # $user_id = DB::table('users')->where('email','=','jamal@harvard.edu')->pluck('id')->first();
+        $user_id = DB::table('users')->first();
 
         DB::table('projects')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'user_id' => $user_id,
+            'user_id' => 1,
 
             'name' => 'Oakland Airport',
             'description' => 'Runway Renovation',
