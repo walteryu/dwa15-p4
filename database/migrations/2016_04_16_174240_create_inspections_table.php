@@ -56,140 +56,140 @@ class CreateInspectionsTable extends Migration
             $table->string('bmp_location_1');
             $table->boolean('bmp_maintenance_1');
             $table->boolean('bmp_action_required_1');
-            $table->boolean('bmp_action_date_1');
+            $table->date('bmp_action_date_1');
             $table->text('bmp_notes_1');
 
             $table->string('bmp_type_2');
             $table->string('bmp_location_2');
             $table->boolean('bmp_maintenance_2');
             $table->boolean('bmp_action_required_2');
-            $table->boolean('bmp_action_date_2');
+            $table->date('bmp_action_date_2');
             $table->text('bmp_notes_2');
 
             $table->string('bmp_type_3');
             $table->string('bmp_location_3');
             $table->boolean('bmp_maintenance_3');
             $table->boolean('bmp_action_required_3');
-            $table->boolean('bmp_action_date_3');
+            $table->date('bmp_action_date_3');
             $table->text('bmp_notes_3');
 
             $table->string('bmp_type_4');
             $table->string('bmp_location_4');
             $table->boolean('bmp_maintenance_4');
             $table->boolean('bmp_action_required_4');
-            $table->boolean('bmp_action_date_4');
+            $table->date('bmp_action_date_4');
             $table->text('bmp_notes_4');
 
             $table->string('bmp_type_5');
             $table->string('bmp_location_5');
             $table->boolean('bmp_maintenance_5');
             $table->boolean('bmp_action_required_5');
-            $table->boolean('bmp_action_date_5');
+            $table->date('bmp_action_date_5');
             $table->text('bmp_notes_5');
 
             $table->string('bmp_type_6');
             $table->string('bmp_location_6');
             $table->boolean('bmp_maintenance_6');
             $table->boolean('bmp_action_required_6');
-            $table->boolean('bmp_action_date_6');
+            $table->date('bmp_action_date_6');
             $table->text('bmp_notes_6');
 
             $table->string('bmp_type_7');
             $table->string('bmp_location_7');
             $table->boolean('bmp_maintenance_7');
             $table->boolean('bmp_action_required_7');
-            $table->boolean('bmp_action_date_7');
+            $table->date('bmp_action_date_7');
             $table->text('bmp_notes_7');
 
             $table->string('bmp_type_8');
             $table->string('bmp_location_8');
             $table->boolean('bmp_maintenance_8');
             $table->boolean('bmp_action_required_8');
-            $table->boolean('bmp_action_date_8');
+            $table->date('bmp_action_date_8');
             $table->text('bmp_notes_8');
 
             $table->string('bmp_type_9');
             $table->string('bmp_location_9');
             $table->boolean('bmp_maintenance_9');
             $table->boolean('bmp_action_required_9');
-            $table->boolean('bmp_action_date_9');
+            $table->date('bmp_action_date_9');
             $table->text('bmp_notes_9');
 
             $table->string('bmp_type_10');
             $table->string('bmp_location_10');
             $table->boolean('bmp_maintenance_10');
             $table->boolean('bmp_action_required_10');
-            $table->boolean('bmp_action_date_10');
+            $table->date('bmp_action_date_10');
             $table->text('bmp_notes_10');
 
             $table->string('practice_type_1');
             $table->string('practice_location_1');
             $table->boolean('practice_maintenance_1');
             $table->boolean('practice_action_required_1');
-            $table->boolean('practice_action_date_1');
+            $table->date('practice_action_date_1');
             $table->text('practice_notes_1');
 
             $table->string('practice_type_2');
             $table->string('practice_location_2');
             $table->boolean('practice_maintenance_2');
             $table->boolean('practice_action_required_2');
-            $table->boolean('practice_action_date_2');
+            $table->date('practice_action_date_2');
             $table->text('practice_notes_2');
 
             $table->string('practice_type_3');
             $table->string('practice_location_3');
             $table->boolean('practice_maintenance_3');
             $table->boolean('practice_action_required_3');
-            $table->boolean('practice_action_date_3');
+            $table->date('practice_action_date_3');
             $table->text('practice_notes_3');
 
             $table->string('practice_type_4');
             $table->string('practice_location_4');
             $table->boolean('practice_maintenance_4');
             $table->boolean('practice_action_required_4');
-            $table->boolean('practice_action_date_4');
+            $table->date('practice_action_date_4');
             $table->text('practice_notes_4');
 
             $table->string('practice_type_5');
             $table->string('practice_location_5');
             $table->boolean('practice_maintenance_5');
             $table->boolean('practice_action_required_5');
-            $table->boolean('practice_action_date_5');
+            $table->date('practice_action_date_5');
             $table->text('practice_notes_5');
 
             $table->string('practice_type_6');
             $table->string('practice_location_6');
             $table->boolean('practice_maintenance_6');
             $table->boolean('practice_action_required_6');
-            $table->boolean('practice_action_date_6');
+            $table->date('practice_action_date_6');
             $table->text('practice_notes_6');
 
             $table->string('practice_type_7');
             $table->string('practice_location_7');
             $table->boolean('practice_maintenance_7');
             $table->boolean('practice_action_required_7');
-            $table->boolean('practice_action_date_7');
+            $table->date('practice_action_date_7');
             $table->text('practice_notes_7');
 
             $table->string('practice_type_8');
             $table->string('practice_location_8');
             $table->boolean('practice_maintenance_8');
             $table->boolean('practice_action_required_8');
-            $table->boolean('practice_action_date_8');
+            $table->date('practice_action_date_8');
             $table->text('practice_notes_8');
 
             $table->string('practice_type_9');
             $table->string('practice_location_9');
             $table->boolean('practice_maintenance_9');
             $table->boolean('practice_action_required_9');
-            $table->boolean('practice_action_date_9');
+            $table->date('practice_action_date_9');
             $table->text('practice_notes_9');
 
             $table->string('practice_type_10');
             $table->string('practice_location_10');
             $table->boolean('practice_maintenance_10');
             $table->boolean('practice_action_required_10');
-            $table->boolean('practice_action_date_10');
+            $table->date('practice_action_date_10');
             $table->text('practice_notes_10');
 
             $table->string('stabilization_area_1');
