@@ -1,15 +1,15 @@
 <?php
 
-namespace P3\Http\Controllers;
+namespace StormSafe\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use P3\Http\Requests;
+use StormSafe\Http\Requests;
 
 class ProjectController extends Controller
 {
     function getIndex() {
-        $projects = \App\Project::all();
+        $projects = \App\User\Project::all();
         return view('projects.index')->with('projects', $projects);
     }
 
