@@ -1,6 +1,6 @@
 <?php
 
-namespace P3\Http\Controllers;
+namespace StormSafe\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

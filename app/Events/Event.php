@@ -1,6 +1,6 @@
 <?php
 
-namespace P3\Events;
+namespace StormSafe\Events;
 
 abstract class Event
 {

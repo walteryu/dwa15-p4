@@ -1,6 +1,6 @@
 <?php
 
-namespace P3\Console\Commands;
+namespace StormSafe\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

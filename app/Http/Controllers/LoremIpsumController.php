@@ -1,14 +1,14 @@
 <?php
 
-namespace P3\Http\Controllers;
+namespace StormSafe\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use P3\Http\Requests;
-use P3\Http\Controllers\Controller;
+use StormSafe\Http\Requests;
+use StormSafe\Http\Controllers\Controller;
 
-use P3\Vendor\Nesbot\Carbon\src;
-use P3\Vendor\Badcow\LoremIpsum\Generator;
+use StormSafe\Vendor\Nesbot\Carbon\src;
+use StormSafe\Vendor\Badcow\LoremIpsum\Generator;
 
 class LoremIpsumController extends Controller
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace P3\Http\Controllers\Auth;
+namespace StormSafe\Http\Controllers\Auth;
 
-use P3\User;
+use StormSafe\User;
 use Validator;
-use P3\Http\Controllers\Controller;
+use StormSafe\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace P3\Http\Controllers\Auth;
+namespace StormSafe\Http\Controllers\Auth;
 
-use P3\Http\Controllers\Controller;
+use StormSafe\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

@@ -1,6 +1,6 @@
 <?php
 
-namespace P3\Exceptions;
+namespace StormSafe\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;
