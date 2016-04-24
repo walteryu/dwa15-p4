@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        P3\Providers\AppServiceProvider::class,
-        P3\Providers\AuthServiceProvider::class,
-        P3\Providers\EventServiceProvider::class,
-        P3\Providers\RouteServiceProvider::class,
+        StormSafe\Providers\AppServiceProvider::class,
+        StormSafe\Providers\AuthServiceProvider::class,
+        StormSafe\Providers\EventServiceProvider::class,
+        StormSafe\Providers\RouteServiceProvider::class,
     ],
 
     /*

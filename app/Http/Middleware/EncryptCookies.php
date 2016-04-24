@@ -1,6 +1,6 @@
 <?php
 
-namespace P3\Http\Middleware;
+namespace StormSafe\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

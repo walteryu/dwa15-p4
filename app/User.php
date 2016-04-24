@@ -1,6 +1,6 @@
 <?php
 
-namespace P3;
+namespace StormSafe;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

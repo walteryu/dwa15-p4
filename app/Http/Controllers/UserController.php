@@ -1,10 +1,10 @@
 <?php
 
-namespace P3\Http\Controllers;
+namespace StormSafe\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use P3\Http\Requests;
+use StormSafe\Http\Requests;
 
 class UserController extends Controller
 {

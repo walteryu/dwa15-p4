@@ -1,6 +1,6 @@
 <?php
 
-namespace P3\Providers;
+namespace StormSafe\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

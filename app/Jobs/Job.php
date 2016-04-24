@@ -1,6 +1,6 @@
 <?php
 
-namespace P3\Jobs;
+namespace StormSafe\Jobs;
 
 use Illuminate\Bus\Queueable;
 
