@@ -3,13 +3,12 @@
 namespace StormSafe\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use StormSafe\Http\Requests;
 
 class ProjectController extends Controller
 {
     function getIndex() {
-        $projects = \App\User\Project::all();
+        $projects = \App\Project::all();
         return view('projects.index')->with('projects', $projects);
     }
 
