@@ -14,9 +14,7 @@ class UserController extends Controller
     }
 
     public function getShow($name = null) {
-        return view('users.show',[
-            'name' => $name,
-        ]);
+        return view('users.show')->with('name',$name);
     }
 
     public function getCreate() {
@@ -42,10 +40,8 @@ class UserController extends Controller
     }
 
     public function getEdit($id) {
-
-        $book = \App\Book::with('tags')->find($id);
-
-        return view('books.edit')->with('book',$book);
+        $user = \App\User::find($request->id);
+        return view('users.edit')->with('name',$name);
     }
 
     public function postEdit(Request $request) {
@@ -61,5 +57,23 @@ class UserController extends Controller
 
         \Session::flash('message','Your changes were saved.');
         return redirect('/user/edit/'.$request->id);
+    }
+
+    public function getConfirmDelete($user_id) {
+        $user = \App\User::find($user_id);
+        return view('users.delete')->with('user', $user);
+    }
+
+    public function getGoDelete($id) {
+        $user = \App\User::find($id);
+
+        if(is_null($user)) {
+            \Session::flash('flash_message','User not found.');
+            return redirect('/users');
+        }
+
+        $user->delete();
+        \Session::flash('flash_message','User was deleted.');
+        return redirect('/users');
     }
 }
