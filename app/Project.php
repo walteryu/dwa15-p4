@@ -78,19 +78,13 @@ class Project extends Model
         return $this->hasMany('\App\Inspection');
 
         /*
-        $project_inspections = \App\Inspection::with('project')->get();
+        $inspections = \App\Inspection::with('project')->get();
 
-        foreach($project_inspections as $inspection) {
+        foreach($inspections as $inspection) {
               echo $inspection->project->name.' '.$inspection->project->description.' has inspection: '.$inspection->name.'<br>';
         }
 
-        dump($project_inspections->toArray());
+        dump($inspections->toArray());
         */
-
-        $inspections = \App\Inspection::all();
-
-        foreach($inspections as $inspection) {
-              echo $inspection['name']."<br>";
-        }
     }
 }
