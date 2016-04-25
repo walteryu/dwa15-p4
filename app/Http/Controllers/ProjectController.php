@@ -55,7 +55,12 @@ class ProjectController extends Controller
         );
 
         # \App\Project::create($data);
-        DB::table('projects')->create($data);
+        DB::table('projects')->insertGetId(
+          array(
+            'name' => 'name',
+            'description' => 'description'
+          )
+        );
 
         \Session::flash('message','Your project was added');
         return redirect('/projects');
@@ -63,14 +68,14 @@ class ProjectController extends Controller
 
     public function getEdit($id) {
         # $project = \App\Project::find($request->id);
-        $project = DB::table('projects')->find($request->id);
+        $project = DB::table('projects')->where('id', '=', $request->id)->get();
 
         return view('projects.edit')->with('name',$name);
     }
 
     public function postEdit(Request $request) {
         # $project = \App\Project::find($request->id);
-        $project = DB::table('projects')->find($request->id);
+        $project = DB::table('projects')->where('id', '=', $request->id)->get();
 
         # $book->title = $request->title;
         # $book->author_id = $request->author_id;
