@@ -45,6 +45,10 @@ http://code.tutsplus.com/tutorials/testing-like-a-boss-in-laravel-models--net-30
 http://www.patrickstephan.me/post/setting-up-a-laravel-5-test-database.html
 )
 
+[Wunderground JSON API Request](
+"http://api.wunderground.com/api/#{APIKEY}/forecast10day/q/#{zipcode}.json"
+)
+
 ## References & Outside Code
 * [Bootstrap](http://getbootstrap.com) - Called as CDN Asset
 * [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Reference for Controllers/Views
