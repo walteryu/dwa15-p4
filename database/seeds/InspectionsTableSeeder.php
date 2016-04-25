@@ -11,7 +11,8 @@ class InspectionsTableSeeder extends Seeder
      */
     public function run()
     {
-        $project_id = \App\Project::first();
+        # $project_id = \App\Project::first();
+        $project_id = DB::table('projects')->first();
 
         DB::table('inspections')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
