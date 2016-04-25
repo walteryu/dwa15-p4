@@ -1,6 +1,9 @@
 <?php
 
 namespace StormSafe\Http\Controllers;
+# namespace App\Http\Controllers;
+
+use StormSafe\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use StormSafe\Http\Requests;
