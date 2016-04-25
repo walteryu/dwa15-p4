@@ -36,19 +36,24 @@ class ProjectController extends Controller
         $data = $request->only(
             # 'title','author','published','cover','purchase_link'
         );
-        \App\Project::create($data);
+
+        # \App\Project::create($data);
+        DB::table('projects')->create($data);
 
         \Session::flash('message','Your project was added');
         return redirect('/projects');
     }
 
     public function getEdit($id) {
-        $project = \App\Project::find($request->id);
+        # $project = \App\Project::find($request->id);
+        $project = DB::table('projects')->find($request->id);
+
         return view('projects.edit')->with('name',$name);
     }
 
     public function postEdit(Request $request) {
-        $project = \App\Project::find($request->id);
+        # $project = \App\Project::find($request->id);
+        $project = DB::table('projects')->find($request->id);
 
         # $book->title = $request->title;
         # $book->author_id = $request->author_id;
