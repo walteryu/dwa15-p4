@@ -37,10 +37,7 @@ Route::post('/project/create', 'ProjectController@postCreate');
 
 Route::get('/project/show/{title?}', 'ProjectController@getShow');
 
-# ------------------------------------
-# Misc debug routes
-# ------------------------------------
-# Restrict certain routes to only be viewable in the local environments
+/*
 if(App::environment('local')) {
 
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
@@ -51,6 +48,7 @@ if(App::environment('local')) {
         return 'Dropped foobooks; created foobooks.';
     });
 }
+*/
 
 Route::get('/debug', function() {
 

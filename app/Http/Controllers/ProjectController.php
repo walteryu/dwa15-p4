@@ -68,12 +68,15 @@ class ProjectController extends Controller
     }
 
     public function getConfirmDelete($id) {
-        $project = \App\Project::find($id);
+        # $project = \App\Project::find($id);
+        $project = DB::table('projects')->find($id);
+
         return view('projects.delete')->with('project', $project);
     }
 
     public function getGoDelete($id) {
-        $project = \App\Project::find($id);
+        # $project = \App\Project::find($id);
+        $project = DB::table('projects')->find($id);
 
         if(is_null($project)) {
             \Session::flash('flash_message','project not found.');
