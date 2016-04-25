@@ -11,7 +11,8 @@ use StormSafe\Http\Requests;
 class ProjectController extends Controller
 {
     function getIndex() {
-        $projects = \App\Project::all();
+        # $projects = \App\Project::all();
+        $projects = \DB::table('projects')->get();
         return view('projects.index')->with('projects', $projects);
     }
 
