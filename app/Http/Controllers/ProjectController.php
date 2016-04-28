@@ -13,7 +13,10 @@ class ProjectController extends Controller
     function getIndex() {
         # $projects = \App\Project::all();
         $projects = \DB::table('projects')->get();
+        $inspections = \DB::table('projects')->with('inspections')->get();
+
         return view('projects.index')->with('projects', $projects);
+        dd($inspections);
     }
 
     public function getShow($name = null) {
