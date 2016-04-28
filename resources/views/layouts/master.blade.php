@@ -21,16 +21,21 @@
 
     <link rel="stylesheet" href="{{ URL::asset('css/master.css') }}" />
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1>
-                <a href="/">Developer's Best Friend Application</a>
+                <a href="/">StormSafe</a>
             </h1>
-            <h2>Lorem Ipsum & Random User Generator</h2>
+            <h2>Environmental Compliance Application</h2>
         </header>
 
         <section>
+            @if(Session::has('message'))
+              <p class="alert alert-info">{{ Session::get('message') }}</p>
+            @endif
+
             @yield('content')
         </section>
 
