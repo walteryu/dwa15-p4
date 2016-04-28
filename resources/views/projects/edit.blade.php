@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Edit project {{ $project->title }}
+    StormSafe | Edit Project {{ $project->title }}
 @stop
 
 @section('content')

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Show Project {{ $name}}
+    StormSafe | Show Project {{ $name}}
 @stop
 
 @section('head')

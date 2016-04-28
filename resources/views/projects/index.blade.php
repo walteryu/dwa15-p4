@@ -5,12 +5,12 @@
 @stop
 
 @section('title')
-    All Projects
+    StormSafe | All Projects
 @stop
 
 @section('content')
 
-    <h1>All Projects</h1>
+    <h2>All Projects</h2>
 
     @foreach($projects as $project)
         <section class='project'>

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Add New Project
+    StormSafe | Add Project
 @stop
 
 @section('content')
