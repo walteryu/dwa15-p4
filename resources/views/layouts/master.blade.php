@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>
-        @yield('title','Developer App')
+        @yield('title','StormSafe')
     </title>
 
     <meta charset='utf-8'>
