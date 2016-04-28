@@ -11,24 +11,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'name' => 'Jamal Harvard',
-            'email' => 'jamal@harvard.edu',
-            # 'password' => 'helloworld',
-            'password' => \Hash::make('helloworld'),
-        ]);
-
-        DB::table('users')->insert([
-            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'name' => 'Jill Harvard',
-            'email' => 'jill@harvard.edu',
-            # 'password' => 'helloworld',
-            'password' => \Hash::make('helloworld'),
-        ]);
-
         /*
           $user = \App\User::firstOrCreate(['email' => 'jill@harvard.edu']);
           $user->name = 'Jill';
@@ -42,5 +24,27 @@ class UsersTableSeeder extends Seeder
           $user->password = \Hash::make('helloworld');
           $user->save();
         */
+
+        DB::table('users')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'name' => 'Jamal Harvard',
+            'email' => 'jamal@harvard.edu',
+            'password' => \Hash::make('helloworld'),
+        ]);
+        DB::table('users')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'name' => 'Jill Harvard',
+            'email' => 'jill@harvard.edu',
+            'password' => \Hash::make('helloworld'),
+        ]);
+        DB::table('users')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'name' => 'stormsavvy',
+            'email' => 'walter@stormsavvy.com',
+            'password' => \Hash::make('paperless'),
+        ]);
     }
 }
