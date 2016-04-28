@@ -15,7 +15,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/register', 'Auth\AuthController@postRegister');
 
     Route::get('/show-login-status', function() {
-        # You may access the authenticated user via the Auth facade
         $user = Auth::user();
 
         if($user) {
@@ -28,7 +27,7 @@ Route::group(['middleware' => ['web']], function () {
         return;
     });
 
-    Route::get('/', 'ProjectController@getIndex'); # Home
+    Route::get('/', 'ProjectController@getIndex'); # Home/Dashboard
     Route::get('/projects', 'ProjectController@getIndex');
 
     Route::get('/project/edit/{id?}', 'ProjectController@getEdit');
@@ -38,6 +37,21 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/project/create', 'ProjectController@postCreate');
 
     Route::get('/project/show/{title?}', 'ProjectController@getShow');
+
+    # Project/inspection nested resource
+    Route::resource('projects', 'ProjectController');
+    Route::resource('projects.inspections', 'ProjectInspectionController');
+
+    Route::get('/projects/{id?}/inspections', 'ProjectInspectionController@getIndex');
+
+    Route::get('/projects/{id?}/inspections/create', 'ProjectInspectionController@getCreate');
+    Route::post('/projects/{id?}/inspections/create', 'ProjectInspectionController@postCreate');
+
+    Route::get('/projects/{id?}/inspections/{inspectionID}/edit', 'ProjectInspectionController@getEdit');
+    Route::post('/projects/{id?}/inspections/{inspectionID}/edit', 'ProjectInspectionController@postEdit');
+
+    Route::get('/projects/{id?}/inspections/{inspectionID}/show', 'ProjectInspectionController@getShow');
+    Route::post('/projects/{id?}/inspections/{inspectionID}/show', 'ProjectInspectionController@postShow');
 
     /*
     if(App::environment('local')) {
