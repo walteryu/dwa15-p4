@@ -18,6 +18,7 @@
 
         {!! csrf_field() !!}
 
+        <br></br>
         <div class='form-group'>
             <label for='email'>Email</label>
             <input type='text' name='email' id='email' value='{{ old('email') }}'>
