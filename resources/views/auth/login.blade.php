@@ -1,10 +1,14 @@
 @extends('layouts.master')
 
+@section('title')
+    StormSafe | Login
+@stop
+
 @section('content')
+    <h3>Not Registered? <a href='/register'>Register Here</a></h3>
 
-    <p>Don't have an account? <a href='/register'>Register here...</a></p>
-
-    <h1>Login</h1>
+    <h1>Welcome to StormSafe!</h1>
+    <h3>Please Login Below</h3>
 
     @if(count($errors) > 0)
         <ul class='errors'>
@@ -15,10 +19,9 @@
     @endif
 
     <form method='POST' action='/login'>
-
         {!! csrf_field() !!}
 
-        <br></br>
+        <br>
         <div class='form-group'>
             <label for='email'>Email</label>
             <input type='text' name='email' id='email' value='{{ old('email') }}'>
@@ -35,6 +38,5 @@
         </div>
 
         <button type='submit' class='btn btn-primary'>Login</button>
-
     </form>
 @stop

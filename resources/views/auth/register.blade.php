@@ -4,15 +4,11 @@
     StormSafe | Registration
 @stop
 
-@section('head')
-    <link href="/css/stormsafe.css" type='text/css' rel='stylesheet'>
-@stop
-
 @section('content')
+    <h3>Already Registered? <a href='/login'>Login Here</a></h3>
 
-    <h3>Already have an account? <a href='/login'>Login here...</a></h3>
-
-    <h1>Register</h1>
+    <h1>Welcome to StormSafe!</h1>
+    <h3>New User Registration: Please Complete Form Below</h3>
 
     @if(count($errors) > 1)
         <ul class='errors'>
@@ -25,7 +21,7 @@
     <form method='POST' action='/register'>
         {!! csrf_field() !!}
 
-        <br></br>
+        <br>
         <div class='form-group'>
             <label for='name'>Name</label>
             <input type='text' name='name' id='name' value='{{ old('name') }}'>
@@ -47,7 +43,5 @@
         </div>
 
         <button type='submit' class='btn btn-primary'>Register</button>
-
     </form>
-
 @stop
