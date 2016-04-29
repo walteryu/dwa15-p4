@@ -7,11 +7,8 @@
 @section('content')
 
     <h1>Edit Project</h1>
-    Project ID: {{$project->id}}
 
     <form method='POST' action='/project/edit'>
-
-        <input type='hidden' name='id' value='{{$project->id}}'>
 
         {{ csrf_field() }}
 
@@ -21,7 +18,6 @@
                 type='text'
                 id='name'
                 name='name'
-                value='{{ $project->name }}'
             >
            <div class='error'>{{ $errors->first('name') }}</div>
         </div>
@@ -32,24 +28,9 @@
                 type='text'
                 id='description'
                 description='description'
-                value='{{ $project->description }}'
             >
            <div class='error'>{{ $errors->first('description') }}</div>
         </div>
-
-        <!--
-        <div class='form-group'>
-           <label for='author_id'>Author:</label>
-           <select name='author_id' id='author_id'>
-               @foreach($authors_for_dropdown as $author_id => $author_name)
-                    <option value='{{$author_id}}' {{ ($project->author_id == $author_id) ? 'SELECTED' : '' }}>
-                        {{$author_name}}
-                    </option>
-                @endforeach
-           </select>
-           <div class='error'>{{ $errors->first('author') }}</div>
-        </div>
-        -->
 
         <div class='form-instructions'>
             All fields are required
