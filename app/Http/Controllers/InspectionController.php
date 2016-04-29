@@ -3,21 +3,22 @@
 namespace StormSafe\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use StormSafe\Http\Requests;
 
 class InspectionController extends Controller
 {
     function getIndex() {
-        $inspectionList = \DB::table('inspections')->lists('project_id');
-        foreach($inspectionList as $inspection){
-            echo $inspection->name;
-        }
+        # $inspection = \DB::table('inspections')->lists('project_id');
+        $inspection = \DB::table('inspections')->first();
+
+        var_dump($inspection->name);
+        echo '<p>';
+        var_dump($inspection->description);
 
         # $inspectionName = \DB::table('inspections')->lists('name');
         # dd($inspectionName);
 
-        return view('inspections.index')->with('inspections', $inspections);
+        # return view('inspections.index')->with('inspections', $inspections);
     }
 
     public function getShow($name = null) {
