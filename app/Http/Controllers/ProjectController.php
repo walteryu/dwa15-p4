@@ -3,72 +3,50 @@
 namespace StormSafe\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use StormSafe\Http\Requests;
 
-class InspectionController extends Controller
+class ProjectController extends Controller
 {
     function getIndex() {
-        # $inspections = \App\Inspection::all();
-        $inspections = \DB::table('inspections')->with('project_id')->get();
-        dd($inspections);
-
-        /*
-        $projects_list = [];
-        foreach($inspections as $inspection){
-            dd($inspection->project_id);
-        }
-        return view('inspections.index')->with('inspections', $inspections);
-        */
+        $projects = \DB::table('projects')->get();
+        return view('projects.index')->with('projects', $projects);
     }
-
-    /*
-    public function index(Project $project)
-    {
-        return view('tasks.index',view compact('project'));
-    }
-     */
 
     public function getShow($name = null) {
-        return view('inspections.show')->with('name',$name);
+        return view('projects.show')->with('name',$name);
     }
 
     public function getCreate() {
-        return view('inspections.create');
+        return view('projects.create');
     }
 
     public function postCreate(Request $request) {
         $this->validate($request,[
-            # 'title' => 'required|min:3',
-            # 'author' => 'required',
-            # 'published' => 'required|min:4',
-            # 'cover' => 'required|url',
-            # 'purchase_link' => 'required|url',
-
             'name' => 'required',
             'description' => 'required',
-            'address' => 'required',
-            'city' => 'required',
-            'state' => 'required',
+            # 'address' => 'required',
+            # 'city' => 'required',
+            # 'state' => 'required',
             # 'zipcode' => 'required',
             # 'latitude' => 'required',
-            'longitude' => 'required',
-            'active' => 'required',
+            # 'longitude' => 'required',
+            # 'active' => 'required',
 
-            'tracking_number' => 'required',
-            'cost_center' => 'required',
-            'project_phase' => 'required',
-            'wdid_number' => 'required',
-            'cgp_number' => 'required',
-            'risk_level' => 'required',
+            # 'tracking_number' => 'required',
+            # 'cost_center' => 'required',
+            # 'project_phase' => 'required',
+            # 'wdid_number' => 'required',
+            # 'cgp_number' => 'required',
+            # 'risk_level' => 'required',
         ]);
 
         $data = $request->only(
             # 'title','author','published','cover','purchase_link'
+            'name', 'description'
         );
 
         # \App\Project::create($data);
-        DB::table('projects')->insertGetId(
+        \DB::table('projects')->insertGetId(
           array(
             'name' => 'name',
             'description' => 'description'
