@@ -37,7 +37,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/project/create', 'ProjectController@getCreate');
     Route::post('/project/create', 'ProjectController@postCreate');
 
-    Route::get('/project/show/{title?}', 'ProjectController@getShow');
+    Route::get('/project/show/{id?}', 'ProjectController@getShow');
 
     # Inspections
     Route::get('/', 'InspectionController@getIndex');
@@ -49,7 +49,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/inspection/create', 'InspectionController@getCreate');
     Route::post('/inspection/create', 'InspectionController@postCreate');
 
-    Route::get('/inspection/show/{title?}', 'InspectionController@getShow');
+    Route::get('/inspection/show/{id?}', 'InspectionController@getShow');
 
     /*
     Route::resource('projects', 'ProjectController');
