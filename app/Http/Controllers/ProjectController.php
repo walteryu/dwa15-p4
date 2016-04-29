@@ -42,14 +42,15 @@ class ProjectController extends Controller
 
         $data = $request->only(
             # 'title','author','published','cover','purchase_link'
-            'name', 'description'
+            'name', 'description', 'user_id'
         );
 
         # \App\Project::create($data);
         \DB::table('projects')->insertGetId(
           array(
             'name' => 'name',
-            'description' => 'description'
+            'description' => 'description',
+            'user_id' => \Auth::user()->id,
           )
         );
 
