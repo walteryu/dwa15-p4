@@ -1,30 +1,40 @@
 <?php
 
 namespace StormSafe\Http\Controllers;
-# namespace App\Http\Controllers;
-
-use StormSafe\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+
 use StormSafe\Http\Requests;
 
-class ProjectController extends Controller
+class InspectionController extends Controller
 {
     function getIndex() {
-        # $projects = \App\Project::all();
-        $projects = \DB::table('projects')->get();
-        $inspections = \DB::table('projects')->with('inspections')->get();
-
-        return view('projects.index')->with('projects', $projects);
+        # $inspections = \App\Inspection::all();
+        $inspections = \DB::table('inspections')->with('project_id')->get();
         dd($inspections);
+
+        /*
+        $projects_list = [];
+        foreach($inspections as $inspection){
+            dd($inspection->project_id);
+        }
+        return view('inspections.index')->with('inspections', $inspections);
+        */
     }
 
+    /*
+    public function index(Project $project)
+    {
+        return view('tasks.index',view compact('project'));
+    }
+     */
+
     public function getShow($name = null) {
-        return view('projects.show')->with('name',$name);
+        return view('inspections.show')->with('name',$name);
     }
 
     public function getCreate() {
-        return view('projects.create');
+        return view('inspections.create');
     }
 
     public function postCreate(Request $request) {

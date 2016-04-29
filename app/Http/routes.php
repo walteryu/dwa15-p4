@@ -27,6 +27,7 @@ Route::group(['middleware' => ['web']], function () {
         return;
     });
 
+    # Projects
     Route::get('/', 'ProjectController@getIndex'); # Home/Dashboard
     Route::get('/projects', 'ProjectController@getIndex');
 
@@ -38,7 +39,19 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/project/show/{title?}', 'ProjectController@getShow');
 
-    # Project/inspection nested resource
+    # Inspections
+    Route::get('/', 'InspectionController@getIndex');
+    Route::get('/inspections', 'InspectionController@getIndex');
+
+    Route::get('/inspection/edit/{id?}', 'InspectionController@getEdit');
+    Route::post('/inspection/edit', 'InspectionController@postEdit');
+
+    Route::get('/inspection/create', 'InspectionController@getCreate');
+    Route::post('/inspection/create', 'InspectionController@postCreate');
+
+    Route::get('/inspection/show/{title?}', 'InspectionController@getShow');
+
+    /*
     Route::resource('projects', 'ProjectController');
     Route::resource('projects.inspections', 'ProjectInspectionController');
 
@@ -52,6 +65,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/projects/{id?}/inspections/{inspectionID}/show', 'ProjectInspectionController@getShow');
     Route::post('/projects/{id?}/inspections/{inspectionID}/show', 'ProjectInspectionController@postShow');
+     */
 
     /*
     if(App::environment('local')) {
