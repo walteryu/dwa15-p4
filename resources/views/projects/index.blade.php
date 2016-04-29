@@ -10,14 +10,31 @@
 
 @section('content')
 
-    <h2>All Projects</h2>
+    <div class='widget'>
+        <h2>All Projects</h2>
+        <h3>
+            <a href='/project/create'>Create Project</a>
+            |
+            <a href='/inspections'>View All Inspections</a>
+        </h3>
+    </div>
 
     @foreach($projects as $project)
         <section class='project'>
-            <h2>{{ $project->name }}</h2>
-            <h3>{{ $project->description }}</h3>
-
-            <br><a href='/project/edit/{{$project->id}}'>Edit</a>
+            <div class="well well-large">
+                <h2>
+                    Name: {{ $project->name }}
+                </h2>
+                <h3>
+                    Description: {{ $project->description }}
+                </h3>
+                <h3>
+                    Location: {{ $project->city}}, {{ $project->state}}
+                </h3>
+                <h3>
+                    <a href='/project/edit/{{$project->id}}'>Edit Project</a>
+                </h3>
+            </div>
         </section>
     @endforeach
 
