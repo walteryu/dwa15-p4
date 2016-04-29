@@ -1,12 +1,13 @@
 @extends('layouts.master')
 
 @section('title')
-    StormSafe | Edit Project {{ $project->title }}
+    StormSafe | Edit Project
 @stop
 
 @section('content')
 
-    <h1>Edit project {{ $project->title }}</h1>
+    <h1>Edit Project</h1>
+    Project ID: {{$project->id}}
 
     <form method='POST' action='/project/edit'>
 
