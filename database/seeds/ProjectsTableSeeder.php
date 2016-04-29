@@ -11,7 +11,7 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        $user_id = DB::table('users')->first();
+        # $user_id = DB::table('users')->first();
 
         DB::table('projects')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
