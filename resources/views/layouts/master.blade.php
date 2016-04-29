@@ -44,7 +44,8 @@
                   <ul class="nav navbar-nav">
                     @if(Auth::check())
                         <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
-                        <li><a href='/project/create'>Add Project</a></li>
+                        <li><a href='/projects'>Projects</a></li>
+                        <li><a href='/inspections'>Inspections</a></li>
                         <li><a href='/logout'>Log out</a></li>
                     @else
                         <li class="active"><a href="/login">Login<span class="sr-only">(current)</span></a></li>
