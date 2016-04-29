@@ -40,7 +40,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/project/show/{id?}', 'ProjectController@getShow');
 
     # Inspections
-    Route::get('/', 'InspectionController@getIndex');
     Route::get('/inspections', 'InspectionController@getIndex');
 
     Route::get('/inspection/edit/{id?}', 'InspectionController@getEdit');
