@@ -12,10 +12,6 @@ class ProjectController extends Controller
         return view('projects.index')->with('projects', $projects);
     }
 
-    public function getShow($name = null) {
-        return view('projects.show')->with('name',$name);
-    }
-
     public function getCreate() {
         return view('projects.create');
     }
