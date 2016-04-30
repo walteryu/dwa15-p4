@@ -90,14 +90,8 @@ Route::group(['middleware' => ['web']], function () {
         if(config('app.debug')) echo "Yes"; else echo "No";
 
         echo '<h1>Database Config</h1>';
-        /*
-        The following line will output your MySQL credentials.
-        Uncomment it only if you're having a hard time connecting to the database and you
-        need to confirm your credentials.
-        When you're done debugging, comment it back out so you don't accidentally leave it
-        running on your live server, making your credentials public.
-        */
-        //print_r(config('database.connections.mysql'));
+        # The following line will output your MySQL credentials.
+        # print_r(config('database.connections.mysql'));
 
         echo '<h1>Test Database Connection</h1>';
         try {
