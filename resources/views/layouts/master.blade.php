@@ -66,11 +66,9 @@
         </section>
 
         <footer>
-            <br>
             <h4>
                 Background Image Provided by <a href="http://subtlepatterns.com/">Subtle Patterns</a>
             </h4>
-            <br>
         </footer>
     </div>
 
