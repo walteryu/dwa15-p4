@@ -23,13 +23,16 @@
         <section class='project'>
             <div class="well well-large">
                 <h2>
-                    Name: {{ $project->name }}
+                    Name:&nbsp;
+                    <a href='/project/show/{{$project->id}}'>{{ $project->name }}</a>
                 </h2>
                 <h3>
-                    Description: {{ $project->description }}
+                    Description:&nbsp;
+                    {{ $project->description }}
                 </h3>
                 <h3>
-                    Location: {{ $project->city}}, {{ $project->state}}
+                    Location:&nbsp;
+                    {{ $project->city}}, {{ $project->state}}
                 </h3>
                 <h3>
                     <a href='/project/edit/{{$project->id}}'>Edit Project</a>
