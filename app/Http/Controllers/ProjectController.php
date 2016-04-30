@@ -63,7 +63,6 @@ class ProjectController extends Controller
     }
 
     public function getEdit($id) {
-        # $project = \DB::table('projects')->where('id', '=', $request->id)->get();
         $project = \DB::table('projects')->where('id', '=', $id)->get();
         return view('projects.edit')->with('project',$project);
     }
