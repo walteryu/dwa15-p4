@@ -8,21 +8,8 @@ use StormSafe\Http\Requests;
 class InspectionController extends Controller
 {
     function getIndex() {
-        # $inspection = \DB::table('inspections')->lists('project_id');
-        $inspection = \DB::table('inspections')->first();
-
-        var_dump($inspection->name);
-        echo '<p>';
-        var_dump($inspection->description);
-
-        # $inspectionName = \DB::table('inspections')->lists('name');
-        # dd($inspectionName);
-
-        # return view('inspections.index')->with('inspections', $inspections);
-    }
-
-    public function getShow($name = null) {
-        return view('inspections.show')->with('name',$name);
+        $inspections = \DB::table('inspections')->get();
+        return view('inspections.index')->with('inspections', $inspections);
     }
 
     public function getCreate() {
