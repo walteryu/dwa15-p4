@@ -148,16 +148,33 @@ class ProjectController extends Controller
 
         # $project->save();
 
-        \DB::table('projects')->updateGetId(
-          array(
-            'name' => 'name',
-            'description' => 'description',
-            'user_id' => \Auth::user()->id,
-          )
+        $data = $request->only(
+            'name', 'description', 'user_id'
         );
 
+        # \DB::table('projects')->where('id', '=', $request->id)->update([
+        \DB::table('projects')->where('id', '=', $id)->update([
+            'id' => $id,
+            'name' => 'name',
+            'description' => 'description',
+            # 'user_id' => \Auth::user()->id,
+        ]);
+
+
         \Session::flash('message','Your project was updated.');
-        return redirect('/projects');
+        # return redirect('/projects/edit/{$id}');
+
+        $project = \DB::table('projects')->where('id', '=', $id)->get();
+        dd($project);
+    }
+
+    public function getShow($id) {
+        $project = \DB::table('projects')->where('id', '=', $id)->get();
+        foreach( $project as $key => $value )
+        {
+            echo $value->id;
+        }
+        # return view('projects.show')->with('project',$project);
     }
 
     public function getConfirmDelete($id) {
