@@ -87,118 +87,113 @@ class ProjectController extends Controller
             # 'risk_level' => 'required',
         ]);
 
-        # $project->name = $request->name;
-        # $project->description = $request->description;
-        # $project->address = $request->address;
-        # $project->city = $request->city;
-        # $project->state = $request->state;
-
-        # $project->zipcode = $request->zipcode;
-        # $project->latitude = $request->latitude;
-        # $project->longitude = $request->longitude;
-        # $project->active = $request->active;
-
-        # $project->tracking_number = $request->tracking_number;
-        # $project->cost_center = $request->cost_center;
-        # $project->project_phase = $request->project_phase;
-        # $project->wdid_number = $request->wdid_number;
-        # $project->cgp_number = $request->cgp_number;
-        # $project->risk_level = $request->risk_level;
-
-        # $project->owner_company_name = $request->owner_company_name;
-        # $project->owner_company_description = $request->owner_company_description;
-        # $project->owner_company_zipcode = $request->owner_company_zipcode;
-        # $project->owner_company_address = $request->owner_company_address;
-        # $project->owner_company_city = $request->owner_company_city;
-        # $project->owner_company_state = $request->owner_company_state;
-
-        # $project->owner_representative = $request->owner_representative;
-        # $project->owner_title = $request->owner_title;
-        # $project->owner_phone = $request->owner_phone;
-        # $project->owner_email = $request->owner_email;
-
-        # $project->contractor_company_name = $request->contractor_company_name;
-        # $project->contractor_company_description = $request->contractor_company_description;
-        # $project->contractor_company_zipcode = $request->contractor_company_zipcode;
-        # $project->contractor_company_address = $request->contractor_company_address;
-        # $project->contractor_company_city = $request->contractor_company_city;
-        # $project->contractor_company_state = $request->contractor_company_state;
-
-        # $project->contractor_representative = $request->contractor_representative;
-        # $project->contractor_title = $request->contractor_title;
-        # $project->contractor_phone = $request->contractor_phone;
-        # $project->contractor_email = $request->contractor_email;
-
-        # $project->wpcm_company_name = $request->wpcm_company_name;
-        # $project->wpcm_company_description = $request->wpcm_company_description;
-        # $project->wpcm_company_zipcode = $request->wpcm_company_zipcode;
-        # $project->wpcm_company_address = $request->wpcm_company_address;
-        # $project->wpcm_company_city = $request->wpcm_company_city;
-        # $project->wpcm_company_state = $request->wpcm_company_state;
-
-        # $project->wpcm_representative = $request->wpcm_representative;
-        # $project->wpcm_title = $request->wpcm_title;
-        # $project->wpcm_phone = $request->wpcm_phone;
-        # $project->wpcm_email = $request->wpcm_email;
-
-        # $project->qsp_company_name = $request->qsp_company_name;
-        # $project->qsp_company_description = $request->qsp_company_description;
-        # $project->qsp_company_zipcode = $request->qsp_company_zipcode;
-        # $project->qsp_company_address = $request->qsp_company_address;
-        # $project->qsp_company_city = $request->qsp_company_city;
-        # $project->qsp_company_state = $request->qsp_company_state;
-
-        # $project->qsp_representative = $request->qsp_representative;
-        # $project->qsp_title = $request->qsp_title;
-        # $project->qsp_phone = $request->qsp_phone;
-        # $project->qsp_email = $request->qsp_email;
-
-        # $project->save();
-
         $data = $request->only(
-            'id', 'name', 'description', 'user_id'
-        );
+            'user_id',
+            'id',
+            'name',
+            'description',
+            'address',
+            'city',
+            'state',
+            'zipcode'
+            # 'latitude',
+            # 'longitude',
+            # 'active',
 
-        foreach( $data as $key => $value ){
-            # $project_id = $value;
-            # $project_name = $value;
-            # $project_desc = $value;
-        }
+            # 'tracking_number',
+            # 'cost_center',
+            # 'project_phase',
+            # 'wdid_number',
+            # 'cgp_number',
+            # 'risk_level',
+
+            # 'owner_company_name',
+            # 'owner_company_description',
+            # 'owner_company_zipcode',
+            # 'owner_company_address',
+            # 'owner_company_city',
+            # 'owner_company_state',
+            # 'owner_representative',
+            # 'owner_title',
+            # 'owner_phone',
+            # 'owner_email',
+
+            # 'contractor_company_name',
+            # 'contractor_company_description',
+            # 'contractor_company_zipcode',
+            # 'contractor_company_address',
+            # 'contractor_company_city',
+            # 'contractor_company_state',
+            # 'contractor_representative',
+            # 'contractor_title',
+            # 'contractor_phone',
+            # 'contractor_email',
+
+            # 'wpcm_company_name',
+            # 'wpcm_company_description',
+            # 'wpcm_company_zipcode',
+            # 'wpcm_company_address',
+            # 'wpcm_company_city',
+            # 'wpcm_company_state',
+            # 'wpcm_representative',
+            # 'wpcm_title',
+            # 'wpcm_phone',
+            # 'wpcm_email',
+
+            # 'qsp_company_name',
+            # 'qsp_company_description',
+            # 'qsp_company_zipcode',
+            # 'qsp_company_address',
+            # 'qsp_company_city',
+            # 'qsp_company_state',
+            # 'qsp_representative',
+            # 'qsp_title',
+            # 'qsp_phone',
+            # 'qsp_email',
+        );
 
         $data = array_values($data);
 
-        \DB::table('projects')->where('id', '=', $data[0])->update([
-            'name' => $data[1],
-            'description' => $data[2],
+        \DB::table('projects')->where('id', '=', $data[1])->update([
             # 'user_id' => \Auth::user()->id,
+            'name' => $data[2],
+            'description' => $data[3],
+            'address' => $data[4],
+            'city' => $data[5],
+            'state' => $data[6],
+            'zipcode' => $data[7],
         ]);
 
         \Session::flash('message','Your project was updated.');
         return redirect('/projects');
 
         /*
-        $project = \DB::table('projects')->where('id', '=', $project_id)->get();
-        foreach( $project as $key => $value )
-        {
-            $project_id = $value;
-        }
+            $project = \DB::table('projects')->where('id', '=', $project_id)->get();
+            foreach( $project as $key => $value )
+            {
+                $project_id = $value;
+            }
+
+            foreach( $data as $key => $value ){
+                # $project_id = $value;
+                # $project_name = $value;
+                # $project_desc = $value;
+            }
         */
     }
 
     public function getShow($id) {
         $project = \DB::table('projects')->where('id', '=', $id)->get();
-        /*
-        */
         return view('projects.show')->with('project',$project);
     }
 
     public function getConfirmDelete($id) {
-        $project = \DB::table('projects')->where('id', '=', $request->id)->get();
+        $project = \DB::table('projects')->where('id', '=', $id)->get();
         return view('projects.delete')->with('project', $project);
     }
 
     public function getGoDelete($id) {
-        $project = \DB::table('projects')->where('id', '=', $request->id)->get();
+        $project = \DB::table('projects')->where('id', '=', $id)->delete();
 
         if(is_null($project)) {
             \Session::flash('flash_message','Project not found.');
