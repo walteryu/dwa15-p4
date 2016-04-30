@@ -149,42 +149,44 @@ class ProjectController extends Controller
         # $project->save();
 
         $data = $request->only(
-            'name', 'description', 'user_id'
+            'id', 'name', 'description', 'user_id'
         );
 
-        # \DB::table('projects')->where('id', '=', $request->id)->update([
-        \DB::table('projects')->where('id', '=', $id)->update([
-            'id' => $id,
-            'name' => 'name',
-            'description' => 'description',
+        foreach( $data as $key => $value ){
+            # $project_id = $value;
+            # $project_name = $value;
+            # $project_desc = $value;
+        }
+
+        $data = array_values($data);
+
+        \DB::table('projects')->where('id', '=', $data[0])->update([
+            'name' => $data[1],
+            'description' => $data[2],
             # 'user_id' => \Auth::user()->id,
         ]);
 
-
         \Session::flash('message','Your project was updated.');
+        return redirect('/projects');
 
-        $project = \DB::table('projects')->where('id', '=', $id)->get();
+        /*
+        $project = \DB::table('projects')->where('id', '=', $project_id)->get();
         foreach( $project as $key => $value )
         {
-            $id = $value->id;
+            $project_id = $value;
         }
-        return redirect('/projects/edit/{$id}');
+        */
     }
 
     public function getShow($id) {
         $project = \DB::table('projects')->where('id', '=', $id)->get();
         /*
-        foreach( $project as $key => $value )
-        {
-          echo $value->id;
-        }
-         */
+        */
         return view('projects.show')->with('project',$project);
     }
 
     public function getConfirmDelete($id) {
         $project = \DB::table('projects')->where('id', '=', $request->id)->get();
-
         return view('projects.delete')->with('project', $project);
     }
 
