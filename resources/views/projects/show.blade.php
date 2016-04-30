@@ -24,16 +24,30 @@
                 <h3>
                   Project ID:&nbsp;
                   {{ $value->id }}
-                  <br>
                 </h3>
                 <h3>
-                  Project Name:&nbsp;
+                  Name:&nbsp;
                   {{ $value->name }}
-                  <br>
                 </h3>
                 <h3>
-                  Project Description:&nbsp;
+                  Description:&nbsp;
                   {{ $value->description }}
+                </h3>
+                <h3>
+                  Street Address:&nbsp;
+                  {{ $value->address}}
+                </h3>
+                <h3>
+                  City:&nbsp;
+                  {{ $value->city}}
+                </h3>
+                <h3>
+                  State:&nbsp;
+                  {{ $value->state}}
+                </h3>
+                <h3>
+                  Zipcode:&nbsp;
+                  {{ $value->zipcode}}
                 </h3>
             @endforeach
         </div>
