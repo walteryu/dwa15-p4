@@ -75,13 +75,13 @@ class InspectionController extends Controller
         return view('inspections.show')->with('inspection',$inspection);
     }
 
-    public function getConfirmDelete($id) {
-        $inspection = \App\Inspection::find($id);
+    public function confirmDelete($id) {
+        $inspection = \DB::table('inspections')->where('id', '=', $id)->get();
         return view('inspections.delete')->with('inspection', $inspection);
     }
 
-    public function getGoDelete($id) {
-        $inspection = \App\Inspection::find($id);
+    public function goDelete($id) {
+        $inspection = \DB::table('inspections')->where('id', '=', $id)->delete();
 
         if(is_null($inspection)) {
             \Session::flash('flash_message','Inspection not found.');
