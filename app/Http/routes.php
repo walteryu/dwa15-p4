@@ -52,19 +52,19 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/inspection/show/{id?}', 'InspectionController@getShow');
 
     /*
-    Route::resource('projects', 'ProjectController');
-    Route::resource('projects.inspections', 'ProjectInspectionController');
+        Route::resource('projects', 'ProjectController');
+        Route::resource('projects.inspections', 'ProjectInspectionController');
 
-    Route::get('/projects/{id?}/inspections', 'ProjectInspectionController@getIndex');
+        Route::get('/projects/{id?}/inspections', 'ProjectInspectionController@getIndex');
 
-    Route::get('/projects/{id?}/inspections/create', 'ProjectInspectionController@getCreate');
-    Route::post('/projects/{id?}/inspections/create', 'ProjectInspectionController@postCreate');
+        Route::get('/projects/{id?}/inspections/create', 'ProjectInspectionController@getCreate');
+        Route::post('/projects/{id?}/inspections/create', 'ProjectInspectionController@postCreate');
 
-    Route::get('/projects/{id?}/inspections/{inspectionID}/edit', 'ProjectInspectionController@getEdit');
-    Route::post('/projects/{id?}/inspections/{inspectionID}/edit', 'ProjectInspectionController@postEdit');
+        Route::get('/projects/{id?}/inspections/{inspectionID}/edit', 'ProjectInspectionController@getEdit');
+        Route::post('/projects/{id?}/inspections/{inspectionID}/edit', 'ProjectInspectionController@postEdit');
 
-    Route::get('/projects/{id?}/inspections/{inspectionID}/show', 'ProjectInspectionController@getShow');
-    Route::post('/projects/{id?}/inspections/{inspectionID}/show', 'ProjectInspectionController@postShow');
+        Route::get('/projects/{id?}/inspections/{inspectionID}/show', 'ProjectInspectionController@getShow');
+        Route::post('/projects/{id?}/inspections/{inspectionID}/show', 'ProjectInspectionController@postShow');
      */
 
     /*
