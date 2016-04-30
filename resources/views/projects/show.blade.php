@@ -22,32 +22,32 @@
                     <a href='/inspections'>View All Inspections</a>
                 </h3>
                 <h3>
-                  Project ID:&nbsp;
-                  {{ $value->id }}
+                    Project ID:&nbsp;
+                    {{ $value->id }}
                 </h3>
                 <h3>
-                  Name:&nbsp;
-                  {{ $value->name }}
+                    Name:&nbsp;
+                    {{ $value->name }}
                 </h3>
                 <h3>
-                  Description:&nbsp;
-                  {{ $value->description }}
+                    Description:&nbsp;
+                    {{ $value->description }}
                 </h3>
                 <h3>
-                  Street Address:&nbsp;
-                  {{ $value->address}}
+                    Street Address:&nbsp;
+                    {{ $value->address}}
                 </h3>
                 <h3>
-                  City:&nbsp;
-                  {{ $value->city}}
+                    City:&nbsp;
+                    {{ $value->city}}
                 </h3>
                 <h3>
-                  State:&nbsp;
-                  {{ $value->state}}
+                    State:&nbsp;
+                    {{ $value->state}}
                 </h3>
                 <h3>
-                  Zipcode:&nbsp;
-                  {{ $value->zipcode}}
+                    Zipcode:&nbsp;
+                    {{ $value->zipcode}}
                 </h3>
             @endforeach
         </div>

@@ -39,9 +39,8 @@
                     <a href='/project/edit/{{$project->id}}'>Edit Project</a>
                 </h3>
                 <br>
-                    <button type="button" class="btn btn-danger" href='/project/delete/{{$project->id}}'>
-                        Delete Project
-                    </button>
+                    <a href='/project/delete/{{$project->id}}'
+                        class="btn btn-danger" role="button">Delete Project</a>
                 </br>
             </div>
         </section>
