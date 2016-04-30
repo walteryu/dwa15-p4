@@ -65,16 +65,6 @@ class ProjectController extends Controller
             'city' => 'required',
             'state' => 'required',
             'zipcode' => 'required',
-            # 'latitude' => 'required',
-            # 'longitude' => 'required',
-            # 'active' => 'required',
-
-            # 'tracking_number' => 'required',
-            # 'cost_center' => 'required',
-            # 'project_phase' => 'required',
-            # 'wdid_number' => 'required',
-            # 'cgp_number' => 'required',
-            # 'risk_level' => 'required',
         ]);
 
         $data = $request->only(
