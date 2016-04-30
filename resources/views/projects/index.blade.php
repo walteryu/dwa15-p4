@@ -21,10 +21,10 @@
     @foreach($projects as $project)
         <section class='project'>
             <div class="well well-large">
-                <h2>
+                <h3>
                     Name:&nbsp;
-                    <a href='/project/show/{{$project->id}}'>{{ $project->name }}</a>
-                </h2>
+                    {{ $project->name}}
+                </h3>
                 <h3>
                     Description:&nbsp;
                     {{ $project->description }}
@@ -34,8 +34,15 @@
                     {{ $project->city}}, {{ $project->state}}
                 </h3>
                 <h3>
+                    <a href='/project/show/{{$project->id}}'>View Project</a>
+                    |
                     <a href='/project/edit/{{$project->id}}'>Edit Project</a>
                 </h3>
+                <br>
+                    <button type="button" class="btn btn-danger" href='/project/delete/{{$project->id}}'>
+                        Delete Project
+                    </button>
+                </br>
             </div>
         </section>
     @endforeach
