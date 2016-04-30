@@ -201,7 +201,7 @@ class ProjectController extends Controller
         }
 
         $project->delete();
-        \Session::flash('flash_message','project was deleted.');
+        \Session::flash('flash_message','Project was deleted.');
         return redirect('/projects');
     }
 }
