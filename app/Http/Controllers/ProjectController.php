@@ -24,37 +24,27 @@ class ProjectController extends Controller
             'city' => 'required',
             'state' => 'required',
             'zipcode' => 'required',
-            # 'latitude' => 'required',
-            # 'longitude' => 'required',
-            # 'active' => 'required',
-
-            # 'tracking_number' => 'required',
-            # 'cost_center' => 'required',
-            # 'project_phase' => 'required',
-            # 'wdid_number' => 'required',
-            # 'cgp_number' => 'required',
-            # 'risk_level' => 'required',
         ]);
 
         $data = $request->only(
+          'user_id',
           'name',
           'description',
           'address',
           'city',
           'state',
-          'zipcode',
-          'user_id'
+          'zipcode'
         );
 
         \DB::table('projects')->insertGetId(
             array(
+                'user_id' => \Auth::user()->id,
                 'name' => 'name',
                 'description' => 'description',
                 'address' => 'address',
                 'city' => 'city',
                 'state' => 'state',
                 'zipcode' => 'zipcode',
-                'user_id' => \Auth::user()->id,
             )
         );
 
