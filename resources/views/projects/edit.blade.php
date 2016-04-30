@@ -15,19 +15,19 @@
         @foreach( $project as $key => $value )
             <!-- Hidden fields for passing back values to controller -->
             <div hidden class='form-group'>
-               <label>Project ID:</label>
-                <input
-                    type='text'
-                    id='id'
-                    name='id'
-                    value='{{ $value->id }}'
-                >
                <label>User ID:</label>
                 <input
                     type='text'
                     id='id'
                     name='id'
                     value='{{ $value->user_id }}'
+                >
+               <label>Project ID:</label>
+                <input
+                    type='text'
+                    id='id'
+                    name='id'
+                    value='{{ $value->id }}'
                 >
             </div>
 
