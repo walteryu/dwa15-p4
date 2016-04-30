@@ -61,10 +61,27 @@ class ProjectController extends Controller
     }
 
     public function postEdit(Request $request) {
-        $project = \DB::table('projects')->where('id', '=', $request->id)->get();
+        $this->validate($request,[
+            'name' => 'required',
+            'description' => 'required',
+            # 'address' => 'required',
+            # 'city' => 'required',
+            # 'state' => 'required',
+            # 'zipcode' => 'required',
+            # 'latitude' => 'required',
+            # 'longitude' => 'required',
+            # 'active' => 'required',
 
-        $project->name = $request->name;
-        $project->description = $request->description;
+            # 'tracking_number' => 'required',
+            # 'cost_center' => 'required',
+            # 'project_phase' => 'required',
+            # 'wdid_number' => 'required',
+            # 'cgp_number' => 'required',
+            # 'risk_level' => 'required',
+        ]);
+
+        # $project->name = $request->name;
+        # $project->description = $request->description;
         # $project->address = $request->address;
         # $project->city = $request->city;
         # $project->state = $request->state;
