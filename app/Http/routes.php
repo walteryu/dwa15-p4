@@ -38,7 +38,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/project/create', 'ProjectController@postCreate');
 
     Route::get('/project/show/{id?}', 'ProjectController@getShow');
+
     Route::get('/project/delete/{id?}', 'ProjectController@confirmDelete');
+    Route::post('/project/delete', 'ProjectController@goDelete');
 
     # Inspections
     Route::get('/inspections', 'InspectionController@getIndex');
@@ -50,7 +52,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/inspection/create', 'InspectionController@postCreate');
 
     Route::get('/inspection/show/{id?}', 'InspectionController@getShow');
+
     Route::get('/inspection/delete/{id?}', 'InspectionController@confirmDelete');
+    Route::post('/inspection/delete/{id?}', 'InspectionController@goDelete');
 
     /*
         Route::resource('projects', 'ProjectController');

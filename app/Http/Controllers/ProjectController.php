@@ -167,12 +167,12 @@ class ProjectController extends Controller
         return view('projects.show')->with('project',$project);
     }
 
-    public function getConfirmDelete($id) {
+    public function confirmDelete($id) {
         $project = \DB::table('projects')->where('id', '=', $id)->get();
         return view('projects.delete')->with('project', $project);
     }
 
-    public function getGoDelete($id) {
+    public function goDelete($id) {
         $project = \DB::table('projects')->where('id', '=', $id)->delete();
 
         if(is_null($project)) {
