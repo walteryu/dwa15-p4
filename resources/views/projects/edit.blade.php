@@ -52,6 +52,50 @@
                 >
                <div class='error'>{{ $errors->first('description') }}</div>
             </div>
+
+            <div class='form-group'>
+               <label>Street Address:</label>
+                <input
+                    type='text'
+                    id='address'
+                    name='address'
+                    value='{{ old('name',$value->address) }}'
+                >
+               <div class='error'>{{ $errors->first('address') }}</div>
+            </div>
+
+            <div class='form-group'>
+               <label>City:</label>
+                <input
+                    type='text'
+                    id='city'
+                    name='city'
+                    value='{{ old('name',$value->city) }}'
+                >
+               <div class='error'>{{ $errors->first('city') }}</div>
+            </div>
+
+            <div class='form-group'>
+               <label>State:</label>
+                <input
+                    type='text'
+                    id='state'
+                    name='state'
+                    value='{{ old('name',$value->state) }}'
+                >
+               <div class='error'>{{ $errors->first('state') }}</div>
+            </div>
+
+            <div class='form-group'>
+               <label>zipcode:</label>
+                <input
+                    type='text'
+                    id='zipcode'
+                    name='zipcode'
+                    value='{{ old('name',$value->zipcode) }}'
+                >
+               <div class='error'>{{ $errors->first('zipcode') }}</div>
+            </div>
         @endforeach
 
         <div class='form-instructions'>
