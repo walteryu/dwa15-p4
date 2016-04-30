@@ -1,19 +1,34 @@
 @extends('layouts.master')
 
 @section('title')
-    StormSafe | Show Project {{ $name}}
+    StormSafe | Show Project
 @stop
 
 @section('head')
-    <link href='/css/project/show.css' rel='stylesheet'>
+    <link href='/css/project_show.css' rel='stylesheet'>
 @stop
 
 @section('content')
-    @if(isset($title))
-        <h1>Show Project: {{ $name }}</h1>
-    @else
-        <h1>No Project Selected</h1>
-    @endif
+    <section class='project'>
+        <div class="well well-large">
+            {{ dd($project) }}
+
+            <!--
+            <h2>
+                Name: {{ $project->name }}
+            </h2>
+            <h3>
+                Description: {{ $project->description }}
+            </h3>
+            <h3>
+                Location: {{ $project->city}}, {{ $project->state}}
+            </h3>
+            <h3>
+                <a href='/project/edit/{{$project->id}}'>Edit Project</a>
+            </h3>
+            -->
+        </div>
+    </section>
 @stop
 
 @section('body')
