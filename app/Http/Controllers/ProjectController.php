@@ -162,19 +162,24 @@ class ProjectController extends Controller
 
 
         \Session::flash('message','Your project was updated.');
-        # return redirect('/projects/edit/{$id}');
 
         $project = \DB::table('projects')->where('id', '=', $id)->get();
-        dd($project);
+        foreach( $project as $key => $value )
+        {
+            $id = $value->id;
+        }
+        return redirect('/projects/edit/{$id}');
     }
 
     public function getShow($id) {
         $project = \DB::table('projects')->where('id', '=', $id)->get();
+        /*
         foreach( $project as $key => $value )
         {
-            echo $value->id;
+          echo $value->id;
         }
-        # return view('projects.show')->with('project',$project);
+         */
+        return view('projects.show')->with('project',$project);
     }
 
     public function getConfirmDelete($id) {

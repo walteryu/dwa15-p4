@@ -11,22 +11,18 @@
 @section('content')
     <section class='project'>
         <div class="well well-large">
-            {{ dd($project) }}
-
-            <!--
-            <h2>
-                Name: {{ $project->name }}
-            </h2>
-            <h3>
-                Description: {{ $project->description }}
-            </h3>
-            <h3>
-                Location: {{ $project->city}}, {{ $project->state}}
-            </h3>
-            <h3>
-                <a href='/project/edit/{{$project->id}}'>Edit Project</a>
-            </h3>
-            -->
+            @foreach( $project as $key => $value )
+                <h3>
+                  Project ID:&nbsp;
+                  {{ $value->id }}
+                  <br>
+                  Project Name:&nbsp;
+                  {{ $value->name }}
+                  <br>
+                  Project Description:&nbsp;
+                  {{ $value->description }}
+                </h3>
+            @endforeach
         </div>
     </section>
 @stop

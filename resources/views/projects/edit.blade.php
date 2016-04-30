@@ -12,18 +12,6 @@
 
         {{ csrf_field() }}
 
-        <!--
-          <div class='form-group'>
-             <label></label>
-              <input
-                  type='integer'
-                  id='id'
-                  name='id'
-                  value='{{ $project->id }}'
-              >
-          </div>
-        -->
-
         <div class='form-group'>
            <label>Name:</label>
             <input
