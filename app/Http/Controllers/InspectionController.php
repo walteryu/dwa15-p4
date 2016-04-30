@@ -18,40 +18,61 @@ class InspectionController extends Controller
 
     public function postCreate(Request $request) {
         $this->validate($request,[
-            # 'title' => 'required|min:3',
-            # 'author' => 'required',
-            # 'published' => 'required|min:4',
-            # 'cover' => 'required|url',
-            # 'purchase_link' => 'required|url',
+            'name' => 'required',
+            'description' => 'required',
         ]);
 
         $data = $request->only(
-            # 'title','author','published','cover','purchase_link'
+            'project_id',
+            'name',
+            'description'
         );
-        \App\Inspection::create($data);
+
+        \DB::table('inspections')->insertGetId(
+            array(
+                # 'project_id' => $data->id,
+                'name' => 'name',
+                'description' => 'description',
+            )
+        );
 
         \Session::flash('message','Your inspection was added');
         return redirect('/inspections');
     }
 
     public function getEdit($id) {
-        $inspection = \App\Inspection::find($request->id);
-        return view('inspections.edit')->with('name',$name);
+        $inspection = \DB::table('inspections')->where('id', '=', $id)->get();
+        return view('inspections.edit')->with('inspection',$inspection);
     }
 
     public function postEdit(Request $request) {
-        $inspection = \App\Inspection::find($request->id);
+        $this->validate($request,[
+            'name' => 'required',
+            'description' => 'required',
+        ]);
 
-        # $book->title = $request->title;
-        # $book->author_id = $request->author_id;
-        # $book->cover = $request->cover;
-        # $book->published = $request->published;
-        # $book->purchase_link = $request->purchase_link;
+        $data = $request->only(
+            'user_id',
+            'id',
+            'name',
+            'description'
+        );
 
-        $inspection->save();
+        $data = array_values($data);
 
-        \Session::flash('message','Your changes were saved.');
-        return redirect('/inspection/edit/'.$request->id);
+        \DB::table('projects')->where('id', '=', $data[1])->update([
+            # 'project_id' => $data[1],
+            'name' => $data[2],
+            'description' => $data[3],
+        ]);
+
+        \Session::flash('message','Your inspection was updated.');
+        return redirect('/inspections');
+    }
+
+    public function getShow($id) {
+        $inspection = \DB::table('inspections')->where('id', '=', $id)->get();
+        return view('inspections.show')->with('inspection',$inspection);
     }
 
     public function getConfirmDelete($id) {
