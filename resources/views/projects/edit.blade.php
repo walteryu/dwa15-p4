@@ -12,12 +12,25 @@
 
         {{ csrf_field() }}
 
+        <!--
+          <div class='form-group'>
+             <label></label>
+              <input
+                  type='integer'
+                  id='id'
+                  name='id'
+                  value='{{ $project->id }}'
+              >
+          </div>
+        -->
+
         <div class='form-group'>
            <label>Name:</label>
             <input
                 type='text'
                 id='name'
                 name='name'
+                value='{{ old('name','Required') }}'
             >
            <div class='error'>{{ $errors->first('name') }}</div>
         </div>
@@ -27,7 +40,8 @@
             <input
                 type='text'
                 id='description'
-                description='description'
+                name='description'
+                value='{{ old('name','Required') }}'
             >
            <div class='error'>{{ $errors->first('description') }}</div>
         </div>
