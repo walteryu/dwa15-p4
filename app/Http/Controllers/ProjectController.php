@@ -43,11 +43,11 @@ class ProjectController extends Controller
 
         # \App\Project::create($data);
         \DB::table('projects')->insertGetId(
-          array(
-            'name' => 'name',
-            'description' => 'description',
-            'user_id' => \Auth::user()->id,
-          )
+            array(
+                'name' => 'name',
+                'description' => 'description',
+                'user_id' => \Auth::user()->id,
+            )
         );
 
         \Session::flash('message','Your project was added.');
