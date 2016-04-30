@@ -9,7 +9,6 @@
 @stop
 
 @section('content')
-
     <div class='widget'>
         <h2>All Projects</h2>
         <h3>
