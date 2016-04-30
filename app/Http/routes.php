@@ -50,6 +50,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/inspection/create', 'InspectionController@postCreate');
 
     Route::get('/inspection/show/{id?}', 'InspectionController@getShow');
+    Route::get('/inspection/delete/{id?}', 'InspectionController@confirmDelete');
 
     /*
         Route::resource('projects', 'ProjectController');
