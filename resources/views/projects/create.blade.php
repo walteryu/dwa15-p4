@@ -29,9 +29,53 @@
                type='text'
                id='description'
                name='description'
-               value='{{ old('description', 'e.g. Retrofit Project') }}'
+               value='{{ old('description', 'e.g. Runway Improvement') }}'
            >
            <div class='error'>{{ $errors->first('description') }}</div>
+        </div>
+
+        <div class='form-group'>
+           <label>Street Address:</label>
+           <input
+               type='text'
+               id='address'
+               name='address'
+               value='{{ old('address', 'e.g. 1 Airport Drive') }}'
+           >
+           <div class='error'>{{ $errors->first('address') }}</div>
+        </div>
+
+        <div class='form-group'>
+           <label>City:</label>
+           <input
+               type='text'
+               id='city'
+               name='city'
+               value='{{ old('city', 'e.g. Oakland') }}'
+           >
+           <div class='error'>{{ $errors->first('city') }}</div>
+        </div>
+
+        <div class='form-group'>
+           <label>State (Please enter 2-letter abbreviation, e.g. CA):</label>
+           <input
+               type='text'
+               id='state'
+               name='state'
+               value='{{ old('state', 'e.g. CA') }}'
+           >
+           <div class='error'>{{ $errors->first('state') }}</div>
+        </div>
+
+        <div class='form-group'>
+           <label>Zipcode:</label>
+           <input
+               type='text'
+               id='zipcode'
+               name='zipcode'
+               value='{{ old('zipcode', 'e.g. 94621') }}'
+           >
+           <div class='error'>{{ $errors->first('zipcode') }}</div>
         </div>
 
         <div class='form-instructions'>
