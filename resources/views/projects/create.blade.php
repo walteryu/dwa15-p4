@@ -18,7 +18,7 @@
                 type='text'
                 id='name'
                 name='name'
-                value='{{ old('name', 'e.g. Golden Gate Bridge') }}'
+                value='{{ old('name', 'e.g. Oakland Airport') }}'
             >
            <div class='error'>{{ $errors->first('name') }}</div>
         </div>
