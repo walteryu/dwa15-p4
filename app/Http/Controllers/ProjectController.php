@@ -146,20 +146,6 @@ class ProjectController extends Controller
 
         \Session::flash('message','Your project was updated.');
         return redirect('/projects');
-
-        /*
-            $project = \DB::table('projects')->where('id', '=', $project_id)->get();
-            foreach( $project as $key => $value )
-            {
-                $project_id = $value;
-            }
-
-            foreach( $data as $key => $value ){
-                # $project_id = $value;
-                # $project_name = $value;
-                # $project_desc = $value;
-            }
-        */
     }
 
     public function getShow($id) {
