@@ -153,20 +153,26 @@ class ProjectController extends Controller
         return view('projects.show')->with('project',$project);
     }
 
-    public function confirmDelete($id) {
+    public function getDelete($id) {
         $project = \DB::table('projects')->where('id', '=', $id)->get();
         return view('projects.delete')->with('project', $project);
     }
 
-    public function goDelete($id) {
-        $project = \DB::table('projects')->where('id', '=', $id)->delete();
+    public function postDelete(Request $request) {
+        $data = $request->only(
+            'user_id',
+            'id'
+        );
+        $data = array_values($data);
 
-        if(is_null($project)) {
-            \Session::flash('flash_message','Project not found.');
-            return redirect('/projects');
-        }
+        # $project = \DB::table('projects')->where('id', '=', $id)->delete();
+        # $project->delete();
 
-        $project->delete();
+        \DB::table('projects')
+          ->where('user_id', '=', $data[0])
+          ->where('id', '=', $data[1])
+          ->delete();
+
         \Session::flash('flash_message','Project was deleted.');
         return redirect('/projects');
     }
