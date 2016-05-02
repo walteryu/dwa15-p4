@@ -83,30 +83,29 @@ Route::group(['middleware' => ['web']], function () {
     }
     */
 
-    Route::get('/debug', function() {
-        echo '<pre>';
+    Route::group(['middleware' => 'auth'], function() {
+        Route::get('/', 'ProjectController@getIndex');
+        Route::get('/projects', 'ProjectController@getIndex');
 
-        echo '<h1>Environment</h1>';
-        echo App::environment().'</h1>';
+        Route::get('/project/create', 'ProjectController@getCreate');
+        Route::post('/project/create', 'ProjectController@postCreate');
+        Route::get('/project/edit/{id?}', 'ProjectController@getEdit');
+        Route::post('/project/edit', 'ProjectController@postEdit');
 
-        echo '<h1>Debugging?</h1>';
-        if(config('app.debug')) echo "Yes"; else echo "No";
+        Route::get('/project/show/{id?}', 'ProjectController@getShow');
+        Route::get('/project/delete/{id?}', 'ProjectController@getDelete');
+        Route::post('/project/delete', 'ProjectController@postDelete');
+    });
 
-        echo '<h1>Database Config</h1>';
-        # The following line will output your MySQL credentials.
-        # print_r(config('database.connections.mysql'));
+    Route::group(['middleware' => 'auth'], function() {
+        Route::get('/inspections', 'InspectionController@getIndex');
+        Route::get('/inspection/edit/{id?}', 'InspectionController@getEdit');
+        Route::post('/inspection/edit', 'InspectionController@postEdit');
+        Route::get('/inspection/create', 'InspectionController@getCreate');
+        Route::post('/inspection/create', 'InspectionController@postCreate');
 
-        echo '<h1>Test Database Connection</h1>';
-        try {
-            $results = DB::select('SHOW DATABASES;');
-            echo '<strong style="background-color:green; padding:5px;">Connection confirmed</strong>';
-            echo "<br><br>Your Databases:<br><br>";
-            print_r($results);
-        }
-        catch (Exception $e) {
-            echo '<strong style="background-color:crimson; padding:5px;">Caught exception: ', $e->getMessage(), "</strong>\n";
-        }
-
-        echo '</pre>';
+        Route::get('/inspection/show/{id?}', 'InspectionController@getShow');
+        Route::get('/inspection/delete/{id?}', 'InspectionController@getDelete');
+        Route::post('/inspection/delete/{id?}', 'InspectionController@postDelete');
     });
 });
