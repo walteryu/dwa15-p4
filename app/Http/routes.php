@@ -27,34 +27,31 @@ Route::group(['middleware' => ['web']], function () {
         return;
     });
 
-    # Projects
-    Route::get('/', 'ProjectController@getIndex'); # Home/Dashboard
-    Route::get('/projects', 'ProjectController@getIndex');
+    Route::group(['middleware' => 'auth'], function() {
+        Route::get('/', 'ProjectController@getIndex');
+        Route::get('/projects', 'ProjectController@getIndex');
 
-    Route::get('/project/edit/{id?}', 'ProjectController@getEdit');
-    Route::post('/project/edit', 'ProjectController@postEdit');
+        Route::get('/project/create', 'ProjectController@getCreate');
+        Route::post('/project/create', 'ProjectController@postCreate');
+        Route::get('/project/edit/{id?}', 'ProjectController@getEdit');
+        Route::post('/project/edit', 'ProjectController@postEdit');
 
-    Route::get('/project/create', 'ProjectController@getCreate');
-    Route::post('/project/create', 'ProjectController@postCreate');
+        Route::get('/project/show/{id?}', 'ProjectController@getShow');
+        Route::get('/project/delete/{id?}', 'ProjectController@confirmDelete');
+        Route::post('/project/delete', 'ProjectController@goDelete');
+    });
 
-    Route::get('/project/show/{id?}', 'ProjectController@getShow');
+    Route::group(['middleware' => 'auth'], function() {
+        Route::get('/inspections', 'InspectionController@getIndex');
+        Route::get('/inspection/edit/{id?}', 'InspectionController@getEdit');
+        Route::post('/inspection/edit', 'InspectionController@postEdit');
+        Route::get('/inspection/create', 'InspectionController@getCreate');
+        Route::post('/inspection/create', 'InspectionController@postCreate');
 
-    Route::get('/project/delete/{id?}', 'ProjectController@confirmDelete');
-    Route::post('/project/delete', 'ProjectController@goDelete');
-
-    # Inspections
-    Route::get('/inspections', 'InspectionController@getIndex');
-
-    Route::get('/inspection/edit/{id?}', 'InspectionController@getEdit');
-    Route::post('/inspection/edit', 'InspectionController@postEdit');
-
-    Route::get('/inspection/create', 'InspectionController@getCreate');
-    Route::post('/inspection/create', 'InspectionController@postCreate');
-
-    Route::get('/inspection/show/{id?}', 'InspectionController@getShow');
-
-    Route::get('/inspection/delete/{id?}', 'InspectionController@confirmDelete');
-    Route::post('/inspection/delete/{id?}', 'InspectionController@goDelete');
+        Route::get('/inspection/show/{id?}', 'InspectionController@getShow');
+        Route::get('/inspection/delete/{id?}', 'InspectionController@confirmDelete');
+        Route::post('/inspection/delete/{id?}', 'InspectionController@goDelete');
+    });
 
     /*
         Route::resource('projects', 'ProjectController');
