@@ -76,7 +76,7 @@
             </div>
 
             <div class='form-group'>
-               <label>State:</label>
+               <label>State (Please enter 2-letter abbreviation, e.g. CA):</label>
                 <input
                     type='text'
                     id='state'
