@@ -160,17 +160,38 @@ class ProjectController extends Controller
     public function postDelete(Request $request) {
         $data = $request->only(
             'user_id',
-            'id'
+            'id',
+            'name',
+            'description',
+            'address',
+            'city',
+            'state',
+            'zipcode'
         );
         $data = array_values($data);
 
-        # $project = \DB::table('projects')->where('id', '=', $id)->delete();
-        # $project->delete();
-
+        /*
         \DB::table('projects')
-          ->where('user_id', '=', $data[0])
-          ->where('id', '=', $data[1])
-          ->delete();
+            ->where('user_id', '=', $data[0])
+            ->where('id', '=', $data[1])
+            ->delete();
+
+            $project = \App\Project::find($data[1]);
+            $project.delete();
+
+        \DB::table('projects')->where('id', '=', $data[1])->delete([
+            'user_id' => $data[0],
+            'id' => $data[1],
+            'name' => $data[2],
+            'description' => $data[3],
+            'address' => $data[4],
+            'city' => $data[5],
+            'state' => $data[6],
+            'zipcode' => $data[7],
+        ]);
+        */
+
+        \DB::table('projects')->where('id', $data[1])->delete();
 
         \Session::flash('flash_message','Project was deleted.');
         return redirect('/projects');
