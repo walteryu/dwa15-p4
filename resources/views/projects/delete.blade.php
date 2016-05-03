@@ -37,6 +37,10 @@
                 <a href='/inspections'>View All Inspections</a>
             </h3>
             <h3>
+                User ID:&nbsp;
+                {{ $value->user_id }}
+            </h3>
+            <h3>
                 Project ID:&nbsp;
                 {{ $value->id }}
             </h3>
