@@ -27,26 +27,25 @@ class ProjectController extends Controller
         ]);
 
         $data = $request->only(
-          'user_id',
-          'name',
-          'description',
-          'address',
-          'city',
-          'state',
-          'zipcode'
+            'user_id',
+            'name',
+            'description',
+            'address',
+            'city',
+            'state',
+            'zipcode'
         );
+        $data = array_values($data);
 
-        \DB::table('projects')->insertGetId(
-            array(
-                'user_id' => \Auth::user()->id,
-                'name' => 'name',
-                'description' => 'description',
-                'address' => 'address',
-                'city' => 'city',
-                'state' => 'state',
-                'zipcode' => 'zipcode',
-            )
-        );
+        \DB::table('projects')->insertGetId([
+            'user_id' => \Auth::user()->id,
+            'name' => data[1],
+            'description' => data[2],
+            'address' => data[3],
+            'city' => data[4],
+            'state' => data[5],
+            'zipcode' => data[6],
+        ]);
 
         \Session::flash('message','Your project was added.');
         return redirect('/projects');
