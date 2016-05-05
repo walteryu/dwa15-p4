@@ -156,7 +156,7 @@ return [
         StormSafe\Providers\EventServiceProvider::class,
         StormSafe\Providers\RouteServiceProvider::class,
 
-        Barryvdh\Debugbar\ServiceProvider::class,
+        // Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*
