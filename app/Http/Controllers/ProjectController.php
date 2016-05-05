@@ -39,12 +39,12 @@ class ProjectController extends Controller
 
         \DB::table('projects')->insertGetId([
             'user_id' => \Auth::user()->id,
-            'name' => data[1],
-            'description' => data[2],
-            'address' => data[3],
-            'city' => data[4],
-            'state' => data[5],
-            'zipcode' => data[6],
+            'name' => $data[1],
+            'description' => $data[2],
+            'address' => $data[3],
+            'city' => $data[4],
+            'state' => $data[5],
+            'zipcode' => $data[6],
         ]);
 
         \Session::flash('message','Your project was added.');
