@@ -198,4 +198,14 @@ class ProjectController extends Controller
         \Session::flash('flash_message','Project was deleted.');
         return redirect('/projects');
     }
+
+    # Returns inspections for given project ID
+    public function getInspections($id) {
+        $inspections = \DB::table('inspections')
+            ->where('project_id', '=', $id)
+            ->get();
+
+        # dd($inspections);
+        return view('projects.inspections')->with('inspections', $inspections);
+    }
 }
