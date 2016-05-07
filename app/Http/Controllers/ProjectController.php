@@ -29,26 +29,17 @@ class ProjectController extends Controller
     }
 
     public function getCreate() {
-        # $projects_menu = \App\Author::authorsForDropdown();
-
-        return view('projects.create')->with([
-            'projects_menu' => $projects_menu
-        ]);
+        return view('projects.create');
     }
 
     public function postCreate(Request $request) {
-        $messages = [
-            'not_in' => 'Please select project for your inspection.',
-        ];
-
         $this->validate($request,[
             'name' => 'required',
             'description' => 'required',
             'address' => 'required',
             'city' => 'required',
             'state' => 'required',
-            'zipcode' => 'required',
-            'inspection_id' => 'not_in:0'
+            'zipcode' => 'required'
         ], $messages);
 
         $data = $request->only(
