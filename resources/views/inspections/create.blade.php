@@ -1,20 +1,28 @@
 @extends('layouts.master')
 
 @section('title')
-    StormSafe | Add Inspection
+    StormSafe | Create Inspection
 @stop
 
 @section('content')
 
-    <h1>Add New Inspection</h1>
+    <h1>Create Inspection</h1>
 
     <form method='POST' action='/inspection/create'>
 
         {{ csrf_field() }}
 
-        <h3>
-            **Add Projects Pulldown Menu Here**
-        </h3>
+        <div class='form-group'>
+           <label for='project_id'>Project:</label>
+           <select name='project_id' id='project_id'>
+               @foreach($projects_menu as $project_id => $project_name)
+                    <option value='{{$project_id}}'>
+                        {{$project_name}}
+                    </option>
+                @endforeach
+           </select>
+           <div class='error'>{{ $errors->first('project_id') }}</div>
+        </div>
 
         <div class='form-group'>
            <label>Name:</label>
