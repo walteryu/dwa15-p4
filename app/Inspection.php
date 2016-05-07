@@ -234,9 +234,10 @@ class Inspection extends Model
         return $this->belongsTo('\App\Project');
     }
 
+    /*
     public static function getProjectsMenu($id) {
         # $authors = \App\Author::orderBy('last_name','ASC')->get();
-        $inspections = \DB::table('inspections')
+        $projects = \DB::table('projects')
             ->orderBy('name', 'ASC')
             ->get();
 
