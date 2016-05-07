@@ -43,7 +43,7 @@
                     <a href='/project/edit/{{$project->id}}'>Edit Project</a>
                 </h3>
                 <br>
-                    <a href='/project/delete/{{$project->id}}'
+                    <a href='/project/confirm-delete/{{$project->id}}'
                         class="btn btn-danger" role="button">Delete Project</a>
                 </br>
             </div>
