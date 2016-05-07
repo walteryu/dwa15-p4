@@ -91,4 +91,11 @@ class Project extends Model
         dump($inspections->toArray());
         */
     }
+
+    public static function getProjectInspections($id) {
+        # return \App\Book::with('author')->orderBy('id','desc')->get();
+        return \DB::table('inspections')
+            ->where('project_id', '=', $id)
+            ->get();
+    }
 }
