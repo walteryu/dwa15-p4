@@ -84,7 +84,7 @@ class InspectionController extends Controller
               'description' => $data[2]
         ]);
 
-        \Session::flash('message','Your inspection was added');
+        \Session::flash('message','Inspection created successfully!');
         return redirect('/inspections');
     }
 
