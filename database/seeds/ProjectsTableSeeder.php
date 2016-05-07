@@ -11,7 +11,7 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        foreach(range(1,50) as $index)
+        foreach(range(1,10) as $index)
         {
             DB::table('projects')->insert([
                 'created_at' => Carbon\Carbon::now()->toDateTimeString(),
