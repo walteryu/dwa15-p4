@@ -119,7 +119,7 @@ class InspectionController extends Controller
             'description' => $data[3],
         ]);
 
-        \Session::flash('message','Your inspection was updated.');
+        \Session::flash('message','Inspection updated successfully!');
         return redirect('/inspections');
     }
 
