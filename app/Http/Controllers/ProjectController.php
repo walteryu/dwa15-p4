@@ -179,7 +179,7 @@ class ProjectController extends Controller
             'zipcode' => $data[7],
         ]);
 
-        \Session::flash('message','Your project was updated.');
+        \Session::flash('message','Project updated successfully!');
         return redirect('/projects');
     }
 
