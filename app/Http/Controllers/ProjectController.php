@@ -224,10 +224,11 @@ class ProjectController extends Controller
 
         \DB::table('projects')->where('id', $data[1])->delete();
 
-        \Session::flash('flash_message','Project was deleted.');
+        \Session::flash('flash_message','Project was deleted!');
         return redirect('/projects');
     }
 
+    /*
     # Returns inspections for given project ID
     public function getInspections($id) {
         $inspections = \DB::table('inspections')
