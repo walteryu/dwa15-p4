@@ -8,18 +8,77 @@ use StormSafe\Http\Requests;
 class InspectionController extends Controller
 {
     function getIndex() {
-        $inspections = \DB::table('inspections')->get();
+        $inspections = \DB::table('inspections')
+            ->orderBy('created_at', '=', 'ASC')
+            ->get();
+
+        if(is_null($inspections)) {
+            \Session::flash(
+                'message','No inspections for project, please add them.'
+            );
+            return redirect('/projects');
+        }
+
         return view('inspections.index')->with('inspections', $inspections);
     }
 
+    public function getShow($id) {
+        $inspection = \DB::table('inspections')->where('id', '=', $id)->get();
+
+        if(is_null($inspection)) {
+            \Session::flash(
+                'message','Inspection not found, please try again.'
+            );
+            return redirect('/projects');
+        }
+
+        return view('inspections.show')->with('inspection',$inspection);
+    }
+
     public function getCreate() {
-        return view('inspections.create');
+        /*
+        $projects_menu = \App\Author::authorsForDropdown();
+        return view('projects.create')->with([
+            'projects_menu' => $projects_menu
+        ]);
+        */
+
+        $projects = \DB::table('projects')
+            ->where('user_id', '=', \Auth::user()->id)
+            ->orderBy('name','ASC')
+            ->get();
+
+        if(is_null($projects)) {
+            \Session::flash(
+                'message','No projects not found, please try again.'
+            );
+            return redirect('/projects');
+        }
+
+        $projects_menu = [];
+        $projects_menu[0] = 'Please Select Project';
+
+        foreach($projects as $project) {
+            $projects_menu[$project->id] = $project->name.' - '.$project->description;
+        }
+
+        return view('inspections.create')->with([
+            'projects_menu' => $projects_menu
+        ]);
+
     }
 
     public function postCreate(Request $request) {
+        /*
+        $messages = [
+            'not_in' => 'Please select project for your inspection.',
+        ];
+        */
+
         $this->validate($request,[
             'name' => 'required',
             'description' => 'required',
+            'project_id' => 'not_in:0'
         ]);
 
         $data = $request->only(
