@@ -75,10 +75,31 @@ class ProjectController extends Controller
 
     public function getEdit($id) {
         $project = \DB::table('projects')->where('id', '=', $id)->get();
-        return view('projects.edit')->with('project',$project);
+
+        if(is_null($project)) {
+            \Session::flash('message','Project not found.');
+            return redirect('/projects');
+        }
+
+        if($project->user_id != \Auth::id()) {
+            \Session::flash(
+              'message','Sorry, project does not belong to your account.'
+            );
+            return redirect('/projects');
+        }
+
+        # $projects_menu = \App\Author::authorsForDropdown();
+
+        return view('projects.edit')
+            ->with('project',$project)
+            ->with('project_inspections',$project_inspections);
     }
 
     public function postEdit(Request $request) {
+        $messages = [
+            'not_in' => 'Please select project for your inspection.',
+        ];
+
         $this->validate($request,[
             'name' => 'required',
             'description' => 'required',
