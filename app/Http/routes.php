@@ -92,11 +92,14 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/project/edit/{id?}', 'ProjectController@getEdit');
         Route::post('/project/edit', 'ProjectController@postEdit');
 
-        Route::get('/project/show/{id?}', 'ProjectController@getShow');
-        Route::get('/project/delete/{id?}', 'ProjectController@getDelete');
+        Route::get('/project/confirm-delete/{id?}', 'ProjectController@getDelete');
         Route::post('/project/delete', 'ProjectController@postDelete');
 
+        Route::get('/project/show/{id?}', 'ProjectController@getShow');
         Route::get('/project/{id?}/inspections', 'ProjectController@getInspections');
+
+        Route::get('/project/search', 'ProjectController@getSearch');
+        Route::post('/project/search', 'ProjectController@postSearch');
     });
 
     Route::group(['middleware' => 'auth'], function() {
