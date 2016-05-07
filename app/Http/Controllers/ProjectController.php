@@ -8,7 +8,6 @@ use StormSafe\Http\Requests;
 class ProjectController extends Controller
 {
     function getIndex() {
-        # $projects = \DB::table('projects')->get();
         $projects = \DB::table('projects')
             ->where('user_id', '=', \Auth::user()->id)
             ->get();
