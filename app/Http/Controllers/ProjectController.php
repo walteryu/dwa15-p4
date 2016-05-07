@@ -14,11 +14,30 @@ class ProjectController extends Controller
         return view('projects.index')->with('projects', $projects);
     }
 
+    public function getShow($id) {
+        $project = \DB::table('projects')->where('id', '=', $id)->get();
+
+        if(is_null($project)) {
+            \Session::flash('message','Project not found');
+            return redirect('/projects');
+        }
+
+        return view('projects.show')->with('project',$project);
+    }
+
     public function getCreate() {
-        return view('projects.create');
+        # $projects_menu = \App\Author::authorsForDropdown();
+
+        return view('projects.create')->with([
+            'projects_menu' => $projects_menu
+        ]);
     }
 
     public function postCreate(Request $request) {
+        $messages = [
+            'not_in' => 'Please select project for your inspection.',
+        ];
+
         $this->validate($request,[
             'name' => 'required',
             'description' => 'required',
