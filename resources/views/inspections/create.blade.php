@@ -50,7 +50,7 @@
             All fields are required
         </div>
 
-        <button type="submit" class="btn btn-primary">Add Project</button>
+        <button type="submit" class="btn btn-primary">Create Project</button>
 
         {{--
         <ul class=''>
