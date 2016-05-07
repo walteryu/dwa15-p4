@@ -95,6 +95,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/project/show/{id?}', 'ProjectController@getShow');
         Route::get('/project/delete/{id?}', 'ProjectController@getDelete');
         Route::post('/project/delete', 'ProjectController@postDelete');
+
+        Route::get('/project/{id?}/inspections', 'ProjectController@getInspections');
     });
 
     Route::group(['middleware' => 'auth'], function() {
