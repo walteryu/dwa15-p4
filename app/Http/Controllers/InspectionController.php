@@ -133,25 +133,33 @@ class InspectionController extends Controller
         return redirect('/inspections');
     }
 
-    public function getShow($id) {
-        $inspection = \DB::table('inspections')->where('id', '=', $id)->get();
-        return view('inspections.show')->with('inspection',$inspection);
-    }
-
     public function getDelete($id) {
         $inspection = \DB::table('inspections')->where('id', '=', $id)->get();
-        return view('inspections.delete')->with('inspection', $inspection);
-    }
-
-    public function postDelete($id) {
-        $inspection = \DB::table('inspections')->where('id', '=', $id)->delete();
 
         if(is_null($inspection)) {
             \Session::flash('flash_message','Inspection not found.');
             return redirect('/inspections');
         }
 
-        $inspection->delete();
+        return view('inspections.delete')->with('inspection', $inspection);
+    }
+
+    public function postDelete($id) {
+        # $inspection = \DB::table('inspections')->where('id', '=', $id)->delete();
+        $data = $request->only(
+            'user_id',
+            'id',
+            'name',
+            'description',
+            'address',
+            'city',
+            'state',
+            'zipcode'
+        );
+        $data = array_values($data);
+
+        \DB::table('projects')->where('id', $data[1])->delete();
+
         \Session::flash('flash_message','Inspection was deleted.');
         return redirect('/inspections');
     }
