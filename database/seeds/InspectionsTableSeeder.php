@@ -11,14 +11,12 @@ class InspectionsTableSeeder extends Seeder
      */
     public function run()
     {
-        # $project_id = DB::table('projects')->first();
-
-        foreach(range(1,200) as $index)
+        foreach(range(1,50) as $index)
         {
             DB::table('inspections')->insert([
                 'created_at' => Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-                'project_id' => rand(1,50),
+                'project_id' => rand(1,10),
 
                 'name' => 'Oakland Airport',
                 'description' => 'Runway Renovation',
