@@ -100,6 +100,12 @@ class InspectionController extends Controller
 
     public function getEdit($id) {
         $inspection = \DB::table('inspections')->where('id', '=', $id)->get();
+
+        if(is_null($inspection)) {
+            \Session::flash('message','Inspection not found.');
+            return redirect('/inspections');
+        }
+
         return view('inspections.edit')->with('inspection',$inspection);
     }
 
