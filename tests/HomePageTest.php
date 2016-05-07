@@ -15,6 +15,7 @@ class HomePageTest extends TestCase
              ->see('Generate Random Users Here')
              ->dontSee('Laravel 5');
 
+        /*
         $this->visit('/')
              ->click('Generate Random Text Here')
              ->seePageIs('/lorem-ipsum/create');
