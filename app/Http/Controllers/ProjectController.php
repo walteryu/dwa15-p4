@@ -19,7 +19,9 @@ class ProjectController extends Controller
         $project = \DB::table('projects')->where('id', '=', $id)->get();
 
         if(is_null($project)) {
-            \Session::flash('message','Project not found');
+            \Session::flash(
+                'message','Project not found, please try again.'
+            );
             return redirect('/projects');
         }
 
