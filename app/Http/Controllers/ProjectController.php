@@ -40,7 +40,7 @@ class ProjectController extends Controller
             'city' => 'required',
             'state' => 'required',
             'zipcode' => 'required'
-        ], $messages);
+        ]);
 
         $data = $request->only(
             'user_id',
