@@ -11,6 +11,7 @@ class ProjectController extends Controller
         $projects = \DB::table('projects')
             ->where('user_id', '=', \Auth::user()->id)
             ->get();
+
         return view('projects.index')->with('projects', $projects);
     }
 
