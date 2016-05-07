@@ -30,7 +30,7 @@ class UsersTableSeeder extends Seeder
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
             'name' => 'stormsavvy',
             'email' => 'walter@stormsavvy.com',
-            'password' => \Hash::make('paperless'),
+            'password' => \Hash::make('helloworld'),
         ]);
     }
 }
