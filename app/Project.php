@@ -74,6 +74,10 @@ class Project extends Model
         'qsp_email',
     ];
 
+    public function user() {
+        return $this->belongsTo('\App\User');
+    }
+
     public function inspections() {
         return $this->hasMany('\App\Inspection');
 
