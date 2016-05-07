@@ -116,16 +116,15 @@ class InspectionController extends Controller
         ]);
 
         $data = $request->only(
-            'user_id',
+            'project_id',
             'id',
             'name',
             'description'
         );
-
         $data = array_values($data);
 
-        \DB::table('projects')->where('id', '=', $data[1])->update([
-            # 'project_id' => $data[1],
+        \DB::table('inspections')->where('id', '=', $data[1])->update([
+            'project_id' => $data[0],
             'name' => $data[2],
             'description' => $data[3],
         ]);
