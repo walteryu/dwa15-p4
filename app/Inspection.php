@@ -229,4 +229,24 @@ class Inspection extends Model
         'discharge_sediment_2',
         'discharge_action_2',
     ];
+
+    public function project() {
+        return $this->belongsTo('\App\Project');
+    }
+
+    public static function getProjectsMenu($id) {
+        # $authors = \App\Author::orderBy('last_name','ASC')->get();
+        $inspections = \DB::table('inspections')
+            ->orderBy('name', 'ASC')
+            ->get();
+
+        $projects_menu = [];
+        $projects_menu[0] = 'Please Select Project';
+
+        foreach($projects as $project) {
+            $projects_menu[$project->id] = $project->name.', '.$project->description;
+        }
+
+        return $projects_menu;
+    }
 }
