@@ -191,11 +191,6 @@ class ProjectController extends Controller
         return redirect('/projects');
     }
 
-    public function getShow($id) {
-        $project = \DB::table('projects')->where('id', '=', $id)->get();
-        return view('projects.show')->with('project',$project);
-    }
-
     public function getDelete($id) {
         $project = \DB::table('projects')->where('id', '=', $id)->get();
         return view('projects.delete')->with('project', $project);
