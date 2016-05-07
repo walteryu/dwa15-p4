@@ -1,12 +1,12 @@
 @extends('layouts.master')
 
 @section('title')
-    StormSafe | Add Project
+    StormSafe | Create Project
 @stop
 
 @section('content')
 
-    <h1>Add New Project</h1>
+    <h1>Create Project</h1>
 
     <form method='POST' action='/project/create'>
 
