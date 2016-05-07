@@ -103,7 +103,7 @@ class ProjectController extends Controller
             'city' => 'required',
             'state' => 'required',
             'zipcode' => 'required',
-            'inspection_id' => 'not_in:0'
+            # 'inspection_id' => 'not_in:0'
         ]);
 
         $data = $request->only(
