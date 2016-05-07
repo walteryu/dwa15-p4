@@ -36,13 +36,6 @@ class InspectionController extends Controller
     }
 
     public function getCreate() {
-        /*
-        $projects_menu = \App\Author::authorsForDropdown();
-        return view('projects.create')->with([
-            'projects_menu' => $projects_menu
-        ]);
-        */
-
         $projects = \DB::table('projects')
             ->where('user_id', '=', \Auth::user()->id)
             ->orderBy('name','ASC')
