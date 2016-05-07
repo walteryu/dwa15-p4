@@ -85,14 +85,16 @@ class ProjectController extends Controller
         # $projects_menu = \App\Author::authorsForDropdown();
 
         return view('projects.edit')
-            ->with('project',$project)
-            ->with('project_inspections',$project_inspections);
+            ->with('project',$project);
+            # ->with('project_inspections',$project_inspections);
     }
 
     public function postEdit(Request $request) {
+        /*
         $messages = [
             'not_in' => 'Please select project for your inspection.',
         ];
+        */
 
         $this->validate($request,[
             'name' => 'required',
