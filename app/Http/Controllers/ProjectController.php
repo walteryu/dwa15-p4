@@ -242,7 +242,22 @@ class ProjectController extends Controller
             ->where('project_id', '=', $id)
             ->get();
 
-        # dd($inspections);
         return view('projects.inspections')->with('inspections', $inspections);
+    }
+
+    # Project search form
+    public function getSearch() {
+        return view('projects.search');
+    }
+
+    # Project search form
+    public function postSearch(Request $request) {
+
+        # Do the search with the provided search term ($request->search)
+        $projects = \App\Project::where('title','LIKE','%'.$request->search.'%')->get();
+
+        return view('projects.search-ajax')->with(
+            ['projects' => $projects]
+        );
     }
 }
