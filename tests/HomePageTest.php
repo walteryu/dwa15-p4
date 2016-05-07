@@ -27,5 +27,6 @@ class HomePageTest extends TestCase
         $this->visit('/')
              ->click('Subtle Patterns')
              ->seePageIs('http://subtlepatterns.com/');
+        */
     }
 }
