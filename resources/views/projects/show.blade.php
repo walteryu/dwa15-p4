@@ -19,7 +19,7 @@
                 <h3>
                     <a href='/project/edit/{{$value->id}}'>Edit Project</a>
                     |
-                    <a href='/inspections'>View All Inspections</a>
+                    <a href='/project/{{$value->id}}/inspections'>View Inspections</a>
                 </h3>
                 <h3>
                     Project ID:&nbsp;
