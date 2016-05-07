@@ -8,25 +8,22 @@ class HomePageTest extends TestCase
 {
     public function testExample()
     {
-        $this->visit('/')
-             ->see('Lorem Ipsum & Random User Generator')
-             ->see('Welcome! Pacific Standard Time (PST) is now:')
-             ->see('Generate Random Text Here')
-             ->see('Generate Random Users Here')
-             ->dontSee('Laravel 5');
+        $this->visit('/login')
+           ->see('Welcome to StormSafe!')
+           ->dontSee('All Projects');
 
-        /*
-        $this->visit('/')
-             ->click('Generate Random Text Here')
-             ->seePageIs('/lorem-ipsum/create');
-
-        $this->visit('/')
-             ->click('Generate Random Users Here')
-             ->seePageIs('/random-user/create');
-
-        $this->visit('/')
-             ->click('Subtle Patterns')
-             ->seePageIs('http://subtlepatterns.com/');
-        */
+        try
+        {
+            $this->visit('/login')
+                ->type('walter@stormsavvy.com', 'email')
+                ->type('helloworld', 'password')
+                ->press('Login')
+                ->see('All Projects')
+                ->onPage('projects');
+        }
+        catch(Exception $e)
+        {
+            echo 'Message: ' .$e->getMessage();
+        }
     }
 }
