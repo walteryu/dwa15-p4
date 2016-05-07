@@ -86,14 +86,13 @@ class InspectionController extends Controller
             'name',
             'description'
         );
+        $data = array_values($data);
 
-        \DB::table('inspections')->insertGetId(
-            array(
-                # 'project_id' => $data->id,
-                'name' => 'name',
-                'description' => 'description',
-            )
-        );
+        \DB::table('inspections')->insertGetId([
+              'project_id' => $data[0],
+              'name' => $data[1],
+              'description' => $data[2]
+        ]);
 
         \Session::flash('message','Your inspection was added');
         return redirect('/inspections');
