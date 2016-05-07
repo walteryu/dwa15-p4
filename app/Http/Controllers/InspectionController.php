@@ -135,7 +135,6 @@ class InspectionController extends Controller
     }
 
     public function postDelete($id) {
-        # $inspection = \DB::table('inspections')->where('id', '=', $id)->delete();
         $data = $request->only(
             'user_id',
             'id',
