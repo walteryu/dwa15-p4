@@ -92,7 +92,7 @@ class InspectionController extends Controller
         $inspection = \DB::table('inspections')->where('id', '=', $id)->get();
 
         if(is_null($inspection)) {
-            \Session::flash('message','Inspection not found.');
+            \Session::flash('message','Inspection not found, please try again');
             return redirect('/inspections');
         }
 
