@@ -32,11 +32,6 @@
             </div>
 
             <h3>
-                <a href='/project/edit/{{$value->id}}'>Edit Project</a>
-                |
-                <a href='/inspections'>View All Inspections</a>
-            </h3>
-            <h3>
                 User ID:&nbsp;
                 {{ $value->user_id }}
             </h3>
