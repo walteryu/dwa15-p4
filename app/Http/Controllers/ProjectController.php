@@ -82,11 +82,8 @@ class ProjectController extends Controller
             return redirect('/projects');
         }
 
-        # $projects_menu = \App\Author::authorsForDropdown();
-
         return view('projects.edit')
             ->with('project',$project);
-            # ->with('project_inspections',$project_inspections);
     }
 
     public function postEdit(Request $request) {
