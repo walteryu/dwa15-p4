@@ -35,7 +35,7 @@
                 </h3>
                 <h3>
                     Location:&nbsp;
-                    {{ $project->city}}, {{ $project->state}}
+                    {{ $project->city }}, {{ $project->state }}
                 </h3>
                 <h3>
                     <a href='/project/show/{{$project->id}}'>View Project</a>
