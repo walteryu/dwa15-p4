@@ -80,22 +80,5 @@ class Project extends Model
 
     public function inspections() {
         return $this->hasMany('\App\Inspection');
-
-        /*
-        $inspections = \App\Inspection::with('project')->get();
-
-        foreach($inspections as $inspection) {
-              echo $inspection->project->name.' '.$inspection->project->description.' has inspection: '.$inspection->name.'<br>';
-        }
-
-        dump($inspections->toArray());
-        */
-    }
-
-    public static function getProjectInspections($id) {
-        # return \App\Book::with('author')->orderBy('id','desc')->get();
-        return \DB::table('inspections')
-            ->where('project_id', '=', $id)
-            ->get();
     }
 }
