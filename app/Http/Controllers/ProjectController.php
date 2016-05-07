@@ -237,6 +237,7 @@ class ProjectController extends Controller
 
         return view('projects.inspections')->with('inspections', $inspections);
     }
+    */
 
     # Project search form
     public function getSearch() {
