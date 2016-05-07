@@ -58,21 +58,18 @@ class InspectionController extends Controller
         return view('inspections.create')->with([
             'projects_menu' => $projects_menu
         ]);
-
     }
 
     public function postCreate(Request $request) {
-        /*
         $messages = [
             'not_in' => 'Please select project for your inspection.',
         ];
-        */
 
         $this->validate($request,[
             'name' => 'required',
             'description' => 'required',
             'project_id' => 'not_in:0'
-        ]);
+        ], $messages);
 
         $data = $request->only(
             'project_id',
