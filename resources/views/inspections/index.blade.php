@@ -25,8 +25,12 @@
                     **Add Project Name Here**
                 </h3>
                 <h3>
+                    Project ID:&nbsp;
+                    {{ $inspection->project_id }}
+                </h3>
+                <h3>
                     Name:&nbsp;
-                    {{ $inspection->name}}
+                    {{ $inspection->name }}
                 </h3>
                 <h3>
                     Description:&nbsp;

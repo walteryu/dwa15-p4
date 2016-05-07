@@ -22,8 +22,12 @@
         <section class='project'>
             <div class="well well-large">
                 <h3>
+                    User ID:&nbsp;
+                    {{ $project->user_id }}
+                </h3>
+                <h3>
                     Name:&nbsp;
-                    {{ $project->name}}
+                    {{ $project->name }}
                 </h3>
                 <h3>
                     Description:&nbsp;
