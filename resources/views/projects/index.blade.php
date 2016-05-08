@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
-@section('head')
-    <link href='/css/projects_index.css' rel='stylesheet'>
-@stop
-
 @section('title')
     StormSafe | All Projects
+@stop
+
+@section('head')
+    <link href='/css/project.css' rel='stylesheet'>
 @stop
 
 @section('content')

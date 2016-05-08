@@ -5,7 +5,7 @@
 @stop
 
 @section('head')
-    <link href='/css/project_show.css' rel='stylesheet'>
+    <link href='/css/project.css' rel='stylesheet'>
 @stop
 
 @section('content')

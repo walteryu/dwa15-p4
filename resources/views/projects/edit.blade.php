@@ -4,6 +4,10 @@
     StormSafe | Edit Project
 @stop
 
+@section('head')
+    <link href='/css/project.css' rel='stylesheet'>
+@stop
+
 @section('content')
 
     <h2>Edit Project</h2>

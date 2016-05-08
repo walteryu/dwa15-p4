@@ -4,6 +4,10 @@
     StormSafe | Delete Project
 @stop
 
+@section('head')
+    <link href='/css/project.css' rel='stylesheet'>
+@stop
+
 @section('content')
 
     <h2>Delete Project?</h2>
