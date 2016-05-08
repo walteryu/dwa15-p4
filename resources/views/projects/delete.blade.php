@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <h2>Delete This Project?</h2>
+    <h2>Delete Project?</h2>
 
     <form method='POST' action='/project/delete'>
 
