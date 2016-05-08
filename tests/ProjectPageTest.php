@@ -16,16 +16,25 @@ class ProjectPageTest extends TestCase
                 ->type('helloworld', 'password')
                 ->press('Login')
 
-                # Test project/index page
+                # Test dashboard
                 ->see('All Projects')
+                ->see('Create Project')
+                ->see('Search Projects')
                 ->dontSee('Welcome to StormSafe!')
 
                 # Test create project page
-                ->click('Create Project')
-                ->see('Create Project')
-                ->dontSee('All Projects')
+                # ->click('Create Project')
+                # ->dontSee('All Projects')
+
+                # Test project/index page
+                ->visit('/projects')
+                ->See('All Projects')
+                ->see('Create project')
+                ->see('Search projects')
+                ->dontSee('Welcome to StormSafe!')
 
                 # Test create project
+                ->visit('/project/create')
                 ->type('Oakland Airport', 'name')
                 ->type('Runway Renovation', 'description')
                 ->type('1 Airport Dr', 'address')
