@@ -152,4 +152,25 @@ class InspectionController extends Controller
         \Session::flash('flash_message','Inspection was deleted!');
         return redirect('/inspections');
     }
+
+    # Inspection search form
+    public function getSearch() {
+        return view('inspections.search');
+    }
+
+    # Inspection search form
+    public function postSearch(Request $request) {
+        $data = $request->input();
+        $data = array_values($data);
+
+        $inspections = \DB::table('inspections')
+            # ->where('title','LIKE','%'.$request->search.'%')->get();
+            ->where('name','LIKE','%'.$data[1].'%')
+            ->orWhere('description','LIKE','%'.$data[1].'%')
+            ->get();
+
+        return view('inspections.search-ajax')->with(
+            ['inspections' => $inspections]
+        );
+    }
 }
