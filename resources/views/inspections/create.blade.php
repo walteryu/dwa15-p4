@@ -4,6 +4,10 @@
     StormSafe | Create Inspection
 @stop
 
+@section('head')
+    <link href='/css/inspection.css' rel='stylesheet'>
+@stop
+
 @section('content')
 
     <h1>Create Inspection</h1>
