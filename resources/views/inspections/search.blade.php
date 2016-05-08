@@ -34,5 +34,5 @@
 @stop
 
 @section('body')
-    <script src="/js/search.js"></script>
+    <script src="/js/inspection-search.js"></script>
 @stop
