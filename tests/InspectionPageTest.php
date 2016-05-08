@@ -21,42 +21,33 @@ class InspectionPageTest extends TestCase
                 ->See('All Inspections')
                 ->click('View All Inspections')
 
-                # Test create project page
+                # Test create inspection page
                 ->click('Create Inspection')
                 ->see('Create Inspection')
                 ->dontSee('All Inspections')
 
-                /*
-                # Test create project
-                ->type(str_random(10), 'name')
-                ->type(str_random(10), 'description')
-                ->type(str_random(10), 'address')
-                ->type(str_random(10), 'city')
-                ->type(str_random(2), 'state')
-                ->type(94612, 'zipcode')
-                ->press('Create Project')
-                ->see('Project created successfully!')
+                # Test create inspection
+                ->select(1, 'project_id')
+                ->type('Oakland Airport', 'name')
+                ->type('Runway Renovation', 'description')
+                ->press('Create Inspection')
+                ->see('Inspection created successfully!')
 
-                # Test show project page
-                ->visit('/project/show/1')
-                ->see('Show Project')
+                # Test show inspection page
+                ->visit('/inspection/show/1')
+                ->see('Show Inspection')
 
-                # Test edit project page
-                ->visit('/project/edit/1')
-                ->see('Edit Project')
-                ->type('Fox Theater', 'name')
-                ->type('Theater Improvement', 'description')
-                ->type('1807 Telegraph Ave', 'address')
-                ->type('Oakland', 'city')
-                ->type('CA', 'state')
-                ->type(94612, 'zipcode')
+                # Test edit inspection page
+                ->visit('/inspection/edit/1')
+                ->see('Edit Inspection')
+                ->type('Oakland Airport', 'name')
+                ->type('Runway Renovation', 'description')
                 ->press('Save Changes')
-                ->see('Project updated successfully!')
+                ->see('inspection updated successfully!')
 
-                # Test confirm-delete project page
-                ->visit('/project/confirm-delete/1')
-                ->see('Delete Project?')
-                */
+                # Test confirm-delete inspection page
+                ->visit('/inspection/confirm-delete/1')
+                ->see('Delete Inspection?')
                 ;
         }
         catch(Exception $e)
