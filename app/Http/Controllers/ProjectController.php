@@ -262,4 +262,29 @@ class ProjectController extends Controller
             ['projects' => $projects]
         );
     }
+
+    # Project chart page
+    public function getChart() {
+        $projects = \DB::table('projects')
+            ->where('user_id', '=', \Auth::user()->id)
+            ->get();
+        $project_count[] = count($projects);
+
+        $inspection_count = [];
+        foreach($projects as $project)
+        {
+            $inspections = \DB::table('inspections')
+                ->where('project_id', '=', $project->id)
+                ->get();
+
+            $inspection_count[] = count($inspections);
+        }
+        # dd(array_sum($project_count));
+        # dd(array_sum($inspection_count));
+
+        return view('projects.chart')->with([
+            'project_count' => $project_count,
+            'inspection_count' => $inspection_count
+        ]);
+    }
 }
