@@ -114,7 +114,7 @@ Route::group(['middleware' => ['web']], function () {
 
         Route::get('/inspection/show/{id?}', 'InspectionController@getShow');
 
-        Route::get('/project/search', 'ProjectController@getSearch');
-        Route::post('/project/search', 'ProjectController@postSearch');
+        Route::get('/inspection/search', 'InspectionController@getSearch');
+        Route::post('/inspection/search', 'InspectionController@postSearch');
     });
 });
