@@ -51,6 +51,10 @@ class InspectionPageTest extends TestCase
                 # Test confirm-delete inspection page
                 ->visit('/inspection/confirm-delete/1')
                 ->see('Delete Inspection?')
+
+                # Test search inspection page
+                ->visit('/inspection/search')
+                ->see('Search Inspections')
                 ;
         }
         catch(Exception $e)
