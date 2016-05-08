@@ -26,6 +26,9 @@
                     {{ $project->user_id }}
                 </h3>
                 <h3>
+                    Project ID:&nbsp;
+                    {{ $project->id }}
+                <h3>
                     Name:&nbsp;
                     {{ $project->name }}
                 </h3>
