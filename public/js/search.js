@@ -9,7 +9,7 @@ $('#searchTerm').keyup(function() {
 
     // Set up the ajax call; see http://api.jquery.com/jquery.ajax for more details
     $.ajax({
-        url: '/book/search', // Route that will handle the request; its job is to return us books.
+        url: '/project/search', // Route that will handle the request; its job is to return us books.
         method: 'POST',
         dataType : 'html', // Kind of data we're expecting to get back
         data: { // Two pieces of data we'll send with the request
