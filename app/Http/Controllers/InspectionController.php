@@ -134,7 +134,7 @@ class InspectionController extends Controller
         return view('inspections.delete')->with('inspection', $inspection);
     }
 
-    public function postDelete($id) {
+    public function postDelete(Request $request) {
         $data = $request->only(
             'user_id',
             'id',
