@@ -4,6 +4,8 @@
 
 @foreach($projects as $project)
     <div class='project'>
-        <a href='/project/show/{{$project->id}}'>{{ $project->name }} - {{ $project->description }}</a>
+        <h4>
+            <a href='/project/show/{{$project->id}}'>{{ $project->name }} - {{ $project->description }}</a>
+        </h4>
     </div>
 @endforeach
