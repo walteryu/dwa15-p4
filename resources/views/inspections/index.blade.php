@@ -14,7 +14,7 @@
         <h3>
             <a href='/inspection/create'>Create Inspection</a>
             |
-            <a href='/projects'>View All Projects</a>
+            <a href='/inspection/search'>Search Inspections</a>
         </h3>
     </div>
 
