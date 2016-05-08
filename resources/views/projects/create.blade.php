@@ -4,6 +4,10 @@
     StormSafe | Create Project
 @stop
 
+@section('head')
+    <link href='/css/project.css' rel='stylesheet'>
+@stop
+
 @section('content')
 
     <h1>Create Project</h1>
