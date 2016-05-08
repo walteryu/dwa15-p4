@@ -249,11 +249,16 @@ class ProjectController extends Controller
 
     # Project search form
     public function postSearch(Request $request) {
-
-        # Do the search with the provided search term ($request->search)
         # $projects = \App\Project::where('title','LIKE','%'.$request->search.'%')->get();
+
+        $data = $request->input();
+        $data = array_values($data);
+
         $projects = \DB::table('projects')
-            ->where('title','LIKE','%'.$request->search.'%')->get();
+            # ->where('title','LIKE','%'.$request->search.'%')->get();
+            ->where('name','LIKE','%'.$data[1].'%')
+            ->orWhere('description','LIKE','%'.$data[1].'%')
+            ->get();
 
         return view('projects.search-ajax')->with(
             ['projects' => $projects]
