@@ -15,18 +15,21 @@ class InspectionPageTest extends TestCase
                 ->type('walter@stormsavvy.com', 'email')
                 ->type('helloworld', 'password')
                 ->press('Login')
-                ->dontSee('Welcome to StormSafe!')
 
                 # Test inspections/index page
+                ->visit('/inspections')
                 ->See('All Inspections')
-                ->click('View All Inspections')
+                ->see('Create Inspection')
+                ->see('Search Inspections')
+                ->dontSee('Welcome to StormSafe!')
 
                 # Test create inspection page
-                ->click('Create Inspection')
-                ->see('Create Inspection')
-                ->dontSee('All Inspections')
+                # ->click('Create Inspection')
+                # ->see('Create Inspection')
+                # ->dontSee('All Inspections')
 
                 # Test create inspection
+                ->visit('/inspection/create')
                 ->select(1, 'project_id')
                 ->type('Oakland Airport', 'name')
                 ->type('Runway Renovation', 'description')
