@@ -109,8 +109,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/inspection/create', 'InspectionController@getCreate');
         Route::post('/inspection/create', 'InspectionController@postCreate');
 
-        Route::get('/inspection/delete/{id?}', 'InspectionController@getDelete');
-        Route::post('/inspection/delete/{id?}', 'InspectionController@postDelete');
+        Route::get('/inspection/confirm-delete/{id?}', 'InspectionController@getDelete');
+        Route::post('/inspection/delete', 'InspectionController@postDelete');
 
         Route::get('/inspection/show/{id?}', 'InspectionController@getShow');
 
