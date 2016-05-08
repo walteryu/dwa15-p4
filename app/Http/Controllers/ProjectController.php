@@ -249,8 +249,6 @@ class ProjectController extends Controller
 
     # Project search form
     public function postSearch(Request $request) {
-        # $projects = \App\Project::where('title','LIKE','%'.$request->search.'%')->get();
-
         $data = $request->input();
         $data = array_values($data);
 
