@@ -42,12 +42,12 @@ class ProjectPageTest extends TestCase
                 # Test edit project page
                 ->visit('/project/edit/1')
                 ->see('Edit Project')
-                ->type('Fox Theater', 'name')
-                ->type('Theater Improvement', 'description')
-                ->type('1807 Telegraph Ave', 'address')
+                ->type('Oakland Airport', 'name')
+                ->type('Runway Renovation', 'description')
+                ->type('1 Airport Dr', 'address')
                 ->type('Oakland', 'city')
                 ->type('CA', 'state')
-                ->type(94612, 'zipcode')
+                ->type(94621, 'zipcode')
                 ->press('Save Changes')
                 ->see('Project updated successfully!')
 
