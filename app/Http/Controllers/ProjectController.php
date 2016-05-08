@@ -63,7 +63,7 @@ class ProjectController extends Controller
             'zipcode' => $data[6],
         ]);
 
-        \Session::flash('message','Your project was added.');
+        \Session::flash('message','Project created successfully!');
         return redirect('/projects');
     }
 
