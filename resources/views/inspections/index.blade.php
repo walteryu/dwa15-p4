@@ -38,14 +38,13 @@
                     {{ $inspection->description }}
                 </h3>
                 <h3>
-                    <a href='/inspection/show/{{$inspection->id}}'>View inspection</a>
+                    <a href='/inspection/show/{{$inspection->id}}'>View Inspection</a>
                     |
-                    <a href='/inspection/edit/{{$inspection->id}}'>Edit inspection</a>
+                    <a href='/inspection/edit/{{$inspection->id}}'>Edit Inspection</a>
                 </h3>
                 <br>
-                    <button type="button" class="btn btn-danger" href='/inspection/delete/{{$inspection->id}}'>
-                        Delete Inspection
-                    </button>
+                    <a href='/inspection/confirm-delete/{{$inspection->id}}'
+                        class="btn btn-danger" role="button">Delete Inspection</a>
                 </br>
             </div>
         </section>
