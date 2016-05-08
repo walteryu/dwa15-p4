@@ -63,6 +63,10 @@ class ProjectPageTest extends TestCase
                 # Test confirm-delete project page
                 ->visit('/project/confirm-delete/1')
                 ->see('Delete Project?')
+
+                # Test search project page
+                ->visit('/project/search')
+                ->see('Search Projects')
                 ;
         }
         catch(Exception $e)
