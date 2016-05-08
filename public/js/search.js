@@ -28,7 +28,7 @@ $('#searchTerm').keyup(function() {
         },
         // What to do upon completion of an unsuccessful ajax call
         error: function() {
-            $('#results').html('Sorry, there was an error; your request could not be completed.');
+            $('#results').html('Sorry, there was an error; please try again.');
             $('#results').addClass('error');
         }
 
