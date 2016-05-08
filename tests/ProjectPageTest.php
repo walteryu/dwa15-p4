@@ -26,12 +26,12 @@ class ProjectPageTest extends TestCase
                 ->dontSee('All Projects')
 
                 # Test create project
-                ->type(str_random(10), 'name')
-                ->type(str_random(10), 'description')
-                ->type(str_random(10), 'address')
-                ->type(str_random(10), 'city')
-                ->type(str_random(2), 'state')
-                ->type(94612, 'zipcode')
+                ->type('Oakland Airport', 'name')
+                ->type('Runway Renovation', 'description')
+                ->type('1 Airport Dr', 'address')
+                ->type('Oakland', 'city')
+                ->type('CA', 'state')
+                ->type(94621, 'zipcode')
                 ->press('Create Project')
                 ->see('Project created successfully!')
 
