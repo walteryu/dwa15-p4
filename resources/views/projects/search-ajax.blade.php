@@ -1,9 +1,9 @@
-@if(sizeof($books) == 0)
+@if(sizeof($projects) == 0)
     No results found.
 @endif
 
-@foreach($books as $book)
-    <div class='book'>
-        <a href='/book/show/{{$book->id}}'>{{ $book->title }}</a>
+@foreach($projects as $project)
+    <div class='project'>
+        <a href='/project/show/{{$project->id}}'>{{ $project->name }} - {{ $project->description }}</a>
     </div>
 @endforeach
