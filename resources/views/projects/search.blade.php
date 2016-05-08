@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Search for a book
+    Search Projects
 @stop
 
 @section('head')
