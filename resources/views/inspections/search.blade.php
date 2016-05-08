@@ -10,14 +10,14 @@
 
 @section('content')
 
-    <h1>Search for a book</h1>
+    <h1>Search Inspections</h1>
 
     <form method='POST'>
 
         {{ csrf_field() }}
 
         <div class='form-group'>
-           <label>Search for a book title, e.g. 'Gatsby' or 'Caged Bird':</label>
+           <label>Search By Title or Description, e.g. 'Oakland Airport':</label>
             <input
                 type='text'
                 id='searchTerm'
