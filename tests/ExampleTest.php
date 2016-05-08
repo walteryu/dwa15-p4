@@ -6,9 +6,19 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ExampleTest extends TestCase
 {
-    public function testBasicExample()
+    public function testLoginPage()
     {
-        $this->visit('/')
-             ->see('Developer\'s Best Friend Application');
+        try
+        {
+            # Test auth/login view
+            $this->visit('/login')
+                ->see('Welcome to StormSafe!')
+                ->dontSee('All Projects')
+                ;
+        }
+        catch(Exception $e)
+        {
+            echo 'Message: '.$e->getMessage();
+        }
     }
 }
