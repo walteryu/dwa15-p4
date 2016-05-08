@@ -75,24 +75,21 @@ class ProjectController extends Controller
             return redirect('/projects');
         }
 
-        if($project->user_id != \Auth::id()) {
-            \Session::flash(
-              'message','Sorry, project does not belong to your account.'
-            );
-            return redirect('/projects');
+        # if($project->user_id != \Auth::id()) {
+        foreach( $project as $key => $value )
+        {
+            if($value->user_id != \Auth::id()) {
+                \Session::flash(
+                  'message','Sorry, project does not belong to your account.'
+                );
+                return redirect('/projects');
+            }
         }
-
         return view('projects.edit')
             ->with('project',$project);
     }
 
     public function postEdit(Request $request) {
-        /*
-        $messages = [
-            'not_in' => 'Please select project for your inspection.',
-        ];
-        */
-
         $this->validate($request,[
             'name' => 'required',
             'description' => 'required',
