@@ -182,6 +182,12 @@ class ProjectController extends Controller
 
     public function getDelete($id) {
         $project = \DB::table('projects')->where('id', '=', $id)->get();
+
+        if(is_null($project)) {
+            \Session::flash('flash_message','Project not found, please try again.');
+            return redirect('/projects');
+        }
+
         return view('projects.delete')->with('project', $project);
     }
 
