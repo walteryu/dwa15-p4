@@ -22,11 +22,12 @@
         <section class='inspection'>
             <div class="well well-large">
                 <h3>
-                    **Add Project Name Here**
-                </h3>
-                <h3>
                     Project ID:&nbsp;
                     {{ $inspection->project_id }}
+                </h3>
+                <h3>
+                    Inspection ID:&nbsp;
+                    {{ $inspection->id }}
                 </h3>
                 <h3>
                     Name:&nbsp;
