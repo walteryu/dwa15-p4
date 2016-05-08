@@ -20,7 +20,6 @@
     @yield('head')
 
     <link rel="stylesheet" href="{{ URL::asset('css/master.css') }}" />
-    <link rel="stylesheet" href="{{ URL::asset('css/stormsafe.css') }}" />
 </head>
 
 <body>
