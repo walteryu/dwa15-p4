@@ -28,31 +28,51 @@ class ProjectController extends Controller
             return redirect('/projects');
         }
 
-        $project_url = array_values($project);
-        foreach($project_url as $key => $value)
+        $project_array = array_values($project);
+        foreach($project_array as $key => $value)
         {
-            $url = 'http://api.wunderground.com/api/'.env('WU_KEY').'/forecast10day/q/'.$value->zipcode.'.json';
+            $forecast_url = 'http://api.wunderground.com/api/'.env('WU_KEY').'/forecast10day/q/'.$value->zipcode.'.json';
+            # $map_url = 'https://www.google.com/maps/place/Oakland,+CA+'.$value->zipcode;
         }
 
-        $response = file_get_contents($url);
+        # Wunderground API response and JSON encoding
+        $response = file_get_contents($forecast_url);
         $data = json_decode($response, true);
 
-        /*
-        foreach($data['forecast'] as $forecast) {
-            foreach($forecast['forecastday'] as $key => $value)
-            {
-                echo 'Day: '.$value['title'].'<br>';
-                echo '<img src="'.$value['icon_url'].'" alt="Icon URL"><br>';
-                echo 'Chance of Rain : '.$value['pop'].'%<br>';
-                echo 'Forecast: '.$value['fcttext'].'<br>';
-                echo '<br></br>';
-            }
+        # Try/catch block for local connection errors
+        try
+        {
+            $redis = Redis::connection();
+            $redis->set('set_array', $response);
+
+            $redis    = Redis::connection();
+            $get_array = $redis->get('set_array');
+            $get_array = json_decode($get_array);
         }
-        */
+        catch(\Exception $e)
+        {
+            \Session::flash('message','Redis Error: '.$e->getMessage());
+        }
+
+        # Geocoder API response for Google Maps integration
+        $curl     = new \Ivory\HttpAdapter\CurlHttpAdapter();
+        $geocoder = new \Geocoder\Provider\GoogleMaps($curl);
+        $geocoder_results = $geocoder->geocode('Oakland, CA');
+        $geocoder_array = $geocoder_results->first();
+        $coordinates_array = $geocoder_array->getCoordinates();
+
+        # dd($coordinates_array);
+
+        foreach($coordinates_array as $key => $value)
+        {
+            # echo($value);
+            $map_url = "http://maps.google.com/maps/api/staticmap?size=600x400&sensor=false&zoom=10&markers=$value->latitutde%2C$value->longitude";
+        }
 
         return view('projects.show')->with([
             'project' => $project,
-            'data' => $data
+            'data' => $data,
+            'map_url' => $map_url
         ]);
     }
 
