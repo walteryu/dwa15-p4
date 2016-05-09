@@ -32,7 +32,7 @@ class ProjectController extends Controller
         foreach($project_array as $key => $value)
         {
             $forecast_url = 'http://api.wunderground.com/api/'.env('WU_KEY').'/forecast10day/q/'.$value->zipcode.'.json';
-            # $map_url = 'https://www.google.com/maps/place/Oakland,+CA+'.$value->zipcode;
+            $map_url = 'https://www.google.com/maps/place/Oakland,+CA+'.$value->zipcode;
         }
 
         # Wunderground API response and JSON encoding
