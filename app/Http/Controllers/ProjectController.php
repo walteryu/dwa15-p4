@@ -34,6 +34,7 @@ class ProjectController extends Controller
         $response = file_get_contents($url);
         $data = json_decode($response, true);
 
+        /*
         foreach($data['forecast'] as $forecast) {
             foreach($forecast['forecastday'] as $key => $value)
             {
