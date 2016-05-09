@@ -72,7 +72,7 @@
 
         <footer>
             <h4>
-                Background Image Provided by <a href="http://subtlepatterns.com/">Subtle Patterns</a>
+                Background Image: <a href="http://subtlepatterns.com/">Subtle Patterns</a>
             </h4>
         </footer>
     </div>
