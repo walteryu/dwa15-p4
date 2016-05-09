@@ -52,14 +52,19 @@
             @endforeach
 
             <h3>
+                Site Map
+            </h3>
+            <img src="{{ $map_url }}" alt="Site Map"><br>
+
+            <h3>
                 10-Day Forecast (Wunderground API):
             </h3>
             @foreach($data['forecast'] as $forecast)
                 @foreach($forecast['forecastday'] as $key => $value)
                     <h4>
                         <img src="{{ $value['icon_url'] }}" alt="Forecast Icon"><br>
-                        Date: {{ $value['title'] or 'Extra Row, Please Ignore' }}<br>
-                        Forecast: {{ $value['fcttext'] or 'Extra Row, Please Ignore' }}<br>
+                        Date: {{ $value['title'] or 'API returns uneven array, please ignore.' }}<br>
+                        Forecast: {{ $value['fcttext'] or 'API returns uneven array, please ignore.' }}<br>
                         Chance of Rain: {{ $value['pop'] }}%<br>
                     </h4>
                 @endforeach
