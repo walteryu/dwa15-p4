@@ -15,7 +15,7 @@
 
     <section class='project'>
         <div class="well well-large">
-            @foreach( $project as $key => $value )
+            @foreach($project as $key => $value)
                 <h3>
                     <a href='/project/edit/{{$value->id}}'>Edit Project</a>
                     |
