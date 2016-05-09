@@ -25,6 +25,26 @@ class ProjectController extends Controller
             return redirect('/projects');
         }
 
+        $project_url = array_values($project);
+        foreach($project_url as $key => $value)
+        {
+            $url = 'http://api.wunderground.com/api/'.env('WU_KEY').'/forecast10day/q/'.$value->zipcode.'.json';
+        }
+
+        $response = file_get_contents($url);
+        $data = json_decode($response, true);
+
+        foreach($data['forecast'] as $forecast) {
+            foreach($forecast['forecastday'] as $key => $value)
+            {
+                echo 'Day: '.$value['title'].'<br>';
+                echo '<img src="'.$value['icon_url'].'" alt="Icon URL"><br>';
+                echo 'Chance of Rain : '.$value['pop'].'%<br>';
+                echo 'Forecast: '.$value['fcttext'].'<br>';
+                echo '<br></br>';
+            }
+        }
+
         return view('projects.show')->with('project',$project);
     }
 
