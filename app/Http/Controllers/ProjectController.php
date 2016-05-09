@@ -66,7 +66,7 @@ class ProjectController extends Controller
         foreach($coordinates_array as $key => $value)
         {
             # echo($value);
-            $map_url = "http://maps.google.com/maps/api/staticmap?size=600x400&sensor=false&zoom=10&markers=$value->latitutde%2C$value->longitude";
+            # $map_url = "http://maps.google.com/maps/api/staticmap?size=600x400&sensor=false&zoom=10&markers=$value->latitutde%2C$value->longitude";
         }
 
         return view('projects.show')->with([
