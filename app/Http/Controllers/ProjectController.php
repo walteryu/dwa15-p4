@@ -5,6 +5,9 @@ namespace StormSafe\Http\Controllers;
 use Illuminate\Http\Request;
 use StormSafe\Http\Requests;
 
+use Redis;
+use StormSafe\Vendor\Geocoder;
+
 class ProjectController extends Controller
 {
     function getIndex() {
