@@ -279,7 +279,6 @@ class ProjectController extends Controller
         return redirect('/projects');
     }
 
-    /*
     # Returns inspections for given project ID
     public function getInspections($id) {
         $inspections = \DB::table('inspections')
@@ -288,7 +287,6 @@ class ProjectController extends Controller
 
         return view('projects.inspections')->with('inspections', $inspections);
     }
-    */
 
     # Project search form
     public function getSearch() {
