@@ -45,8 +45,12 @@ class ProjectController extends Controller
                 echo '<br></br>';
             }
         }
+        */
 
-        return view('projects.show')->with('project',$project);
+        return view('projects.show')->with([
+            'project' => $project,
+            'data' => $data
+        ]);
     }
 
     public function getCreate() {
