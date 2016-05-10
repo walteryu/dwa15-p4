@@ -54,7 +54,7 @@
             <h3>
                 Site Map
             </h3>
-            <img src="{{ $map_url }}" alt="Site Map"><br>
+            <img src="http://bit.ly/24KvUoa" alt="Site Map"><br>
 
             <h3>
                 10-Day Forecast (Wunderground API):
