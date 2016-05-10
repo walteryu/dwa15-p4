@@ -145,6 +145,7 @@ class ProjectController extends Controller
             'city' => 'required',
             'state' => 'required',
             'zipcode' => 'required'
+            # str_random(10)
         ]);
 
         $data = $request->only(
