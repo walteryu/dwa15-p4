@@ -9,12 +9,6 @@ class Inspection extends Model
     protected $fillable = [
         'name',
         'description',
-        'address',
-        'city',
-        'state',
-
-        'name' => 'Oakland Airport',
-        'description' => 'Runway Renovation',
         'inspection_date',
         'inspection_location',
 
