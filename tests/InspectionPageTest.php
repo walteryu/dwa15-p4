@@ -43,10 +43,13 @@ class InspectionPageTest extends TestCase
                 # Test edit inspection page
                 ->visit('/inspection/edit/1')
                 ->see('Edit Inspection')
+                ->type(1, 'project_id')
                 ->type('Oakland Airport', 'name')
                 ->type('Runway Renovation', 'description')
                 ->press('Save Changes')
                 ->see('inspection updated successfully!')
+                /*
+                */
 
                 # Test confirm-delete inspection page
                 ->visit('/inspection/confirm-delete/1')
