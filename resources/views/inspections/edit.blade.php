@@ -22,8 +22,8 @@
                <label>Project ID:</label>
                 <input
                     type='text'
-                    id='id'
-                    name='id'
+                    id='project_id'
+                    name='project_id'
                     value='{{ $value->project_id }}'
                 >
                <label>Inspection ID:</label>
