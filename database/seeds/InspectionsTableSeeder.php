@@ -20,6 +20,7 @@ class InspectionsTableSeeder extends Seeder
 
                 'name' => 'Oakland Airport',
                 'description' => 'Runway Renovation',
+
                 'inspection_date' => Carbon\Carbon::today(),
                 'inspection_location' => '1 Airport Dr',
 
