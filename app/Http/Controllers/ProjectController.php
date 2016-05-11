@@ -420,27 +420,8 @@ class ProjectController extends Controller
         );
         $data = array_values($data);
 
-        /*
-        \DB::table('projects')
-            ->where('user_id', '=', $data[0])
-            ->where('id', '=', $data[1])
-            ->delete();
-
-            $project = \App\Project::find($data[1]);
-            $project.delete();
-
-        \DB::table('projects')->where('id', '=', $data[1])->delete([
-            'user_id' => $data[0],
-            'id' => $data[1],
-            'name' => $data[2],
-            'description' => $data[3],
-            'address' => $data[4],
-            'city' => $data[5],
-            'state' => $data[6],
-            'zipcode' => $data[7],
-        ]);
-        */
-
+        # Cascading delete of inspection, then project records
+        \DB::table('inspections')->where('project_id', $data[1])->delete();
         \DB::table('projects')->where('id', $data[1])->delete();
 
         \Session::flash('flash_message','Project was deleted!');
