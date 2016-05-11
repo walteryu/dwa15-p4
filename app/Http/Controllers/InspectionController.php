@@ -147,7 +147,7 @@ class InspectionController extends Controller
         );
         $data = array_values($data);
 
-        \DB::table('projects')->where('id', $data[1])->delete();
+        \DB::table('inspections')->where('id', $data[1])->delete();
 
         \Session::flash('flash_message','Inspection was deleted!');
         return redirect('/inspections');
