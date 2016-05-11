@@ -165,7 +165,7 @@ class ProjectController extends Controller
             'state' => $data[5],
             'zipcode' => $data[6],
 
-            # Verify failing unit test...
+            # Correct failing unit test...
             'latitude' => $data[8],
             'longitude' => $data[9],
             'active' => $data[10],
