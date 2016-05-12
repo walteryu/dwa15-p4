@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ProjectPageTest extends TestCase
 {
-    public function testProjectPage()
+    public function testProjectIndex()
     {
         try
         {
