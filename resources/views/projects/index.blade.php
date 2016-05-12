@@ -44,11 +44,10 @@
                     <a href='/project/show/{{$project->id}}'>View Project</a>
                     |
                     <a href='/project/edit/{{$project->id}}'>Edit Project</a>
-                </h3>
-                <br>
+                    |
                     <a href='/project/confirm-delete/{{$project->id}}'
                         class="btn btn-danger" role="button">Delete Project</a>
-                </br>
+                </h3>
             </div>
         </section>
     @endforeach

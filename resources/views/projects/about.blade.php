@@ -12,28 +12,26 @@
 
     <h1>About StormSafe, Environmental Software</h1>
     <br>
-    <h3>
-        <p>
-            StormSafe helps Civil & Environmental engineers with environmental compliance.
-        </p>
-        <br>
+    <p>
+        <h3>StormSafe helps Civil & Environmental engineers with environmental compliance.</h3>
+    </p>
+    <br>
 
-        <p>
-            Benefits of using our software with your projects are as follows:
-        </p>
+    <p>
+        <h3>Benefits of using our software with your projects are as follows:</h3>
+    </p>
 
-        <li>
-            All users to track projects and site inspections to meet environmnetal permit requirements
-        </li>
-        <li>
-            Save users time in filling out, submitting and storing paper forms
-        </li>
-        <li>
-            Improve project record retention by storing them electronically
-        </li>
-        <li>
-            Complete site inspection reports using the website, based on the US EPA site inspection template
-        </li>
-    </h3>
+    <li>
+        <h3>All users to track projects and site inspections to meet environmnetal permit requirements</h3>
+    </li>
+    <li>
+        <h3>Save users time in filling out, submitting and storing paper forms</h3>
+    </li>
+    <li>
+        <h3>Improve project record retention by storing them electronically</h3>
+    </li>
+    <li>
+        <h3>Complete site inspection reports using the website, based on the US EPA site inspection template</h3>
+    </li>
 
 @stop

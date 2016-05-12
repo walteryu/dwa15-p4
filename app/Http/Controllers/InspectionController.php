@@ -74,8 +74,11 @@ class InspectionController extends Controller
         $data = $request->only(
             'project_id',
             'name',
-            'description',
+            'description'
+            #,
 
+            # Additional fields, commented out for project submission
+            /*
             'inspection_date',
             'inspection_location',
 
@@ -257,17 +260,20 @@ class InspectionController extends Controller
             'discharge_description_2',
             'discharge_sediment_2',
             'discharge_action_2'
+            */
         );
         $data = array_values($data);
 
         \DB::table('inspections')->insertGetId([
               'project_id' => $data[0],
               'name' => $data[1],
-              'description' => $data[2],
+              'description' => $data[2]
+              #,
 
-              # Update index values, leave extra ID at the end?
-              # 'inspection_date',
-              # 'inspection_location',
+              # Additional fields, commented out for project submission
+              /*
+              'inspection_date',
+              'inspection_location',
 
               'inspector_name' => $data[3],
               'inspector_title' => $data[4],
@@ -447,6 +453,7 @@ class InspectionController extends Controller
               'discharge_description_2' => $data[176],
               'discharge_sediment_2' => $data[177],
               'discharge_action_2' => $data[178]
+              */
         ]);
 
         \Session::flash('message','Inspection created successfully!');
@@ -474,8 +481,11 @@ class InspectionController extends Controller
             'project_id',
             'id',
             'name',
-            'description',
+            'description'
+            #,
 
+            # Additional fields, commented out for project submission
+            /*
             'inspection_date',
             'inspection_location',
             'inspector_name',
@@ -656,17 +666,20 @@ class InspectionController extends Controller
             'discharge_description_2',
             'discharge_sediment_2',
             'discharge_action_2'
+            */
         );
         $data = array_values($data);
 
         \DB::table('inspections')->where('id', '=', $data[1])->update([
             'project_id' => $data[0],
             'name' => $data[2],
-            'description' => $data[3],
+            'description' => $data[3]
+            #,
 
-            # Update index values, leave extra ID at the end?
-            # 'inspection_date',
-            # 'inspection_location',
+            # Additional fields, commented out for project submission
+            /*
+            'inspection_date',
+            'inspection_location',
 
             'inspector_name' => $data[3],
             'inspector_title' => $data[4],
@@ -846,7 +859,7 @@ class InspectionController extends Controller
             'discharge_description_2' => $data[176],
             'discharge_sediment_2' => $data[177],
             'discharge_action_2' => $data[178]
-
+            */
         ]);
 
         \Session::flash('message','Inspection updated successfully!');
@@ -869,8 +882,11 @@ class InspectionController extends Controller
             'project_id',
             'id',
             'name',
-            'description',
+            'description'
+            #,
 
+            # Additional fields, commented out for project submission
+            /*
             'inspection_date',
             'inspection_location',
             'inspector_name',
@@ -1051,6 +1067,7 @@ class InspectionController extends Controller
             'discharge_description_2',
             'discharge_sediment_2',
             'discharge_action_2'
+            */
         );
         $data = array_values($data);
 
