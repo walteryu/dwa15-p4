@@ -477,4 +477,9 @@ class ProjectController extends Controller
             'inspection_count' => $inspection_count
         ]);
     }
+
+    # About page
+    public function getAbout() {
+        return view('projects.search');
+    }
 }
