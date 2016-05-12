@@ -94,9 +94,6 @@ class ProjectController extends Controller
             'zipcode' => 'required'
         ]);
 
-        /*
-        $data = $request->all();
-        */
         $data = $request->only(
             'user_id',
             'name',
