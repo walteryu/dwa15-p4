@@ -1,7 +1,8 @@
 # HES, DWA-15 P4 - Final Project (StormSafe)
 
 ## Live URL
-Login using user seed accounts per [P4 Instructions](http://bit.ly/1R0cZZk):
+Please login using seed accounts per [Instructions](http://bit.ly/1R0cZZk) for the final project:
+
 [StormSafe, Environmental App](http://p4.walteryu.pw)
 
 ## Description
@@ -10,13 +11,12 @@ StormSafe helps Civil & Environmental engineers with environmental compliance.
 The application is a PHP implementation of my personal project 
 [StormSavvy](http://stormsavvy.com/), which is written in Ruby on Rails.
 
-StormSavvy provides the following features (and inspiration for this
-assignment):
+StormSavvy has the following features (and inspiration for this assignment):
 
-* Weather forecast and POP alerts using the NOAA/Wunderground API's
+* Weather forecast and POP alerts using the NOAA XML API and Wunderground JSON API
 * PDF generation using the [PrawnPDF RubyGem](https://rubygems.org/gems/prawn/versions/2.1.0)
 * Document/image storage using Amazon S3
-* User emails using SendGrid and
+* User weather forecast and document attachment emails using SendGrid and
   [ActionMailer](http://guides.rubyonrails.org/action_mailer_basics.html)
 
 
@@ -32,7 +32,6 @@ my coding demos for that project, showing major features as listed
 above.
 
 [Demo on YouTube](https://youtu.be/zrTFrxOlIgM)
-[Product Demo](https://youtu.be/T1dfGAIYniw)
 
 ## Details for Teaching Team
 
@@ -163,9 +162,7 @@ Geocoder lat/long response was successfully incorporated but data array
 returns an an "unknown value"; as a result, feature was commented out
 for sake of completing remaining project requirements on time.
 
-As a result, code is contained within the 
-
-[Project Controller](
+As a result, code is contained within the [Project Controller](
 https://github.com/walteryu/dwa15-p4/blob/master/app/Http/Controllers/ProjectController.php
 )
 
@@ -177,9 +174,7 @@ better understanding of the Redis PHP implementation (StormSavvy uses
 Redis as part of the SideKick RubyGem for speeding up PDF generation
 using multi-threading processes).
 
-As a result, code is contained within the 
-
-[Project Controller](
+As a result, code is contained within the [Project Controller](
 https://github.com/walteryu/dwa15-p4/blob/master/app/Http/Controllers/ProjectController.php
 )
 
@@ -187,13 +182,39 @@ and commented out to avoid issues in production. Main issue is that
 Redis needs to be installed to read from the correct port in order to
 run correctly (works correctly in development).
 
+### 6. Additional Demo Video (Posted on Login Page):
+
+Treating this project as if it were a real-life Minimum Viable Product
+(MVP), I posted an additional demo video to the login page to explain
+basic and bonus features
+
 ## References & Outside Code
 
 Outside code/libraries were used as follows:
 
-* [Bootstrap](http://getbootstrap.com) - Called as CDN Asset
-* [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Reference for Controllers/Views
-* [Subtle Patterns](http://subtlepatterns.com) - Background Image, Set Inside Stylesheet
-* [Bootstrap Documentation](https://v5-alpha.getbootstrap.com/components/forms) - Referenced for Form Elements
-* [Laravel Docs on Testing](https://laravel.com/docs/5.1/testing) - Referenced for PHPUnit testing in Laravel
-* [Laravel Docs on Validation](https://laravel.com/docs/5.1/validation) - Referenced for HTML Form Validation/Error Handling
+### Basic Feature Reference:
+* [StormSavvy](http://stormsavvy.com/) - Original Ruby on Rails implementation of StormSafe
+* [Bootstrap](http://getbootstrap.com) - Called as CDN Asset from master layout view template
+* [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Referenced for Foobooks example, search box feature and pulldown menu (book/authors)
+* [Subtle Patterns](http://subtlepatterns.com) - Background image, which are set within stylesheet
+* [Bootstrap Documentation](https://v5-alpha.getbootstrap.com/components/forms) - Referenced for form elements
+* [Laravel Docs on Validation](https://laravel.com/docs/5.1/validation) - Referenced for HTML form validation/error handling
+
+### Bonue Feature Reference:
+* [Laravel Docs on Testing](https://laravel.com/docs/5.1/testing) - Referenced for PHPUnit unit/integration testing in Laravel
+* [Laravel Docs on Testing](https://laravel.com/docs/5.2/redis) - Referenced for Redis setup/configuration
+* [PHP Geocoder Package on Github](https://github.com/geocoder-php/Geocoder) - Used for geocoding project zipcode to return lat/long (works to return lat/long but data array returns error)
+* [D3.js](https://d3js.org) - Data visualization library used for
+  showing user project/inspection metrics
+* [C3.js](http://c3js.org) - Add-on library used together with D3.js
+* [Predis Package on Packagist](https://packagist.org/packages/predis/predis) - Required for using Redis; however, full installation required on production serve; as a result, feature was not completed
+[Laravel Docs on Database Interactions/Facade](https://laravel.com/docs/5.2/database) - Used for with Database Facade due to \App model namespacing issue 
+[Laravel Docs on Query Builder](https://laravel.com/docs/5.2/queries) -
+Used for CRUD operations (create/edit) due to \App model namespacing issue
+
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
