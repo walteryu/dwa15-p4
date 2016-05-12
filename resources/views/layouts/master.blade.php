@@ -71,13 +71,13 @@
 
             @yield('content')
         </section>
-
-        <footer>
-            <h4>
-                Background Image: <a href="http://subtlepatterns.com/">Subtle Patterns</a>
-            </h4>
-        </footer>
     </div>
+
+    <footer>
+        <h4>
+            Background Image: <a href="http://subtlepatterns.com/">Subtle Patterns</a>
+        </h4>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
