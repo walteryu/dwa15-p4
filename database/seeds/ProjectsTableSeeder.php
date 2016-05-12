@@ -82,7 +82,7 @@ class ProjectsTableSeeder extends Seeder
                 'qsp_representative' => str_random(10),
                 'qsp_title' => str_random(10),
                 'qsp_phone' => str_random(10),
-                'qsp_email' => str_random(10),
+                'qsp_email' => str_random(10)
             ]);
         }
     }
