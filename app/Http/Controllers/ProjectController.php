@@ -325,6 +325,7 @@ class ProjectController extends Controller
 
         $data = array_values($data);
 
+        # \App model namespacing issue, using Database Facade instead
         \DB::table('projects')->where('id', '=', $data[1])->update([
             # 'user_id' => \Auth::user()->id,
             'name' => $data[2],
