@@ -159,6 +159,7 @@ class ProjectController extends Controller
         );
         $data = array_values($data);
 
+        # \App model namespacing issue, using Database Facade instead
         \DB::table('projects')->insertGetId([
             'user_id' => \Auth::user()->id,
             'name' => $data[1],
