@@ -306,7 +306,6 @@
             <h3>
                 10-Day Forecast (Wunderground API):
             </h3>
-            {{ dd($data['forecast']) }}
             @foreach($data['forecast'] as $forecast)
                 @foreach($forecast['forecastday'] as $key => $value)
                     <h4>

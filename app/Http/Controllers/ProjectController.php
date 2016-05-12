@@ -40,6 +40,7 @@ class ProjectController extends Controller
         $data = json_decode($response, true);
 
         # Bonus Feature, Redis caching (try/catch block for local connection errors)
+        /*
         try
         {
             $redis = Redis::connection();
@@ -53,6 +54,7 @@ class ProjectController extends Controller
         {
             \Session::flash('message','Redis Error: '.$e->getMessage());
         }
+        */
 
         # Bonus Feature, Geocoder API response for Google Maps integration
         $curl     = new \Ivory\HttpAdapter\CurlHttpAdapter();
@@ -61,12 +63,14 @@ class ProjectController extends Controller
         $geocoder_array = $geocoder_results->first();
         $coordinates_array = $geocoder_array->getCoordinates();
 
+        # Bonus Feature, Google Map API URL:
+        /*
         foreach($coordinates_array as $key => $value)
         {
-            # Bonus Feature, Google Map API URL:
             # $map_url = "http://maps.google.com/maps/api/staticmap?size=600x400&sensor=false&zoom=10&markers=#{@site.lat}%2C#{@site.long}"
             # $map_url = 'http://maps.google.com/maps/api/staticmap?size=600x400&sensor=false&zoom=10&markers='.$value->latitude.'%2C'.$value->longitude'
         }
+        */
 
         return view('projects.show')->with([
             'project' => $project,

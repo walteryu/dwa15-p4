@@ -1,4 +1,4 @@
-# HES, DWA-15 P4 - Final Project (StormSafe, Environmental Compliance)
+# HES, DWA-15 P4 - Final Project (StormSafe)
 
 ## Live URL
 Login using user seed accounts per P4 Instructions:
@@ -31,7 +31,8 @@ Video is submitted using personal project account (StormSavvy), which contains
 my coding demos for that project, showing major features as listed
 above.
 
-[Demo on YouTube]()
+[Demo on YouTube](https://youtu.be/zrTFrxOlIgM)
+[Product Demo](https://youtu.be/T1dfGAIYniw)
 
 ## Details for Teaching Team
 
