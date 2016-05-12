@@ -11,8 +11,7 @@ Please login using seed accounts per [Instructions](http://bit.ly/1R0cZZk) for t
 * Save users time in filling out, submitting and storing paper forms
 * Improve project record retention by storing them electronically
 * Allow users to complete site inspection reports using the website, based
-  on the US Environmental Protection Agency (EPA)
-[template](http://1.usa.gov/27hdYQA)
+  on the US EPA [site inspection template](http://1.usa.gov/27hdYQA)
 
 ## Description
 StormSafe helps Civil & Environmental engineers with environmental compliance.
@@ -195,20 +194,20 @@ Outside code/libraries were used as follows:
 
 ### Basic Feature Reference:
 * [StormSavvy](http://stormsavvy.com/) - Original Ruby on Rails implementation of StormSafe
-* [Bootstrap](http://getbootstrap.com) - Called as CDN Asset from master layout view template
-* [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Referenced for Foobooks example, search box feature and pulldown menu (book/authors)
-* [Subtle Patterns](http://subtlepatterns.com) - Background image, which are set within stylesheet
 * [Bootstrap Documentation](https://v5-alpha.getbootstrap.com/components/forms) - Referenced for form elements
+* [Bootstrap](http://getbootstrap.com) - Called as CDN Asset from master layout view template
+* [Subtle Patterns](http://subtlepatterns.com) - Background image, which are set within stylesheet
 * [Laravel Docs on Validation](https://laravel.com/docs/5.1/validation) - Referenced for HTML form validation/error handling
 
+* [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Referenced for Foobooks example, search box feature and pulldown menu (book/authors)
 ### Bonue Feature Reference:
 * [Laravel Docs on Testing](https://laravel.com/docs/5.1/testing) - Referenced for PHPUnit unit/integration testing in Laravel
 * [Laravel Docs on Testing](https://laravel.com/docs/5.2/redis) - Referenced for Redis setup/configuration
-* [PHP Geocoder Package on Github](https://github.com/geocoder-php/Geocoder) - Used for geocoding project zipcode to return lat/long (works to return lat/long but data array returns error)
+* [PHP Geocoder Package on Github](https://github.com/geocoder-php/Geocoder) - Used for geocoding project zipcode to return lat/long
 * [D3.js](https://d3js.org) - Data visualization library used for
   showing user project/inspection metrics
 * [C3.js](http://c3js.org) - Add-on library used together with D3.js
-* [Predis Package on Packagist](https://packagist.org/packages/predis/predis) - Required for using Redis; however, full installation required on production serve; as a result, feature was not completed
-[Laravel Docs on Database Interactions/Facade](https://laravel.com/docs/5.2/database) - Used for with Database Facade due to \App model namespacing issue 
-[Laravel Docs on Query Builder](https://laravel.com/docs/5.2/queries) -
+* [Predis Package on Packagist](https://packagist.org/packages/predis/predis) - Required for using Redis
+* [Laravel Docs on Database Interactions/Facade](https://laravel.com/docs/5.2/database) - Used for with Database Facade due to \App model namespacing issue 
+* [Laravel Docs on Query Builder](https://laravel.com/docs/5.2/queries) -
 Used for CRUD operations (create/edit) due to \App model namespacing issue
