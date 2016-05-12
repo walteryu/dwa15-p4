@@ -301,26 +301,32 @@
                   Site Map (Bonus Feature):
               </h3>
               <img src="http://bit.ly/24KvUoa" alt="Site Map"><br>
+
+              <h3>
+                  10-Day Forecast (Bonus Feature, Wunderground API):
+              </h3>
             -->
 
-            <h3>
-                10-Day Forecast (Wunderground API):
-            </h3>
-            @foreach($data['forecast'] as $forecast)
-                @foreach($forecast['forecastday'] as $key => $value)
+            {{-- @foreach($data['forecast'] as $forecast) --}}
+                {{-- @foreach($forecast['forecastday'] as $key => $value) --}}
                     <h4>
-                        <img src="{{ $value['icon_url'] }}" alt="Forecast Icon"><br>
-                        Date: {{ $value['title'] or 'API returns uneven array, please ignore.' }}<br>
-                        Forecast: {{ $value['fcttext'] or 'API returns uneven array, please ignore.' }}<br>
-                        Chance of Rain: {{ $value['pop'] }}%<br>
+                        <!-- Date: -->
+                        {{-- {{ $value['title'] or 'API returns uneven array, please ignore.' }} --}}
+                        <!-- <br> -->
+                        <!-- Forecast: -->
+                        {{-- {{ $value['fcttext'] or 'API returns uneven array, please ignore.' }} --}}
+                        <!-- <br> -->
+                        <!-- Chance of Rain: -->
+                        {{-- {{ $value['pop'] }} --}}
+                        <!-- % -->
+                        <br>
                     </h4>
-                @endforeach
-            @endforeach
+                {{-- @endforeach --}}
+            {{-- @endforeach --}}
 
         </div>
     </section>
 @stop
 
 @section('body')
-    <script src="/js/project/show.js"></script>
 @stop
