@@ -9,7 +9,9 @@ use StormSafe\Http\Requests;
 class UserController extends Controller
 {
     public function getIndex() {
-        $users = \App\User::all();
+        # $users = \App\User::all();
+        $users = \DB::table('projects')->get();
+
         return view('users.index')->with('users', $users);
     }
 
@@ -23,15 +25,11 @@ class UserController extends Controller
 
     public function postCreate(Request $request) {
         $this->validate($request,[
-            # 'title' => 'required|min:3',
-            # 'author' => 'required',
-            # 'published' => 'required|min:4',
-            # 'cover' => 'required|url',
-            # 'purchase_link' => 'required|url',
+            # Placeholder for now, do not wish to break pages for project submission
         ]);
 
         $data = $request->only(
-            # 'title','author','published','cover','purchase_link'
+            # Placeholder for now, do not wish to break pages for project submission
         );
         \App\User::create($data);
 
@@ -41,18 +39,12 @@ class UserController extends Controller
 
     public function getEdit($id) {
         $user = \App\User::find($request->id);
+
         return view('users.edit')->with('name',$name);
     }
 
     public function postEdit(Request $request) {
         $user = \App\User::find($request->id);
-
-        # $book->title = $request->title;
-        # $book->author_id = $request->author_id;
-        # $book->cover = $request->cover;
-        # $book->published = $request->published;
-        # $book->purchase_link = $request->purchase_link;
-
         $user->save();
 
         \Session::flash('message','Your changes were saved.');

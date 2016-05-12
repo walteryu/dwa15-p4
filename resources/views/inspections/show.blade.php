@@ -42,5 +42,4 @@
 @stop
 
 @section('body')
-    <script src="/js/project/show.js"></script>
 @stop

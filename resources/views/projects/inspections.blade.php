@@ -40,12 +40,11 @@
                     <a href='/inspection/show/{{$inspection->id}}'>View inspection</a>
                     |
                     <a href='/inspection/edit/{{$inspection->id}}'>Edit inspection</a>
-                </h3>
-                <br>
+                    |
                     <button type="button" class="btn btn-danger" href='/inspection/delete/{{$inspection->id}}'>
                         Delete Inspection
                     </button>
-                </br>
+                </h3>
             </div>
         </section>
     @endforeach

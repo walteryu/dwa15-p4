@@ -94,6 +94,7 @@ class ProjectController extends Controller
             'zipcode' => 'required'
         ]);
 
+        # Database facade used for create/edit method due to namespacing issue
         $data = $request->only(
             'user_id',
             'name',
@@ -160,7 +161,7 @@ class ProjectController extends Controller
         );
         $data = array_values($data);
 
-        # \App model namespacing issue, using Database Facade instead
+        # Database facade used for create/edit method due to namespacing issue
         \DB::table('projects')->insertGetId([
             'user_id' => \Auth::user()->id,
             'name' => $data[1],
@@ -258,6 +259,7 @@ class ProjectController extends Controller
             # str_random(10)
         ]);
 
+        # Database facade used for create/edit method due to namespacing issue
         $data = $request->only(
             'user_id',
             'id',
@@ -326,7 +328,7 @@ class ProjectController extends Controller
 
         $data = array_values($data);
 
-        # \App model namespacing issue, using Database Facade instead
+        # Database facade used for create/edit method due to namespacing issue
         \DB::table('projects')->where('id', '=', $data[1])->update([
             # 'user_id' => \Auth::user()->id,
             'name' => $data[2],
@@ -436,13 +438,12 @@ class ProjectController extends Controller
         return view('projects.search');
     }
 
-    # Project search form
+    # Project search form, implemented from Foobooks example
     public function postSearch(Request $request) {
         $data = $request->input();
         $data = array_values($data);
 
         $projects = \DB::table('projects')
-            # ->where('title','LIKE','%'.$request->search.'%')->get();
             ->where('name','LIKE','%'.$data[1].'%')
             ->orWhere('description','LIKE','%'.$data[1].'%')
             ->get();
@@ -452,7 +453,7 @@ class ProjectController extends Controller
         );
     }
 
-    # Project chart page
+    # Project chart page, render results using d3.js library
     public function getChart() {
         $projects = \DB::table('projects')
             ->where('user_id', '=', \Auth::user()->id)

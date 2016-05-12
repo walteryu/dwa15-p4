@@ -8,6 +8,7 @@ use StormSafe\Http\Requests;
 class InspectionController extends Controller
 {
     function getIndex() {
+        # Retrieve all projects for all users
         $inspections = \DB::table('inspections')
             ->orderBy('created_at', '=', 'ASC')
             ->get();
@@ -51,6 +52,7 @@ class InspectionController extends Controller
         $projects_menu = [];
         $projects_menu[0] = 'Please Select Project';
 
+        # Return pulldown values so that user can select from projects for their inspection
         foreach($projects as $project) {
             $projects_menu[$project->id] = $project->name.' - '.$project->description;
         }
@@ -65,6 +67,7 @@ class InspectionController extends Controller
             'not_in' => 'Please select project for your inspection.',
         ];
 
+        # Limited number of validations, pending remaining attributes
         $this->validate($request,[
             'name' => 'required',
             'description' => 'required',
@@ -264,6 +267,7 @@ class InspectionController extends Controller
         );
         $data = array_values($data);
 
+        # Use database facade for create/edit actions due to model namespacing issue
         \DB::table('inspections')->insertGetId([
               'project_id' => $data[0],
               'name' => $data[1],
@@ -472,9 +476,11 @@ class InspectionController extends Controller
     }
 
     public function postEdit(Request $request) {
+        # Limited number of validations, pending remaining attributes
         $this->validate($request,[
             'name' => 'required',
-            'description' => 'required',
+            'description' => 'required'
+            #,
         ]);
 
         $data = $request->only(
@@ -1082,13 +1088,12 @@ class InspectionController extends Controller
         return view('inspections.search');
     }
 
-    # Inspection search form
+    # Inspection search form, implemented from Foobooks example
     public function postSearch(Request $request) {
         $data = $request->input();
         $data = array_values($data);
 
         $inspections = \DB::table('inspections')
-            # ->where('title','LIKE','%'.$request->search.'%')->get();
             ->where('name','LIKE','%'.$data[1].'%')
             ->orWhere('description','LIKE','%'.$data[1].'%')
             ->get();

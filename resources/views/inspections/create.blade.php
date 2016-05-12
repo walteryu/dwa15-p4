@@ -16,6 +16,7 @@
 
         {{ csrf_field() }}
 
+        <!-- Projects pulldown menu for given inspection -->
         <div class='form-group'>
            <label for='project_id'>Project:</label>
            <select name='project_id' id='project_id'>
