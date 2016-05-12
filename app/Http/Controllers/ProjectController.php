@@ -409,13 +409,14 @@ class ProjectController extends Controller
     public function postDelete(Request $request) {
         $data = $request->only(
             'user_id',
-            'id',
-            'name',
-            'description',
-            'address',
-            'city',
-            'state',
-            'zipcode'
+            'id'
+            #,
+            # 'name',
+            # 'description',
+            # 'address',
+            # 'city',
+            # 'state',
+            # 'zipcode'
         );
         $data = array_values($data);
 
