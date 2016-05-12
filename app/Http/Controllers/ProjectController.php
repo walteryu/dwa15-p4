@@ -410,13 +410,6 @@ class ProjectController extends Controller
         $data = $request->only(
             'user_id',
             'id'
-            #,
-            # 'name',
-            # 'description',
-            # 'address',
-            # 'city',
-            # 'state',
-            # 'zipcode'
         );
         $data = array_values($data);
 
@@ -474,8 +467,6 @@ class ProjectController extends Controller
 
             $inspection_count[] = count($inspections);
         }
-        # dd(array_sum($project_count));
-        # dd(array_sum($inspection_count));
 
         return view('projects.chart')->with([
             'project_count' => $project_count,
