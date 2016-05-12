@@ -7,11 +7,16 @@
 @section('content')
     <div class="container">
         <div class="row">
+            <!-- Bootstrap column layout for demo video and login -->
             <div class="col-md-8">
                 <h1>Welcome to StormSafe</h1>
                 <h3>Environmental Compliance Software</h3>
+
+                <!-- Embed link is provided by YouTube itself yet fails W3C validation -->
+                <!-- Video is critical to explaining features so will take deduction due to time limitation -->
                 <iframe width="700" height="500" src="https://www.youtube.com/embed/T1dfGAIYniw" frameborder="0" allowfullscreen></iframe>
             </div>
+
             <div class="col-md-4">
                 <h1>User Login</h1>
                 <h3>Not Registered? <a href='/register'>Register Here</a></h3>
