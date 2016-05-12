@@ -1,8 +1,8 @@
 # HES, DWA-15 P4 - Final Project (StormSafe)
 
 ## Live URL
-Login using user seed accounts per P4 Instructions:
-<http://p4.walteryu.pw>
+Login using user seed accounts per [P4 Instructions](http://bit.ly/1R0cZZk):
+[StormSafe, Environmental App](http://p4.walteryu.pw)
 
 ## Description
 StormSafe helps Civil & Environmental engineers with environmental compliance.
