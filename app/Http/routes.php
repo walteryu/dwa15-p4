@@ -34,7 +34,6 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/project/search', 'ProjectController@getSearch');
         Route::post('/project/search', 'ProjectController@postSearch');
         Route::get('/project/chart', 'ProjectController@getChart');
-        Route::get('/project/about', 'ProjectController@getAbout');
     });
 
     Route::group(['middleware' => 'auth'], function() {
