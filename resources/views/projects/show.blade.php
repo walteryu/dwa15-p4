@@ -296,14 +296,17 @@
                 </h3>
             @endforeach
 
-            <h3>
-                Site Map
-            </h3>
-            <img src="http://bit.ly/24KvUoa" alt="Site Map"><br>
+            <!--
+              <h3>
+                  Site Map (Bonus Feature):
+              </h3>
+              <img src="http://bit.ly/24KvUoa" alt="Site Map"><br>
+            -->
 
             <h3>
                 10-Day Forecast (Wunderground API):
             </h3>
+            {{ dd($data['forecast']) }}
             @foreach($data['forecast'] as $forecast)
                 @foreach($forecast['forecastday'] as $key => $value)
                     <h4>
