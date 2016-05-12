@@ -16,7 +16,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/project/about', 'ProjectController@getAbout');
 
-    Route::group(['middleware' => 'auth'], function() {
+#    Route::group(['middleware' => 'auth'], function() {
         Route::get('/', 'ProjectController@getIndex');
         Route::get('/projects', 'ProjectController@getIndex');
 
@@ -34,9 +34,9 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/project/search', 'ProjectController@getSearch');
         Route::post('/project/search', 'ProjectController@postSearch');
         Route::get('/project/chart', 'ProjectController@getChart');
-    });
+#    });
 
-    Route::group(['middleware' => 'auth'], function() {
+#    Route::group(['middleware' => 'auth'], function() {
         Route::get('/inspections', 'InspectionController@getIndex');
         Route::get('/inspection/edit/{id?}', 'InspectionController@getEdit');
         Route::post('/inspection/edit', 'InspectionController@postEdit');
@@ -50,5 +50,5 @@ Route::group(['middleware' => ['web']], function () {
 
         Route::get('/inspection/search', 'InspectionController@getSearch');
         Route::post('/inspection/search', 'InspectionController@postSearch');
-    });
+#    });
 });
