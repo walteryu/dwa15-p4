@@ -2,12 +2,11 @@
 
 ## Live URL
 Please login using seed accounts per [Instructions](http://bit.ly/1R0cZZk) for the final project:
-
 [StormSafe, Environmental App](http://p4.walteryu.pw)
 
 ## Objectives
 * All users to track projects and site inspections to meet
-  environmnetal permit requirements (primarily Water Quality)
+  environmental permit requirements (primarily Water Quality)
 * Save users time in filling out, submitting and storing paper forms
 * Improve project record retention by storing them electronically
 * Allow users to complete site inspection reports using the website, based
