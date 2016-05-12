@@ -23,8 +23,8 @@ class ProjectsTableSeeder extends Seeder
                 'address' => '1 Airport Dr',
                 'city' => 'Oakland',
                 'state' => 'CA',
-
                 'zipcode' => 94621,
+
                 'latitude' => 37.7125689,
                 'longitude' => -122.2197428,
                 'active' => true,
