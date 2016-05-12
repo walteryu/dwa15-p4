@@ -54,25 +54,25 @@ class ProjectController extends Controller
             \Session::flash('message','Redis Error: '.$e->getMessage());
         }
 
-        # Geocoder API response for Google Maps integration
+        # Bonus Feature, Geocoder API response for Google Maps integration
         $curl     = new \Ivory\HttpAdapter\CurlHttpAdapter();
         $geocoder = new \Geocoder\Provider\GoogleMaps($curl);
         $geocoder_results = $geocoder->geocode('Oakland, CA');
         $geocoder_array = $geocoder_results->first();
         $coordinates_array = $geocoder_array->getCoordinates();
 
-        # dd($coordinates_array);
-
         foreach($coordinates_array as $key => $value)
         {
-            # echo($value);
-            # $map_url = "http://maps.google.com/maps/api/staticmap?size=600x400&sensor=false&zoom=10&markers=$value->latitutde%2C$value->longitude";
+            # Bonus Feature, Google Map API URL:
+            # $map_url = "http://maps.google.com/maps/api/staticmap?size=600x400&sensor=false&zoom=10&markers=#{@site.lat}%2C#{@site.long}"
+            # $map_url = 'http://maps.google.com/maps/api/staticmap?size=600x400&sensor=false&zoom=10&markers='.$value->latitude.'%2C'.$value->longitude'
         }
 
         return view('projects.show')->with([
             'project' => $project,
-            'data' => $data,
-            'map_url' => $map_url
+            'data' => $data
+            #,
+            # 'map_url' => $map_url
         ]);
     }
 
