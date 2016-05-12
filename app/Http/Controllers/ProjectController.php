@@ -475,8 +475,8 @@ class ProjectController extends Controller
         ]);
     }
 
-    # About page
+    # About page: Placed here to save an additional main/home controller
     public function getAbout() {
-        return view('projects.search');
+        return view('projects.about');
     }
 }
