@@ -177,10 +177,56 @@ class ProjectPageTest extends TestCase
                 ->type(94621, 'zipcode')
                 ->press('Save Changes')
                 ->see('Project updated successfully!')
+                ;
+        }
+        catch(Exception $e)
+        {
+            echo 'Message: '.$e->getMessage();
+        }
+    }
+
+    public function testProjectDelete()
+    {
+        try
+        {
+            $this->visit('/login')
+                # Test auth/login page
+                ->type('walter@stormsavvy.com', 'email')
+                ->type('helloworld', 'password')
+                ->press('Login')
+
+                # Test dashboard
+                ->see('All Projects')
+                ->see('Create Project')
+                ->see('Search Projects')
+                ->dontSee('Welcome to StormSafe!')
 
                 # Test confirm-delete project page
                 ->visit('/project/confirm-delete/1')
                 ->see('Delete Project?')
+                ;
+        }
+        catch(Exception $e)
+        {
+            echo 'Message: '.$e->getMessage();
+        }
+    }
+
+    public function testProjectSearch()
+    {
+        try
+        {
+            $this->visit('/login')
+                # Test auth/login page
+                ->type('walter@stormsavvy.com', 'email')
+                ->type('helloworld', 'password')
+                ->press('Login')
+
+                # Test dashboard
+                ->see('All Projects')
+                ->see('Create Project')
+                ->see('Search Projects')
+                ->dontSee('Welcome to StormSafe!')
 
                 # Test search project page
                 ->visit('/project/search')
