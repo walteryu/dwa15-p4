@@ -31,12 +31,12 @@ StormSavvy has the following features (inspiration for this assignment):
 
 Demo covers the following items:
 
-* Walkthough of basic and bonus features 
+* Walkthrough of basic and bonus features 
 * Coverage of major features within code base
 * Known issues and/or challenges during development
 
 Please note the demo length is 6 minutes (not 5 minutes per assignment instructions) due to time
-for covering bonus features, issues/challenges and my StormSavvy app (used for reference).
+for covering bonus features, issues/challenges and my StormSavvy project (used for reference).
 
 Video is submitted using personal project account (StormSavvy), which contains my coding demos
 for that project, showing major features as listed above.
@@ -96,7 +96,7 @@ throws "value unknown" error and crashes the show project page.
 As a result, feature is commented out to avoid breaking the page and
 remains in the code base for review.
 
-## Additional Features
+## Bonus Features
 
 ### 1. Integration/Unit Testing (PHPUnit)
 
@@ -140,7 +140,7 @@ Chart can be viewed from the "chart" link from the top navigation bar.
 Feature works in development; however, it throws an "unknown value" error in production
 as described above.
 
-API was used to return a JSON document, which included a detailed 10-day forcast with
+API was used to return a JSON document, which included a detailed 10-day forecast with
 percentage of rain, forecast description and date/time: [Wunderground JSON API Documentation](
 https://www.wunderground.com/weather/api/d/docs
 )
@@ -156,7 +156,7 @@ zipcode; user would input zipcode with their project, which would then
 return lat/long for requesting site map form Google Map API.
 
 Geocoder lat/long response was successfully incorporated but data array
-returns an an "unknown value"; as a result, feature was commented out
+returns an "unknown value"; as a result, feature was commented out
 for sake of completing remaining project requirements on time.
 
 As a result, code is contained within the [Project Controller](
@@ -191,7 +191,7 @@ basic and bonus features
 
 Outside code/libraries were used as follows:
 
-### Basic Feature Reference:
+### Basic Feature References:
 * [StormSavvy](http://stormsavvy.com/) - Original Ruby on Rails implementation of StormSafe
 * [Bootstrap Documentation](https://v5-alpha.getbootstrap.com/components/forms) - Referenced for form elements
 * [Bootstrap](http://getbootstrap.com) - Called as CDN Asset from master layout view template
@@ -202,11 +202,11 @@ Outside code/libraries were used as follows:
 Used for CRUD operations (create/edit) due to \App model namespacing issue
 * [Laravel Docs on Database Interactions/Facade](https://laravel.com/docs/5.2/database) - Used for with Database Facade due to \App model namespacing issue 
 
-### Bonus Feature Reference:
+### Bonus Feature References:
 * [Laravel Docs on Testing](https://laravel.com/docs/5.1/testing) - Referenced for PHPUnit unit/integration testing in Laravel
-* [Laravel Docs on Testing](https://laravel.com/docs/5.2/redis) - Referenced for Redis setup/configuration
-* [PHP Geocoder Package on Github](https://github.com/geocoder-php/Geocoder) - Used for geocoding project zipcode to return lat/long
 * [D3.js](https://d3js.org) - Data visualization library used for
   showing user project/inspection metrics
 * [C3.js](http://c3js.org) - Add-on library used together with D3.js
 * [Predis Package on Packagist](https://packagist.org/packages/predis/predis) - Required for using Redis
+* [PHP Geocoder Package on Github](https://github.com/geocoder-php/Geocoder) - Used for geocoding project zipcode to return lat/long
+* [Laravel Docs on Redis](https://laravel.com/docs/5.2/redis) - Referenced for Redis setup/configuration
