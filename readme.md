@@ -197,10 +197,13 @@ Outside code/libraries were used as follows:
 * [Bootstrap Documentation](https://v5-alpha.getbootstrap.com/components/forms) - Referenced for form elements
 * [Bootstrap](http://getbootstrap.com) - Called as CDN Asset from master layout view template
 * [Subtle Patterns](http://subtlepatterns.com) - Background image, which are set within stylesheet
-* [Laravel Docs on Validation](https://laravel.com/docs/5.1/validation) - Referenced for HTML form validation/error handling
-
+* [Laravel Docs on Validation](https://laravel.com/docs/5.1/validation) - Referenced for HTML form validation
 * [Class Notes](https://github.com/walteryu/dwa15-spring2016-notes) - Referenced for Foobooks example, search box feature and pulldown menu (book/authors)
-### Bonue Feature Reference:
+* [Laravel Docs on Query Builder](https://laravel.com/docs/5.2/queries) -
+Used for CRUD operations (create/edit) due to \App model namespacing issue
+* [Laravel Docs on Database Interactions/Facade](https://laravel.com/docs/5.2/database) - Used for with Database Facade due to \App model namespacing issue 
+
+### Bonus Feature Reference:
 * [Laravel Docs on Testing](https://laravel.com/docs/5.1/testing) - Referenced for PHPUnit unit/integration testing in Laravel
 * [Laravel Docs on Testing](https://laravel.com/docs/5.2/redis) - Referenced for Redis setup/configuration
 * [PHP Geocoder Package on Github](https://github.com/geocoder-php/Geocoder) - Used for geocoding project zipcode to return lat/long
@@ -208,6 +211,3 @@ Outside code/libraries were used as follows:
   showing user project/inspection metrics
 * [C3.js](http://c3js.org) - Add-on library used together with D3.js
 * [Predis Package on Packagist](https://packagist.org/packages/predis/predis) - Required for using Redis
-* [Laravel Docs on Database Interactions/Facade](https://laravel.com/docs/5.2/database) - Used for with Database Facade due to \App model namespacing issue 
-* [Laravel Docs on Query Builder](https://laravel.com/docs/5.2/queries) -
-Used for CRUD operations (create/edit) due to \App model namespacing issue
