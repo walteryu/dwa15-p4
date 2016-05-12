@@ -56,6 +56,7 @@
                     @else
                         <li class="active"><a href="/login">Login<span class="sr-only">(current)</span></a></li>
                         <li><a href='/register'>Register</a></li>
+                        <li><a href='/project/about'>About</a></li>
                     @endif
                   </ul>
                 </div><!-- /.navbar-collapse -->
