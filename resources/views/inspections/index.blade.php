@@ -43,9 +43,8 @@
                     <a href='/inspection/edit/{{$inspection->id}}'>Edit Inspection</a>
                 </h3>
                 <br>
-                    <a href='/inspection/confirm-delete/{{$inspection->id}}'
-                        class="btn btn-danger" role="button">Delete Inspection</a>
-                </br>
+                <a href='/inspection/confirm-delete/{{$inspection->id}}'
+                    class="btn btn-danger" role="button">Delete Inspection</a>
             </div>
         </section>
     @endforeach
