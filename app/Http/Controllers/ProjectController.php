@@ -29,17 +29,17 @@ class ProjectController extends Controller
         }
 
         $project_array = array_values($project);
+
+        # Bonus Feature, Wunderground API response and JSON encoding
         foreach($project_array as $key => $value)
         {
-            $forecast_url = 'http://api.wunderground.com/api/'.env('WU_KEY').'/forecast10day/q/'.$value->zipcode.'.json';
-            $map_url = 'https://www.google.com/maps/place/Oakland,+CA+'.$value->zipcode;
+          $forecast_url = 'http://api.wunderground.com/api/'.env('WU_KEY').'/forecast10day/q/'.$value->zipcode.'.json';
         }
 
-        # Wunderground API response and JSON encoding
         $response = file_get_contents($forecast_url);
         $data = json_decode($response, true);
 
-        # Try/catch block for local connection errors
+        # Bonus Feature, Redis caching (try/catch block for local connection errors)
         try
         {
             $redis = Redis::connection();
