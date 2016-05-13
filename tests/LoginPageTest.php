@@ -12,7 +12,7 @@ class LoginPageTest extends TestCase
         {
             # Test auth/login page
             $this->visit('/login')
-                ->see('Welcome to StormSafe!')
+                ->see('Welcome to StormSafe')
                 ->dontSee('All Projects')
                 ;
         }

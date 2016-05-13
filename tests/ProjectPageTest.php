@@ -20,14 +20,14 @@ class ProjectPageTest extends TestCase
                 ->see('All Projects')
                 ->see('Create Project')
                 ->see('Search Projects')
-                ->dontSee('Welcome to StormSafe!')
+                ->dontSee('Welcome to StormSafe')
 
                 # Test index page
                 ->visit('/projects')
                 ->See('All Projects')
                 ->see('Create project')
                 ->see('Search projects')
-                ->dontSee('Welcome to StormSafe!')
+                ->dontSee('Welcome to StormSafe')
                 ;
         }
         catch(Exception $e)
@@ -50,7 +50,7 @@ class ProjectPageTest extends TestCase
                 ->see('All Projects')
                 ->see('Create Project')
                 ->see('Search Projects')
-                ->dontSee('Welcome to StormSafe!')
+                ->dontSee('Welcome to StormSafe')
 
                 # Test create project
                 ->visit('/project/create')
@@ -137,7 +137,7 @@ class ProjectPageTest extends TestCase
                 ->see('All Projects')
                 ->see('Create Project')
                 ->see('Search Projects')
-                ->dontSee('Welcome to StormSafe!')
+                ->dontSee('Welcome to StormSafe')
 
                 # Test show project page
                 ->visit('/project/show/1')
@@ -164,7 +164,7 @@ class ProjectPageTest extends TestCase
                 ->see('All Projects')
                 ->see('Create Project')
                 ->see('Search Projects')
-                ->dontSee('Welcome to StormSafe!')
+                ->dontSee('Welcome to StormSafe')
 
                 # Test edit project page
                 ->visit('/project/edit/1')
@@ -199,7 +199,7 @@ class ProjectPageTest extends TestCase
                 ->see('All Projects')
                 ->see('Create Project')
                 ->see('Search Projects')
-                ->dontSee('Welcome to StormSafe!')
+                ->dontSee('Welcome to StormSafe')
 
                 # Test confirm-delete project page
                 ->visit('/project/confirm-delete/1')
@@ -226,7 +226,7 @@ class ProjectPageTest extends TestCase
                 ->see('All Projects')
                 ->see('Create Project')
                 ->see('Search Projects')
-                ->dontSee('Welcome to StormSafe!')
+                ->dontSee('Welcome to StormSafe')
 
                 # Test search project page
                 ->visit('/project/search')
@@ -253,7 +253,7 @@ class ProjectPageTest extends TestCase
                 ->see('All Projects')
                 ->see('Create Project')
                 ->see('Search Projects')
-                ->dontSee('Welcome to StormSafe!')
+                ->dontSee('Welcome to StormSafe')
 
                 # Test search project page
                 ->visit('/project/show/1')
