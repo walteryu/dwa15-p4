@@ -6,6 +6,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class UserPageTest extends TestCase
 {
+    /*
     public function testUserLogin()
     {
         try
@@ -101,4 +102,5 @@ class UserPageTest extends TestCase
             echo 'Message: '.$e->getMessage();
         }
     }
+    */
 }
