@@ -18,6 +18,17 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::group(['middleware' => 'auth'], function() {
         Route::get('/', 'ProjectController@getIndex');
+
+        Route::get('/users', 'UserController@getIndex');
+
+        Route::get('/user/create', 'UserController@getCreate');
+        Route::post('/user/create', 'UserController@postCreate');
+        Route::get('/user/edit/{id?}', 'UserController@getEdit');
+        Route::post('/user/edit', 'UserController@postEdit');
+
+        Route::get('/user/confirm-delete/{id?}', 'UserController@getDelete');
+        Route::get('/user/show/{id?}', 'UserController@getShow');
+
         Route::get('/projects', 'ProjectController@getIndex');
 
         Route::get('/project/create', 'ProjectController@getCreate');
