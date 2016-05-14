@@ -61,20 +61,4 @@ class UsersControllerTest extends TestCase {
             echo 'Message: '.$e->getMessage();
         }
     }
-
-    public function testConfirmDelete()
-    {
-        try
-        {
-          $this->withoutMiddleware();
-          $this->action('GET', 'UserController@getConfirmDelete', 1);
-          $this->assertResponseOk();
-        }
-        catch(Exception $e)
-        {
-            echo 'Message: '.$e->getMessage();
-        }
-    }
-
 }
-

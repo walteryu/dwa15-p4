@@ -80,7 +80,7 @@ class UserController extends Controller
 
     public function getConfirmDelete($user_id) {
         # $user = \App\User::find($user_id);
-        $user = \DB::table('users')->where('id', '=', $id)->get();
+        $user = \DB::table('users')->where('user_id', '=', $user_id)->get();
 
         /*
         if(is_null($user)) {
